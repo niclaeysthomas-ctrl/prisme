@@ -1,0 +1,152 @@
+:root{
+  --bg:#0d1220;
+  --bg2:#131a2c;
+  --card:#1a2338;
+  --card2:#212c46;
+  --ink:#eef2fb;
+  --ink-soft:#a9b3cd;
+  --ink-dim:#6b7699;
+  --line:#2a3455;
+  --accent:#8b7dff;
+  --good:#4ade80;
+  --bad:#f87171;
+  --warn:#fbbf24;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, #1b2540 0, transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, #201a3a 0, transparent 55%),
+    var(--bg);
+  color:var(--ink);
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+
+/* ---------- Topbar ---------- */
+#topbar{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;gap:12px;
+  padding:14px 16px calc(14px);
+  padding-top:calc(14px + env(safe-area-inset-top));
+  background:rgba(13,18,32,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.14em}
+.prism{color:var(--accent);font-size:20px;filter:drop-shadow(0 0 8px rgba(139,125,255,.6))}
+.brandName{font-size:15px}
+.xpChip{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-soft);font-weight:700}
+.xpBarWrap{width:64px;height:7px;background:var(--card2);border-radius:6px;overflow:hidden}
+.xpBar{display:block;height:100%;width:0;background:linear-gradient(90deg,#8b7dff,#4fd1c5);transition:width .5s ease}
+.ghost{background:none;border:none;color:var(--ink);font-size:26px;line-height:1;cursor:pointer;padding:0 4px}
+
+main{flex:1;width:100%;max-width:720px;margin:0 auto;padding:18px 16px 40px}
+
+/* ---------- Home ---------- */
+.hero{margin:6px 2px 20px}
+.hero h1{font-size:26px;margin:0 0 6px;letter-spacing:-.01em}
+.hero p{margin:0;color:var(--ink-soft);font-size:14.5px;line-height:1.5}
+.statRow{display:flex;gap:10px;margin:16px 0 22px}
+.statBox{flex:1;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.statBox b{display:block;font-size:22px}
+.statBox span{font-size:11.5px;color:var(--ink-dim);text-transform:uppercase;letter-spacing:.08em}
+
+.sectionTitle{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-dim);margin:8px 2px 12px;font-weight:800}
+
+.domGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.domCard{
+  position:relative;text-align:left;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 14px 14px;overflow:hidden;transition:transform .12s ease,border-color .2s;
+}
+.domCard:active{transform:scale(.975)}
+.domCard .glow{position:absolute;inset:-40% 40% auto -40%;height:120px;opacity:.16;filter:blur(30px);border-radius:50%}
+.domCard .emoji{font-size:30px;display:block;margin-bottom:8px}
+.domCard h3{margin:0 0 3px;font-size:16px}
+.domCard .tag{font-size:11.5px;color:var(--ink-dim);line-height:1.35;min-height:31px}
+.domProg{margin-top:12px;height:6px;background:var(--card2);border-radius:6px;overflow:hidden}
+.domProg i{display:block;height:100%;width:0;border-radius:6px}
+.domMeta{display:flex;justify-content:space-between;margin-top:7px;font-size:10.5px;color:var(--ink-dim)}
+
+/* ---------- Domain page ---------- */
+.domHead{display:flex;align-items:center;gap:12px;margin:2px 2px 4px}
+.domHead .big{font-size:34px}
+.domHead h2{margin:0;font-size:22px}
+.domHead .sub{margin:2px 0 0;font-size:13px;color:var(--ink-soft)}
+
+.tabs{display:flex;gap:6px;margin:18px 0 16px;background:var(--card);padding:5px;border-radius:14px;border:1px solid var(--line)}
+.tab{flex:1;border:none;background:none;color:var(--ink-soft);font-weight:700;font-size:12.5px;padding:9px 4px;border-radius:10px;cursor:pointer;transition:.15s}
+.tab.active{background:var(--card2);color:var(--ink)}
+
+/* Fiche découverte */
+.fiche{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:12px}
+.fiche .fh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.fiche h3{margin:0;font-size:17px}
+.fiche .year{font-size:12px;font-weight:800;color:#0d1220;background:var(--warn);padding:2px 8px;border-radius:20px}
+.fiche .qui{font-size:12.5px;color:var(--ink-dim);margin-bottom:10px;font-style:italic}
+.fiche .resume{font-size:14.5px;line-height:1.55;margin:0 0 12px}
+.fiche .why{font-size:13.5px;line-height:1.5;color:var(--ink-soft);background:var(--bg2);border-left:3px solid var(--accent);padding:10px 12px;border-radius:0 10px 10px 0}
+.fiche .why b{color:var(--ink)}
+
+/* Notion */
+.notion{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;margin-bottom:11px}
+.notion h3{margin:0 0 7px;font-size:15.5px;color:var(--accent)}
+.notion p{margin:0;font-size:14px;line-height:1.55;color:var(--ink-soft)}
+
+/* Quotidien / danger */
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;margin-bottom:11px}
+.qcard.danger{border-color:#5a2130;background:linear-gradient(180deg,#241723,var(--card))}
+.qcard h3{margin:0 0 7px;font-size:15px;display:flex;align-items:center;gap:8px}
+.qcard.danger h3::before{content:"⚠";color:var(--bad);font-size:16px}
+.qcard p{margin:0;font-size:14px;line-height:1.55;color:var(--ink-soft)}
+.dangerBadge{font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--bad);text-transform:uppercase;margin-left:auto}
+
+/* ---------- Quiz ---------- */
+.quizWrap{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px}
+.quizTop{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--ink-dim);margin-bottom:6px;font-weight:700}
+.quizProg{height:6px;background:var(--card2);border-radius:6px;overflow:hidden;margin-bottom:16px}
+.quizProg i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s}
+.question{font-size:17px;line-height:1.45;margin:0 0 16px;font-weight:600}
+.choices{display:flex;flex-direction:column;gap:10px}
+.choice{
+  text-align:left;background:var(--bg2);border:1.5px solid var(--line);color:var(--ink);
+  padding:13px 14px;border-radius:13px;font-size:14.5px;cursor:pointer;transition:.14s;line-height:1.4;
+}
+.choice:active{transform:scale(.99)}
+.choice.correct{border-color:var(--good);background:rgba(74,222,128,.12)}
+.choice.wrong{border-color:var(--bad);background:rgba(248,113,113,.12)}
+.choice.dim{opacity:.5}
+.explain{margin-top:14px;font-size:13.5px;line-height:1.5;color:var(--ink-soft);background:var(--bg2);border-radius:12px;padding:12px 13px;border-left:3px solid var(--accent)}
+.explain.ok{border-left-color:var(--good)}
+.explain.no{border-left-color:var(--bad)}
+.nextBtn{margin-top:16px;width:100%;border:none;background:var(--accent);color:#0d1220;font-weight:800;font-size:15px;padding:14px;border-radius:13px;cursor:pointer}
+.nextBtn:active{transform:scale(.99)}
+
+/* Résultat quiz */
+.result{text-align:center;padding:24px 16px}
+.result .score{font-size:52px;font-weight:800;margin:6px 0}
+.result .msg{color:var(--ink-soft);font-size:15px;margin-bottom:20px;line-height:1.5}
+.result .xpGain{color:var(--good);font-weight:800;font-size:14px;margin-bottom:22px}
+
+.emptyExo{color:var(--ink-dim);font-size:14px;text-align:center;padding:30px 10px;line-height:1.5}
+
+/* ---------- Footer ---------- */
+#foot{text-align:center;padding:14px;color:var(--ink-dim);font-size:11px;border-top:1px solid var(--line)}
+
+/* Toast montée de niveau */
+.toast{
+  position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);
+  background:var(--accent);color:#0d1220;font-weight:800;font-size:14px;padding:12px 20px;border-radius:30px;
+  box-shadow:var(--shadow);opacity:0;transition:.35s;z-index:100;pointer-events:none;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.fade{animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
