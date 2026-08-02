@@ -96,9 +96,15 @@ main{flex:1;width:100%;max-width:720px;margin:0 auto;padding:18px 16px 40px}
 .fiche .why b{color:var(--ink)}
 
 /* Notion */
-.notion{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;margin-bottom:11px}
-.notion h3{margin:0 0 7px;font-size:15.5px;color:var(--accent)}
-.notion p{margin:0;font-size:14px;line-height:1.55;color:var(--ink-soft)}
+.notion{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 17px;margin-bottom:12px}
+.notion h3{margin:0 0 4px;font-size:16.5px;color:var(--accent)}
+.notion h4{margin:15px 0 5px;font-size:13.5px;color:var(--ink);font-weight:800;letter-spacing:.01em}
+.notion .accroche{font-style:italic;color:var(--ink);font-size:14.5px;line-height:1.5;margin:0 0 12px;opacity:.95}
+.notion p{margin:0 0 10px;font-size:14px;line-height:1.6;color:var(--ink-soft)}
+.notion p:last-of-type{margin-bottom:0}
+.notion .retenir{margin-top:15px;font-size:13.5px;line-height:1.5;background:rgba(139,125,255,.10);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:11px 13px;color:var(--ink-soft)}
+.notion .retenir b{color:var(--accent)}
+.notion .retenir + *{margin-top:0}
 
 /* Quotidien / danger */
 .qcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;margin-bottom:11px}

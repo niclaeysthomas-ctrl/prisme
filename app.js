@@ -159,12 +159,19 @@ function viewDecouvertes(d){
 }
 
 function viewNotions(d){
-  return d.notions.map(n=>`
+  return d.notions.map(n=>{
+    // Schéma riche (accroche + blocs + retenir) avec repli sur l'ancien champ texte.
+    const blocs = n.blocs
+      ? n.blocs.map(b=> `${b.h?`<h4>${b.h}</h4>`:''}<p>${b.t}</p>`).join('')
+      : `<p>${n.texte||''}</p>`;
+    return `
     <article class="notion">
       <h3>${n.titre}</h3>
-      <p>${n.texte}</p>
-    </article>
-  `).join('');
+      ${n.accroche?`<p class="accroche">${n.accroche}</p>`:''}
+      ${blocs}
+      ${n.retenir?`<div class="retenir"><b>À retenir —</b> ${n.retenir}</div>`:''}
+    </article>`;
+  }).join('');
 }
 
 function viewQuotidien(d){
