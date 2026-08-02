@@ -50,6 +50,13 @@ const DATA = {
           qui: "Edison (continu) vs Tesla & Westinghouse (alternatif)",
           resume: "Bataille industrielle pour imposer le standard de distribution. Le courant alternatif l'emporte car il se transforme facilement en haute tension, ce qui limite les pertes sur de longues distances.",
           pourquoi: "C'est pour ça que ta prise est en alternatif (230 V, 50 Hz en Europe). Le transport à haute tension puis l'abaissement local est ce qui rend un réseau national viable."
+        },
+        {
+          titre: "Le moteur électrique",
+          annee: "1821",
+          qui: "Michael Faraday",
+          resume: "Faraday montre qu'un fil parcouru par un courant, plongé dans le champ d'un aimant, se met à bouger. L'électricité peut donc produire du mouvement.",
+          pourquoi: "C'est l'inverse exact du générateur : le générateur transforme le mouvement en courant, le moteur transforme le courant en mouvement. Ventilateur, TGV, perceuse, disque dur, voiture électrique : partout le même principe."
         }
       ],
       notions: [
@@ -121,6 +128,15 @@ const DATA = {
             { h:"En parallèle (chacun sa branche)", t:"Chaque composant a son propre chemin et reçoit la pleine tension. Si l'un tombe en panne, les autres continuent. C'est ainsi qu'est câblée une maison : chaque lampe, chaque prise sur sa branche, toutes sous 230 V, indépendantes." }
           ],
           retenir: "Série = un seul chemin, tout dépend de tout (un maillon lâche, tout s'éteint). Parallèle = chacun sa branche sous pleine tension, indépendants. Ta maison est en parallèle."
+        },
+        {
+          titre: "L'électricité statique et la foudre",
+          accroche: "Le petit \"clac\" quand tu touches une poignée en hiver et l'éclair d'un orage sont exactement le même phénomène, à deux échelles différentes.",
+          blocs: [
+            { t:"En frottant deux matériaux (tes semelles sur la moquette, les cristaux de glace dans un nuage), des électrons passent de l'un à l'autre. Un objet se retrouve avec un excès d'électrons (chargé −), l'autre avec un manque (chargé +). Cette charge accumulée ne circule pas : c'est l'électricité \"statique\", une pression électrique en attente." },
+            { t:"Quand l'accumulation devient trop forte, tout se décharge d'un coup en forçant le passage à travers l'air : une étincelle. C'est ton \"clac\" ; en version géante entre un nuage et le sol, c'est la foudre — un courant de dizaines de milliers d'ampères pendant une fraction de seconde, qui chauffe l'air au point de le faire briller (l'éclair) et exploser (le tonnerre)." }
+          ],
+          retenir: "L'électricité statique = une charge accumulée et immobile. Quand elle se libère brutalement à travers l'air, ça fait une étincelle. La foudre n'est que cette étincelle à l'échelle d'un nuage."
         }
       ],
       quotidien: [
@@ -142,6 +158,11 @@ const DATA = {
         {
           titre: "Le rôle de la terre",
           texte: "Le fil de terre (vert/jaune) relie la carcasse métallique des appareils au sol. Si un fil sous tension touche la carcasse, le courant part à la terre et fait sauter le différentiel, au lieu d'attendre que tu touches l'appareil. C'est une protection invisible mais essentielle."
+        },
+        {
+          titre: "Les multiprises et le risque de surchauffe",
+          danger: true,
+          texte: "Brancher radiateur, bouilloire et chauffage d'appoint sur une même multiprise peut dépasser la puissance qu'elle supporte (souvent 3680 W, soit 16 A). Les fils chauffent alors et peuvent fondre ou prendre feu. On évite les gros appareils sur une multiprise, et on ne branche jamais une multiprise sur une autre (\"marguerite\")."
         }
       ],
       exos: [
@@ -198,6 +219,30 @@ const DATA = {
           choix: ["L'eau augmente la tension", "L'eau baisse ta résistance, donc le courant qui te traverse augmente", "L'eau attire la foudre", "Ça ne change rien"],
           bonne: 1,
           explication: "Mains mouillées, ta résistance chute (~1000 Ω au lieu de ~100 000). À tension fixe, I = U/R explose. Le courant qui te traverse peut devenir mortel."
+        },
+        {
+          q: "Pourquoi un oiseau posé sur un fil à haute tension n'est-il pas électrocuté ?",
+          choix: ["Ses plumes l'isolent", "Il ne touche qu'un seul fil : pas de différence de tension entre ses pattes, donc pas de courant", "La tension est trop faible", "Il est trop léger"],
+          bonne: 1,
+          explication: "Le courant ne traverse un corps que s'il existe une différence de tension entre deux points touchés. Sur un seul fil, les deux pattes sont au même potentiel : rien ne circule. Toucher en plus un 2e fil ou le sol serait fatal."
+        },
+        {
+          q: "Dans une centrale nucléaire, qu'est-ce qui produit concrètement l'électricité ?",
+          choix: ["La réaction nucléaire directement", "La chaleur fait bouillir de l'eau, dont la vapeur fait tourner un aimant dans des bobines", "Des panneaux solaires internes", "D'immenses piles"],
+          bonne: 1,
+          explication: "Le nucléaire ne sert qu'à produire de la chaleur, donc de la vapeur. C'est cette vapeur qui fait tourner une turbine, donc un aimant : on retombe sur l'induction de Faraday. Charbon, gaz, nucléaire : tous font \"juste\" bouillir de l'eau."
+        },
+        {
+          q: "Un moteur électrique, c'est essentiellement…",
+          choix: ["Une grosse pile", "L'inverse d'un générateur : il transforme le courant en mouvement", "Un aimant permanent", "Une résistance chauffante"],
+          bonne: 1,
+          explication: "Générateur : mouvement → courant. Moteur : courant → mouvement. Même physique (courant + aimant), sens inverse. D'où ventilateurs, TGV, voitures électriques."
+        },
+        {
+          q: "\"Courant alternatif à 50 Hz\" veut dire que le courant…",
+          choix: ["Est coupé 50 fois par jour", "Change de sens 50 fois par seconde", "Vaut 50 volts", "Passe dans 50 fils"],
+          bonne: 1,
+          explication: "50 Hz = 50 cycles par seconde. Les électrons font un va-et-vient complet 50 fois chaque seconde, à l'image de l'aimant qui tourne dans la centrale."
         }
       ]
     },
@@ -237,6 +282,20 @@ const DATA = {
           qui: "Gordon Moore",
           resume: "Observation (pas une loi physique) : le nombre de transistors par puce double environ tous les deux ans.",
           pourquoi: "Cette prédiction a tenu un demi-siècle et a guidé toute l'industrie. Elle explique pourquoi ton téléphone est plus puissant que les ordinateurs de la mission Apollo."
+        },
+        {
+          titre: "Le microprocesseur",
+          annee: "1971",
+          qui: "Intel (Federico Faggin, Ted Hoff, Masatoshi Shima)",
+          resume: "L'Intel 4004 : la première fois que toute l'unité de calcul d'un ordinateur tient sur une seule puce de silicium grande comme un ongle.",
+          pourquoi: "L'ordinateur devient miniaturisable et bon marché. Sans le microprocesseur, pas d'ordinateur personnel, pas de smartphone, pas d'objet connecté."
+        },
+        {
+          titre: "La LED (diode électroluminescente)",
+          annee: "1962",
+          qui: "Nick Holonyak",
+          resume: "Une diode qui, au lieu de gaspiller son énergie en chaleur, émet directement de la lumière quand le courant la traverse.",
+          pourquoi: "Bien plus efficace que l'ampoule à filament (presque pas de chaleur perdue), elle a remplacé l'essentiel de l'éclairage et illumine tous nos écrans. La LED bleue, plus tardive, a valu un Nobel en 2014."
         }
       ],
       notions: [
@@ -285,6 +344,15 @@ const DATA = {
             { h:"Protéger le composant fragile", t:"Une LED grille si on lui envoie trop de courant. On place alors une résistance en série pour le brider à une valeur sûre. C'est le tout premier réflexe de l'électronicien : mettre un garde-fou devant le composant délicat." }
           ],
           retenir: "Tout courant qui traverse une résistance produit de la chaleur (effet Joule) : utile dans un chauffage, nuisible dans une puce. Et on protège toujours un composant fragile en limitant le courant avec une résistance."
+        },
+        {
+          titre: "Comment on grave des milliards de transistors",
+          accroche: "Comment fait-on tenir cinquante milliards d'interrupteurs sur un ongle ? En dessinant… avec de la lumière.",
+          blocs: [
+            { t:"On part d'une galette de silicium ultra-pur. On la recouvre d'un vernis sensible à la lumière, puis on projette dessus le plan du circuit — énormément réduit — à travers un masque, comme une diapositive. Là où la lumière frappe, le vernis change ; on peut alors creuser ou déposer de la matière exactement selon le motif." },
+            { t:"On répète l'opération couche par couche, des dizaines de fois, pour bâtir les transistors et tous leurs fils de connexion. Les détails atteignent aujourd'hui quelques nanomètres — soit quelques dizaines d'atomes, plus fin que la longueur d'onde de la lumière visible. C'est cette précision hallucinante qui permet la miniaturisation." }
+          ],
+          retenir: "Une puce est \"imprimée\" par la lumière (photolithographie), couche après couche, sur du silicium. La finesse atteint quelques nanomètres : voilà comment on entasse des dizaines de milliards de transistors sur une puce."
         }
       ],
       quotidien: [
@@ -351,6 +419,30 @@ const DATA = {
           choix: ["Il est encore chaud", "Son condensateur haute tension peut rester chargé et être mortel", "Les ondes continuent", "Rien de dangereux"],
           bonne: 1,
           explication: "Le condensateur haute tension d'un micro-ondes peut conserver une charge mortelle longtemps après le débranchement."
+        },
+        {
+          q: "Combien de transistors compte environ un processeur de smartphone moderne ?",
+          choix: ["Quelques centaines", "Quelques milliers", "Des dizaines de milliards", "Exactement un million"],
+          bonne: 2,
+          explication: "On grave aujourd'hui des dizaines de milliards de transistors sur une puce grande comme un ongle. C'est la miniaturisation décrite par la loi de Moore."
+        },
+        {
+          q: "Une LED, c'est…",
+          choix: ["Une petite ampoule à filament", "Une diode conçue pour émettre de la lumière quand le courant la traverse", "Un transistor", "Une résistance"],
+          bonne: 1,
+          explication: "C'est une diode (sens unique) qui émet de la lumière plutôt que de la chaleur : bien plus efficace qu'un filament, d'où sa généralisation dans l'éclairage et les écrans."
+        },
+        {
+          q: "Un octet (byte) correspond à…",
+          choix: ["1 bit", "8 bits", "1000 bits", "1 transistor"],
+          bonne: 1,
+          explication: "8 bits = 1 octet. Avec ces 8 chiffres binaires, on code par exemple une lettre, ou un nombre de 0 à 255."
+        },
+        {
+          q: "Comment grave-t-on les motifs microscopiques d'une puce ?",
+          choix: ["Au laser, un par un", "En projetant le plan réduit avec de la lumière sur un vernis photosensible, couche par couche", "En les imprimant à l'encre", "En les soudant à la main"],
+          bonne: 1,
+          explication: "C'est la photolithographie : la lumière insole un plan à travers un masque, couche après couche. Les détails atteignent quelques nanomètres."
         }
       ]
     },
@@ -397,6 +489,20 @@ const DATA = {
           qui: "Penzias & Wilson",
           resume: "Un rayonnement micro-onde uniforme dans tout le ciel : la lumière fossile émise ~380 000 ans après le Big Bang, quand l'univers est devenu transparent.",
           pourquoi: "C'est la preuve observationnelle la plus forte du Big Bang. Sa cartographie très fine nous renseigne sur l'âge, la composition et la géométrie de l'univers."
+        },
+        {
+          titre: "La première exoplanète",
+          annee: "1995",
+          qui: "Michel Mayor & Didier Queloz",
+          resume: "Première détection d'une planète en orbite autour d'une autre étoile que le Soleil (51 Pegasi b). On en connaît aujourd'hui des milliers, et on estime qu'il y en a des milliards.",
+          pourquoi: "La question \"sommes-nous seuls ?\" devient une science : on cherche désormais des planètes de la taille de la Terre, dans la zone où l'eau peut être liquide. Prix Nobel 2019."
+        },
+        {
+          titre: "Les ondes gravitationnelles",
+          annee: "2015",
+          qui: "Collaboration LIGO",
+          resume: "Détection directe des ondulations de l'espace-temps prédites par Einstein en 1916, produites ici par la collision de deux trous noirs il y a 1,3 milliard d'années.",
+          pourquoi: "Une toute nouvelle fenêtre sur l'univers : on ne l'observe plus seulement avec de la lumière, mais en \"écoutant\" les vibrations de l'espace lui-même. Prix Nobel 2017."
         }
       ],
       notions: [
@@ -445,6 +551,24 @@ const DATA = {
             { t:"Idée fausse à corriger : un trou noir n'\"aspire\" pas tout autour de lui. À distance suffisante, il attire exactement comme une étoile ordinaire de même masse. Si le Soleil devenait un trou noir, la Terre continuerait tranquillement son orbite — il ferait juste très noir." }
           ],
           retenir: "Un trou noir : une masse si concentrée que, passé l'horizon des événements, même la lumière ne peut plus sortir. Mais de loin, il attire comme n'importe quelle masse — ce n'est pas un aspirateur."
+        },
+        {
+          titre: "Le Big Bang n'est pas une explosion",
+          accroche: "L'image d'une bombe qui projette de la matière dans le vide est fausse. Le Big Bang, c'est l'espace lui-même qui grandit.",
+          blocs: [
+            { t:"Une explosion se produit quelque part, dans un espace qui existe déjà, et envoie des débris vers l'extérieur depuis un centre. Le Big Bang, non : il n'y a ni \"centre\" d'où tout partirait, ni \"dehors\" vers lequel s'étendre. C'est l'espace entier qui s'étire, partout à la fois." },
+            { t:"La bonne image est un cake aux raisins qui gonfle au four. Chaque raisin s'éloigne de tous les autres, non parce qu'il se déplace dans la pâte, mais parce que la pâte entre les raisins grandit. Les galaxies sont les raisins, l'espace est la pâte. Voilà pourquoi, depuis n'importe quelle galaxie, toutes les autres semblent fuir." }
+          ],
+          retenir: "Le Big Bang n'est pas une explosion DANS l'espace, mais une expansion DE l'espace : ni centre, ni bord. Partout, la distance entre galaxies augmente — comme les raisins d'un cake qui gonfle."
+        },
+        {
+          titre: "Pourquoi il y a des saisons",
+          accroche: "Non, ce n'est pas parce que la Terre est plus proche du Soleil en été. La preuve : quand c'est l'été chez nous, c'est l'hiver en Australie.",
+          blocs: [
+            { t:"L'axe de rotation de la Terre est incliné (d'environ 23°). Au fil de l'année, c'est tantôt l'hémisphère nord, tantôt l'hémisphère sud qui est penché vers le Soleil. L'hémisphère penché reçoit les rayons plus à la verticale (donc plus concentrés) et pendant plus d'heures par jour : c'est l'été. L'autre, incliné à l'opposé, est en hiver." },
+            { t:"La distance Terre-Soleil, elle, ne varie presque pas — et la Terre est même un peu plus PROCHE du Soleil en janvier, en plein hiver de l'hémisphère nord. Ce qui fait les saisons, c'est l'inclinaison, jamais la distance." }
+          ],
+          retenir: "Les saisons viennent de l'inclinaison de l'axe terrestre, pas de la distance au Soleil. L'hémisphère penché vers le Soleil reçoit des rayons plus directs et plus longs : c'est l'été. D'où les saisons inversées entre nord et sud."
         }
       ],
       quotidien: [
@@ -460,6 +584,10 @@ const DATA = {
         {
           titre: "Pourquoi le ciel est bleu (et rouge au couchant)",
           texte: "L'atmosphère diffuse plus la lumière bleue que la rouge (diffusion de Rayleigh). Au zénith, le bleu diffusé domine. Au couchant, la lumière traverse plus d'air, le bleu est dispersé en route et il ne reste que le rouge/orange."
+        },
+        {
+          titre: "Les marées, c'est surtout la Lune",
+          texte: "La Lune attire les océans par sa gravité : l'eau se bombe légèrement du côté qui lui fait face (et, par un effet symétrique, du côté opposé). Comme la Terre tourne sous ce bourrelet d'eau, chaque littoral connaît deux marées hautes par jour. Le Soleil s'en mêle un peu : quand Lune et Soleil s'alignent (pleine et nouvelle lune), les marées sont les plus fortes — les grandes marées."
         }
       ],
       exos: [
@@ -510,6 +638,30 @@ const DATA = {
           choix: ["Les satellites sont trop loin", "Leurs horloges se décalent (vitesse + gravité)", "À cause du vent solaire", "Pour économiser la batterie"],
           bonne: 1,
           explication: "Effets combinés de la relativité restreinte et générale : ~38 µs d'avance par jour, soit ~10 km d'erreur si on ne corrige pas."
+        },
+        {
+          q: "La lumière du Soleil met environ combien de temps à nous parvenir ?",
+          choix: ["C'est instantané", "8 minutes", "1 heure", "1 journée"],
+          bonne: 1,
+          explication: "Environ 8 minutes. Tu vois donc toujours le Soleil tel qu'il était il y a 8 minutes — s'il s'éteignait, on ne le saurait qu'après ce délai."
+        },
+        {
+          q: "Le Big Bang, c'est…",
+          choix: ["Une explosion de matière dans le vide", "L'expansion de l'espace lui-même, sans centre ni bord", "L'explosion du Soleil primitif", "Une théorie aujourd'hui abandonnée"],
+          bonne: 1,
+          explication: "Pas une explosion DANS l'espace, mais une dilatation DE l'espace, partout à la fois — comme les raisins d'un cake qui gonfle s'éloignant les uns des autres."
+        },
+        {
+          q: "Pourquoi y a-t-il des saisons ?",
+          choix: ["La Terre est plus près du Soleil en été", "L'axe de la Terre est incliné : un hémisphère est penché vers le Soleil", "Le Soleil brûle plus fort l'été", "La Lune projette son ombre"],
+          bonne: 1,
+          explication: "L'inclinaison de l'axe (~23°) fait que l'hémisphère penché reçoit des rayons plus directs et plus longs. La distance ne joue quasiment pas — d'où les saisons inversées entre nord et sud."
+        },
+        {
+          q: "Que reste-t-il après l'explosion (supernova) d'une étoile très massive ?",
+          choix: ["Rien du tout", "Une étoile à neutrons ou un trou noir", "Une nouvelle planète", "Seulement un nuage de gaz"],
+          bonne: 1,
+          explication: "Le cœur s'effondre en étoile à neutrons (ultra-dense) ou, pour les plus massives, en trou noir. Les couches externes sont soufflées et ensemencent l'espace en éléments lourds."
         }
       ]
     },
@@ -549,6 +701,20 @@ const DATA = {
           qui: "Fritz Haber & Carl Bosch",
           resume: "Fabriquer de l'ammoniac (NH₃) à partir de l'azote de l'air et de l'hydrogène, sous haute pression et température.",
           pourquoi: "Les engrais azotés qui en découlent nourrissent aujourd'hui près de la moitié de l'humanité. Sans doute la réaction industrielle qui a le plus changé la démographie mondiale."
+        },
+        {
+          titre: "La synthèse de l'urée",
+          annee: "1828",
+          qui: "Friedrich Wöhler",
+          resume: "Wöhler fabrique de l'urée — une molécule produite par les êtres vivants — à partir d'un simple composé minéral, dans un tube à essai.",
+          pourquoi: "Avant lui, on croyait que les molécules du vivant exigeaient une mystérieuse \"force vitale\". Wöhler prouve que la chimie du vivant obéit aux mêmes lois que le reste de la matière : c'est l'acte de naissance de la chimie organique."
+        },
+        {
+          titre: "La radioactivité",
+          annee: "1896-1898",
+          qui: "Henri Becquerel, Marie et Pierre Curie",
+          resume: "Certains éléments (uranium, radium) émettent spontanément un rayonnement en se transformant. Marie Curie isole deux nouveaux éléments, le polonium et le radium.",
+          pourquoi: "Révèle que l'atome n'est pas immuable : il peut se désintégrer et libérer de l'énergie. Ouvre la médecine nucléaire et la datation… mais coûtera la vie à Marie Curie, exposée sans protection. Deux prix Nobel."
         }
       ],
       notions: [
@@ -597,6 +763,24 @@ const DATA = {
             { t:"Et le lien avec l'électricité est direct : une pile n'est qu'une oxydoréduction dont on force les électrons à passer par un fil au lieu de sauter directement. La chimie fabrique alors du courant. C'est exactement le \"deux métaux + acide\" du domaine Électricité." }
           ],
           retenir: "Oxydoréduction = transfert d'électrons entre deux espèces. Rouille, feu, respiration : même mécanisme. Et si on canalise ces électrons dans un fil, on obtient une pile — la chimie devient électricité."
+        },
+        {
+          titre: "Physique ou chimique ? La bonne question à se poser",
+          accroche: "L'eau qui gèle et le bois qui brûle changent tous les deux d'aspect. Pourtant un seul est une vraie transformation chimique.",
+          blocs: [
+            { h:"Changement d'état = physique", t:"Quand l'eau fond, bout ou s'évapore, ses molécules restent des H₂O : elles se rapprochent ou s'écartent, c'est tout. Aucune nouvelle substance n'est créée, et c'est réversible (la vapeur redevient eau, l'eau regèle). C'est un changement physique." },
+            { h:"Réaction = chimique", t:"Quand le bois brûle ou que le fer rouille, les molécules de départ sont cassées et recombinées en d'AUTRES molécules (gaz, cendres, oxyde). De nouvelles substances apparaissent, et on ne peut pas revenir en arrière facilement. Là, c'est chimique. Le test à retenir : y a-t-il de NOUVELLES molécules à la fin ?" }
+          ],
+          retenir: "Changement d'état (fondre, bouillir) = physique : mêmes molécules, réversible. Réaction chimique (brûler, rouiller) = de nouvelles molécules se forment, difficilement réversible. La question clé : nouvelles molécules, oui ou non ?"
+        },
+        {
+          titre: "Le catalyseur : accélérer sans se consumer",
+          accroche: "Certaines réactions sont possibles mais désespérément lentes. Un catalyseur les débloque — et ressort intact, prêt à recommencer.",
+          blocs: [
+            { t:"Un catalyseur est une substance qui accélère énormément une réaction en lui offrant un chemin plus facile, sans être consommée : on la retrouve intacte à la fin. Le pot catalytique d'une voiture, par exemple, transforme à la volée des gaz d'échappement toxiques en gaz moins nocifs." },
+            { t:"Le vivant en est bourré : ce sont les enzymes. Sans elles, digérer un repas prendrait des années au lieu de quelques heures. Chaque enzyme accélère une réaction bien précise, des millions de fois — c'est ce qui rend la vie chimiquement possible à la douce température du corps." }
+          ],
+          retenir: "Un catalyseur accélère une réaction sans être consommé (donc réutilisable). Dans le vivant, ce sont les enzymes : elles rendent possibles à 37 °C des réactions qui, autrement, prendraient des années."
         }
       ],
       quotidien: [
@@ -664,6 +848,30 @@ const DATA = {
           choix: ["Il sent très mauvais", "Il est inodore et prend la place de l'oxygène dans le sang", "Il est explosif au moindre contact", "Il ronge les murs"],
           bonne: 1,
           explication: "Inodore et incolore, il se fixe sur l'hémoglobine à la place de l'O₂ et asphyxie sans signe avant-coureur."
+        },
+        {
+          q: "L'eau qui bout et se change en vapeur, c'est…",
+          choix: ["Une réaction chimique", "Un changement d'état (physique) : les molécules restent des H₂O", "Une combustion", "Une oxydation"],
+          bonne: 1,
+          explication: "Aucune nouvelle molécule n'est créée : l'eau reste de l'eau. C'est physique et réversible, contrairement à une combustion qui, elle, forme de nouvelles substances."
+        },
+        {
+          q: "Qu'est-ce qu'un catalyseur ?",
+          choix: ["Une substance qui accélère une réaction sans être consommée", "Un explosif", "Un acide très fort", "Un gaz rare"],
+          bonne: 0,
+          explication: "Il facilite la réaction et ressort intact, donc réutilisable. Les enzymes de ton corps sont des catalyseurs qui rendent la digestion possible à 37 °C."
+        },
+        {
+          q: "Pourquoi saler les routes fait-il fondre le verglas ?",
+          choix: ["Le sel dégage de la chaleur", "Le sel abaisse la température à laquelle l'eau gèle", "Le sel brûle la glace", "Le sel absorbe la glace"],
+          bonne: 1,
+          explication: "De l'eau salée reste liquide en dessous de 0 °C. En salant, on empêche l'eau de geler aux températures proches de zéro."
+        },
+        {
+          q: "Combien d'éléments compte environ le tableau périodique ?",
+          choix: ["Une dizaine", "Environ 118", "Plusieurs milliers", "Exactement 50"],
+          bonne: 1,
+          explication: "Environ 118 éléments connus, dont ~90 présents naturellement. Toute la matière de l'univers se combine à partir de ces \"lettres\"."
         }
       ]
     },
@@ -703,6 +911,20 @@ const DATA = {
           qui: "Albert Einstein",
           resume: "Masse et énergie sont deux formes d'une même chose. Une petite masse équivaut à une énorme énergie, le facteur étant le carré de la vitesse de la lumière.",
           pourquoi: "Explique d'où vient l'énergie du Soleil (fusion) et des centrales nucléaires (fission). La physique la plus célèbre du monde."
+        },
+        {
+          titre: "L'antimatière",
+          annee: "1928 / 1932",
+          qui: "Paul Dirac (prédiction), Carl Anderson (détection)",
+          resume: "Dirac prédit par le calcul un \"jumeau\" de l'électron, de charge opposée. Quatre ans plus tard, on le détecte : le positron. À chaque particule correspond une antiparticule.",
+          pourquoi: "Quand matière et antimatière se rencontrent, elles s'annihilent en pure énergie (E = mc²). Ce n'est pas de la science-fiction : l'imagerie médicale TEP (le PET-scan) exploite ce phénomène tous les jours."
+        },
+        {
+          titre: "Le boson de Higgs",
+          annee: "2012",
+          qui: "CERN (théorisé par Higgs, Englert et al. en 1964)",
+          resume: "Détection, dans le grand collisionneur LHC, de la particule associée au champ de Higgs — le champ qui donne leur masse aux autres particules.",
+          pourquoi: "Dernière pièce manquante du \"modèle standard\", notre meilleure théorie des particules. Il répond à une question fondamentale : pourquoi les particules ont-elles une masse plutôt que rien ? Prix Nobel 2013."
         }
       ],
       notions: [
@@ -750,6 +972,24 @@ const DATA = {
             { t:"On l'a vérifié en embarquant des horloges atomiques ultra-précises dans des avions : de retour, elles affichaient un décalage exactement conforme aux prédictions. Et ton GPS corrige ce décalage en permanence, sinon il te situerait à des kilomètres." }
           ],
           retenir: "Le temps est élastique : il ralentit avec la vitesse et avec la gravité. Imperceptible au quotidien, mesuré par des horloges atomiques, et corrigé en direct par ton GPS."
+        },
+        {
+          titre: "Rien ne va plus vite que la lumière",
+          accroche: "300 000 km/s, ce n'est pas juste \"très rapide\" : c'est la limite de vitesse de l'univers, et rien de matériel ne peut l'atteindre.",
+          blocs: [
+            { t:"Plus on pousse un objet qui a une masse, plus il va vite — mais plus il devient difficile de l'accélérer encore. En s'approchant de la vitesse de la lumière, il faudrait une énergie tendant vers l'infini pour aller plus vite : c'est impossible. Seuls les objets sans masse, comme la lumière elle-même, atteignent cette vitesse." },
+            { t:"Le plus étrange : cette vitesse est la même pour tout le monde, quelle que soit sa propre vitesse. Que tu fonces vers un rayon lumineux ou que tu le fuies, tu le mesures toujours à 300 000 km/s. C'est de cette bizarrerie que découle toute la relativité — le temps qui ralentit, les longueurs qui se contractent." }
+          ],
+          retenir: "La vitesse de la lumière (~300 000 km/s) est la limite absolue de l'univers : accélérer une masse jusque-là demanderait une énergie infinie. Seul ce qui n'a pas de masse l'atteint."
+        },
+        {
+          titre: "La superposition et le chat de Schrödinger",
+          accroche: "Le fameux chat \"mort et vivant à la fois\" n'est pas une devinette : c'est une image pour illustrer une propriété bien réelle du monde quantique.",
+          blocs: [
+            { t:"À l'échelle des particules, tant qu'on ne l'observe pas, un objet quantique peut être dans plusieurs états à la fois — par exemple à deux endroits en même temps. C'est la superposition. Ce n'est pas qu'on ignore où il est : il est réellement dans une combinaison des deux, jusqu'à ce qu'une mesure le \"fixe\" sur un état." },
+            { t:"Schrödinger a poussé l'idée à l'absurde : en liant le sort d'un chat à une particule superposée, le chat serait \"mort ET vivant\" tant qu'on n'ouvre pas la boîte. Son but était de souligner combien c'est déroutant transposé à notre échelle. Mais pour les particules, la superposition est bien réelle — et c'est précisément elle qu'exploitent les ordinateurs quantiques." }
+          ],
+          retenir: "Superposition = une particule non observée est réellement dans plusieurs états à la fois, jusqu'à la mesure. Le chat de Schrödinger illustre l'absurdité de transposer ça à notre échelle. C'est la base des ordinateurs quantiques."
         }
       ],
       quotidien: [
@@ -815,6 +1055,30 @@ const DATA = {
           choix: ["Le Wi-Fi", "Les ondes radio", "Les rayons X", "Les micro-ondes"],
           bonne: 2,
           explication: "Les rayons X et gamma sont ionisants. Wi-Fi, radio et micro-ondes sont non-ionisants : ils ne font que chauffer."
+        },
+        {
+          q: "Pourquoi ne peut-on pas accélérer une fusée jusqu'à dépasser la vitesse de la lumière ?",
+          choix: ["Le carburant gèlerait", "Plus on approche de cette vitesse, plus l'énergie nécessaire tend vers l'infini", "La lumière la repousserait", "On le peut, en réalité"],
+          bonne: 1,
+          explication: "Amener une masse à la vitesse de la lumière demanderait une énergie infinie. Seuls les objets sans masse (la lumière) l'atteignent : c'est la limite de vitesse de l'univers."
+        },
+        {
+          q: "La \"superposition\" quantique signifie qu'une particule non observée…",
+          choix: ["N'existe pas vraiment", "Peut être réellement dans plusieurs états à la fois, jusqu'à la mesure", "Va plus vite que la lumière", "Est toujours parfaitement immobile"],
+          bonne: 1,
+          explication: "Avant mesure, elle est dans une combinaison de plusieurs états (ex : deux endroits). Le chat de Schrödinger illustre l'étrangeté de l'idée. C'est le principe des ordinateurs quantiques."
+        },
+        {
+          q: "L'antimatière, ça existe vraiment ?",
+          choix: ["Non, c'est de la science-fiction", "Oui : chaque particule a une antiparticule, utilisée par ex. dans les PET-scans", "Seulement au cœur des étoiles", "Uniquement sur le papier"],
+          bonne: 1,
+          explication: "Prédite par Dirac (1928), détectée dès 1932. Particule et antiparticule s'annihilent en énergie. L'imagerie médicale TEP (PET-scan) l'exploite au quotidien."
+        },
+        {
+          q: "Un morceau de métal chauffé devient rouge, puis blanc. Pourquoi ?",
+          choix: ["Il rouille", "Tout corps chaud émet de la lumière, et la couleur émise dépend de la température", "Il reflète les flammes", "C'est une réaction chimique"],
+          bonne: 1,
+          explication: "C'est le rayonnement thermique : plus c'est chaud, plus la lumière émise se décale vers le blanc/bleu. Expliquer ce phénomène a mené Planck à fonder la physique quantique en 1900."
         }
       ]
     },
@@ -861,6 +1125,20 @@ const DATA = {
           qui: "Alexander Fleming",
           resume: "Une moisissure contaminant une culture tue les bactéries autour d'elle. Fleming en tire le premier antibiotique.",
           pourquoi: "Des infections jusque-là mortelles deviennent soignables. Un des plus grands sauts d'espérance de vie de l'histoire médicale."
+        },
+        {
+          titre: "La théorie des germes",
+          annee: "années 1860",
+          qui: "Louis Pasteur",
+          resume: "Pasteur montre que des micro-organismes invisibles causent les fermentations et de nombreuses maladies — et qu'on peut les neutraliser par la chaleur (la pasteurisation).",
+          pourquoi: "Fin de la croyance en la \"génération spontanée\". Naissance de l'hygiène, de l'asepsie en chirurgie et de la microbiologie. Se laver les mains et stériliser les instruments a sauvé des millions de vies."
+        },
+        {
+          titre: "CRISPR, les ciseaux génétiques",
+          annee: "2012",
+          qui: "Jennifer Doudna & Emmanuelle Charpentier",
+          resume: "Un outil emprunté au système de défense des bactéries, qui permet de couper et modifier l'ADN à un endroit précis — simplement, vite et à faible coût.",
+          pourquoi: "Une révolution pour la biologie et la médecine : on commence à corriger des maladies héréditaires en réécrivant directement le gène fautif. Prix Nobel de chimie 2020."
         }
       ],
       notions: [
@@ -909,6 +1187,24 @@ const DATA = {
             { t:"En prendre \"pour rien\" ne guérit pas, et pire : ça tue tes bonnes bactéries et entraîne les mauvaises à devenir résistantes. D'où deux règles d'or : ne pas exiger d'antibiotique pour une infection virale, et toujours terminer un traitement prescrit pour ne pas laisser survivre les bactéries les plus coriaces." }
           ],
           retenir: "Antibiotique = contre les bactéries seulement. Contre un virus (grippe, rhume), il est inutile et même nuisible (résistances). On ne l'utilise que sur prescription, et on va au bout du traitement."
+        },
+        {
+          titre: "La photosynthèse : capter la lumière pour fabriquer du vivant",
+          accroche: "À la base de presque toute la nourriture et tout l'oxygène de la planète, il y a des êtres qui \"mangent\" de la lumière.",
+          blocs: [
+            { t:"Les plantes, les algues et certaines bactéries captent l'énergie de la lumière du Soleil et s'en servent pour assembler, à partir de CO₂ (puisé dans l'air) et d'eau, des molécules de sucre riches en énergie. Elles fabriquent leur propre matière à partir de presque rien — c'est l'inverse d'un animal, qui doit manger d'autres organismes." },
+            { t:"Deux conséquences immenses. D'abord, elles rejettent de l'oxygène : celui que tu respires vient de là. Ensuite, elles sont le premier maillon de presque toutes les chaînes alimentaires. Quand tu manges, tu consommes, en bout de chaîne, de l'énergie solaire captée par des plantes." }
+          ],
+          retenir: "Photosynthèse : lumière + CO₂ + eau → sucre + oxygène. C'est la porte d'entrée de l'énergie du Soleil dans le vivant. Notre nourriture ET l'oxygène qu'on respire en découlent."
+        },
+        {
+          titre: "Qu'est-ce qu'un virus ?",
+          accroche: "Ni tout à fait vivant, ni tout à fait inerte : le virus est un cas-limite fascinant — et comprendre ce qu'il est explique pourquoi on le soigne autrement.",
+          blocs: [
+            { t:"Un virus, c'est un simple fragment d'information génétique (ADN ou ARN) emballé dans une coque de protéines. Contrairement à une cellule, il n'a aucune machinerie à lui : il ne se nourrit pas, ne produit pas d'énergie, et surtout ne peut pas se reproduire seul. Isolé, c'est presque un objet inerte." },
+            { t:"Pour se multiplier, il doit entrer dans une de tes cellules et détourner SA machinerie pour se faire recopier en masse. C'est exactement pour ça qu'un antibiotique — qui s'attaque à la machinerie propre des bactéries — ne peut rien contre lui : le virus n'a pas de machinerie à saboter, il emprunte la tienne." }
+          ],
+          retenir: "Un virus = un bout d'information dans une coque, incapable de se reproduire seul ; il détourne les cellules qu'il infecte. D'où l'inutilité des antibiotiques contre lui, et l'intérêt des vaccins qui préparent la défense."
         }
       ],
       quotidien: [
@@ -975,6 +1271,30 @@ const DATA = {
           choix: ["Une sphère, pour flotter", "Une double hélice à brins complémentaires, ce qui explique comment il se copie", "Une chaîne unique, plus simple", "Un cristal cubique, très solide"],
           bonne: 1,
           explication: "Les deux brins complémentaires permettent, en se séparant, de servir chacun de modèle : c'est le mécanisme même de la copie de l'information génétique."
+        },
+        {
+          q: "Où l'ADN est-il rangé dans une de tes cellules ?",
+          choix: ["Dans la membrane", "Dans le noyau", "Dans le sang", "Il flotte partout autour de la cellule"],
+          bonne: 1,
+          explication: "Chez les organismes comme nous, l'ADN est protégé dans le noyau. Les bactéries, plus simples, n'ont pas de noyau : leur ADN flotte librement."
+        },
+        {
+          q: "Qu'est-ce qu'un virus, fondamentalement ?",
+          choix: ["Une petite bactérie", "Un fragment d'information dans une coque, incapable de se reproduire seul", "Un poison chimique", "Un champignon microscopique"],
+          bonne: 1,
+          explication: "Sans machinerie propre, il détourne tes cellules pour se copier. D'où l'inutilité des antibiotiques, qui ciblent la machinerie des bactéries."
+        },
+        {
+          q: "La photosynthèse produit notamment…",
+          choix: ["Du CO₂", "De l'oxygène et du sucre, à partir de lumière, d'eau et de CO₂", "De l'azote pur", "De l'électricité"],
+          bonne: 1,
+          explication: "Les plantes captent la lumière pour fabriquer du sucre (leur énergie) et rejettent l'oxygène qu'on respire. C'est l'entrée de l'énergie solaire dans le vivant."
+        },
+        {
+          q: "Toutes tes cellules ont le même ADN. Pourquoi un neurone diffère-t-il d'une cellule de peau ?",
+          choix: ["Elles ont un ADN différent", "Elles n'activent pas les mêmes gènes", "L'une n'a pas d'ADN", "C'est totalement aléatoire"],
+          bonne: 1,
+          explication: "Le plan complet est dans chaque cellule, mais chacune ne \"lit\" que les chapitres (gènes) utiles à sa fonction. C'est l'expression génique."
         }
       ]
     }
