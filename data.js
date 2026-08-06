@@ -925,6 +925,20 @@ const DATA = {
           qui: "CERN (théorisé par Higgs, Englert et al. en 1964)",
           resume: "Détection, dans le grand collisionneur LHC, de la particule associée au champ de Higgs — le champ qui donne leur masse aux autres particules.",
           pourquoi: "Dernière pièce manquante du \"modèle standard\", notre meilleure théorie des particules. Il répond à une question fondamentale : pourquoi les particules ont-elles une masse plutôt que rien ? Prix Nobel 2013."
+        },
+        {
+          titre: "L'atome de Bohr",
+          annee: "1913",
+          qui: "Niels Bohr",
+          resume: "Bohr propose que les électrons ne tournent autour du noyau que sur certaines orbites permises, à énergies fixes. En sautant de l'une à l'autre, ils émettent ou absorbent un grain de lumière bien précis.",
+          pourquoi: "Première explication des couleurs propres à chaque atome (ses \"raies\") et de la structure du tableau périodique. Le pont décisif entre l'atome et la théorie quantique naissante."
+        },
+        {
+          titre: "L'intrication confirmée",
+          annee: "1982",
+          qui: "Alain Aspect (d'après Einstein-Podolsky-Rosen 1935 et John Bell 1964)",
+          resume: "Deux particules \"intriquées\" restent corrélées même séparées par une grande distance : mesurer l'une fixe instantanément l'état de l'autre. Aspect le prouve par l'expérience.",
+          pourquoi: "Einstein jugeait cette \"action fantôme à distance\" impossible. L'expérience lui donne tort : l'intrication est bien réelle. C'est la base des ordinateurs quantiques et de la cryptographie quantique. Prix Nobel 2022."
         }
       ],
       notions: [
@@ -990,6 +1004,51 @@ const DATA = {
             { t:"Schrödinger a poussé l'idée à l'absurde : en liant le sort d'un chat à une particule superposée, le chat serait \"mort ET vivant\" tant qu'on n'ouvre pas la boîte. Son but était de souligner combien c'est déroutant transposé à notre échelle. Mais pour les particules, la superposition est bien réelle — et c'est précisément elle qu'exploitent les ordinateurs quantiques." }
           ],
           retenir: "Superposition = une particule non observée est réellement dans plusieurs états à la fois, jusqu'à la mesure. Le chat de Schrödinger illustre l'absurdité de transposer ça à notre échelle. C'est la base des ordinateurs quantiques."
+        },
+        {
+          titre: "L'intrication : le lien fantôme entre deux particules",
+          accroche: "Deux particules peuvent rester si liées que ce qui arrive à l'une se reflète instantanément sur l'autre, même à l'autre bout de l'univers. Einstein trouvait ça impossible. Il avait tort.",
+          blocs: [
+            { t:"Quand deux particules sont \"intriquées\", elles ne forment plus qu'un seul système : leurs propriétés sont liées. Mesure l'une, et tu connais aussitôt l'état de l'autre, quelle que soit la distance. Imagine deux pièces magiques qui, lancées aux deux bouts du monde, tomberaient toujours sur des faces coordonnées." },
+            { t:"Le piège à éviter : cela ne permet PAS d'envoyer un message plus vite que la lumière, car le résultat de chaque mesure reste, pris isolément, totalement aléatoire. Mais la corrélation, elle, est bien réelle et plus forte que tout ce que la physique classique autorise. C'est l'une des ressources clés des ordinateurs quantiques." }
+          ],
+          retenir: "L'intrication lie deux particules en un seul système : mesurer l'une fixe instantanément l'état de l'autre, à toute distance. Ça ne transmet pas d'information plus vite que la lumière, mais c'est bien réel — et exploitable en informatique quantique."
+        },
+        {
+          titre: "L'effet tunnel : traverser un mur infranchissable",
+          accroche: "En physique classique, sans l'élan pour passer une colline, tu redescends. Dans le monde quantique, une particule peut parfois se retrouver de l'autre côté sans jamais passer par-dessus.",
+          blocs: [
+            { t:"Une particule quantique est \"floue\" : elle est décrite par une onde de probabilité qui s'étale un peu partout. Face à une barrière d'énergie qu'elle ne devrait pas pouvoir franchir, il reste une petite chance qu'elle apparaisse de l'autre côté — comme si elle avait creusé un tunnel. Plus la barrière est fine, plus c'est probable." },
+            { t:"Ce n'est pas une curiosité de laboratoire : c'est grâce à l'effet tunnel que le Soleil brille (des noyaux fusionnent alors qu'ils devraient se repousser), que certains atomes sont radioactifs, et que fonctionnent la mémoire flash de ta clé USB et le microscope qui \"voit\" les atomes un par un." }
+          ],
+          retenir: "Effet tunnel : une particule peut franchir une barrière d'énergie qu'elle ne \"devrait\" pas pouvoir passer, parce qu'elle est étalée en probabilité. Sans lui, le Soleil ne brillerait pas et ta clé USB n'existerait pas."
+        },
+        {
+          titre: "Le spin et le principe de Pauli : pourquoi la matière est solide",
+          accroche: "Pourquoi ta main ne traverse-t-elle pas la table, alors qu'un atome est surtout du vide ? La réponse tient dans une règle quantique, pas dans la \"solidité\" de la matière.",
+          blocs: [
+            { t:"Les électrons possèdent une propriété quantique appelée spin, une sorte de \"sens de rotation\" sans équivalent dans notre monde. Le principe d'exclusion de Pauli impose que deux électrons ne peuvent jamais occuper exactement le même état au même endroit." },
+            { t:"Conséquence : quand tu presses deux objets l'un contre l'autre, leurs électrons refusent de se superposer et se repoussent violemment. C'est cette répulsion — et non un quelconque \"plein\" de la matière — qui empêche ta main de traverser la table. La même règle explique pourquoi les électrons se rangent par couches, donnant au tableau périodique sa forme en colonnes." }
+          ],
+          retenir: "Le principe de Pauli interdit à deux électrons d'être dans le même état : ils s'évitent. C'est ce qui rend la matière \"solide\" (les objets ne se traversent pas) et ce qui structure le tableau périodique."
+        },
+        {
+          titre: "Pourquoi on ne voit jamais le quantique (la décohérence)",
+          accroche: "Si une particule peut être à deux endroits à la fois, pourquoi jamais un ballon de foot ? La réponse fait le pont entre le monde quantique et le nôtre.",
+          blocs: [
+            { t:"Les comportements quantiques (superposition, intrication) sont extrêmement fragiles. Dès qu'un objet interagit avec son environnement — de l'air, de la lumière, de la chaleur — ces états délicats se \"brouillent\" quasi instantanément et se réduisent à un seul état bien défini. On appelle ça la décohérence." },
+            { t:"Un électron isolé reste quantique. Un objet de notre taille, fait de milliards de milliards de particules sans cesse bousculées, perd ses propriétés quantiques en un temps infime : il se comporte \"classiquement\". Voilà pourquoi un ordinateur quantique doit isoler et refroidir ses qubits près du zéro absolu — pour retarder cette décohérence." }
+          ],
+          retenir: "La décohérence : au contact de l'environnement, les états quantiques se brouillent instantanément et deviennent classiques. C'est pourquoi le quantique reste invisible à notre échelle, et pourquoi les ordinateurs quantiques doivent isoler leurs qubits du monde."
+        },
+        {
+          titre: "L'ordinateur quantique : ce que c'est (et ce que ce n'est pas)",
+          accroche: "Ce n'est pas un ordinateur simplement \"plus rapide\". Il calcule d'une façon fondamentalement différente — et seulement pour certains problèmes.",
+          blocs: [
+            { t:"Un ordinateur classique manipule des bits, chacun valant 0 OU 1. Un ordinateur quantique manipule des \"qubits\" qui, par superposition, explorent 0 ET 1 à la fois, et qui, par intrication, se coordonnent. En orchestrant finement ces états, il peut évaluer un nombre colossal de combinaisons simultanément." },
+            { t:"Ce n'est pas une baguette magique : il n'accélère qu'une poignée de problèmes très particuliers — factoriser de très grands nombres (ce qui menacerait le chiffrement actuel), ou simuler des molécules pour la chimie et les médicaments. Pour envoyer un mail, naviguer ou jouer, un ordinateur classique reste bien meilleur." }
+          ],
+          retenir: "Un ordinateur quantique exploite superposition et intrication pour explorer massivement de possibilités en parallèle. Redoutable sur quelques problèmes précis (chiffrement, chimie), inutile pour le quotidien, et si fragile qu'il doit être isolé du monde."
         }
       ],
       quotidien: [
@@ -1079,6 +1138,42 @@ const DATA = {
           choix: ["Il rouille", "Tout corps chaud émet de la lumière, et la couleur émise dépend de la température", "Il reflète les flammes", "C'est une réaction chimique"],
           bonne: 1,
           explication: "C'est le rayonnement thermique : plus c'est chaud, plus la lumière émise se décale vers le blanc/bleu. Expliquer ce phénomène a mené Planck à fonder la physique quantique en 1900."
+        },
+        {
+          q: "Deux particules intriquées sont séparées de plusieurs kilomètres. Mesurer l'une…",
+          choix: ["N'a aucun effet sur l'autre", "Fixe instantanément l'état de l'autre, sans pour autant transmettre de message", "Détruit l'autre", "Envoie un message plus vite que la lumière"],
+          bonne: 1,
+          explication: "La corrélation est instantanée et réelle, mais comme chaque résultat pris seul est aléatoire, on ne peut pas s'en servir pour transmettre une information plus vite que la lumière."
+        },
+        {
+          q: "Grâce à quel phénomène le Soleil peut-il fusionner l'hydrogène malgré la répulsion des noyaux ?",
+          choix: ["La décohérence", "L'effet tunnel", "L'intrication", "Le spin"],
+          bonne: 1,
+          explication: "L'effet tunnel donne aux noyaux une petite chance de franchir la barrière de répulsion. Sans lui, le Soleil ne brillerait pas — et la mémoire flash de ta clé USB n'existerait pas."
+        },
+        {
+          q: "Pourquoi ta main ne traverse-t-elle pas la table, alors que les atomes sont surtout du vide ?",
+          choix: ["Les atomes sont en fait pleins", "Le principe de Pauli fait que les électrons refusent de se superposer et se repoussent", "À cause de la gravité", "À cause du magnétisme"],
+          bonne: 1,
+          explication: "Deux électrons ne peuvent pas occuper le même état (Pauli) : pressés l'un contre l'autre, ils se repoussent. C'est cette répulsion qui rend la matière \"solide\"."
+        },
+        {
+          q: "Pourquoi ne voit-on jamais un objet de notre taille \"à deux endroits à la fois\" ?",
+          choix: ["C'est interdit par une loi", "La décohérence : au contact de l'environnement, les états quantiques se brouillent instantanément", "Les gros objets n'ont pas d'atomes", "On n'observe pas assez finement"],
+          bonne: 1,
+          explication: "Un objet macroscopique interagit sans cesse avec son environnement ; ses états quantiques se réduisent instantanément à un seul. C'est la décohérence."
+        },
+        {
+          q: "À quoi sert surtout un ordinateur quantique ?",
+          choix: ["À tout faire plus vite", "À quelques problèmes précis (chiffrement, simulation de molécules)", "À jouer aux jeux vidéo", "À remplacer entièrement les ordinateurs classiques"],
+          bonne: 1,
+          explication: "Il n'accélère qu'une poignée de problèmes exploitant superposition et intrication. Pour le quotidien, un ordinateur classique reste bien meilleur."
+        },
+        {
+          q: "Pourquoi chaque type d'atome émet-il des couleurs bien précises (ses \"raies\") ?",
+          choix: ["À cause de sa température", "Ses électrons ne peuvent occuper que certains niveaux d'énergie et émettent en sautant de l'un à l'autre", "C'est un reflet du Soleil", "C'est le fruit du hasard"],
+          bonne: 1,
+          explication: "Modèle de Bohr : les électrons sautent entre des niveaux d'énergie fixes, émettant à chaque saut un grain de lumière d'une couleur précise. C'est la signature de l'atome."
         }
       ]
     },
@@ -1295,6 +1390,791 @@ const DATA = {
           choix: ["Elles ont un ADN différent", "Elles n'activent pas les mêmes gènes", "L'une n'a pas d'ADN", "C'est totalement aléatoire"],
           bonne: 1,
           explication: "Le plan complet est dans chaque cellule, mais chacune ne \"lit\" que les chapitres (gènes) utiles à sa fonction. C'est l'expression génique."
+        }
+      ]
+    },
+
+    /* ============================ LA TERRE ============================ */
+    {
+      id: "terre",
+      nom: "La Terre",
+      emoji: "🌍",
+      accent: "#6ec98a",
+      tagline: "La planète sous tes pieds, en mouvement.",
+      decouvertes: [
+        {
+          titre: "L'âge de la Terre",
+          annee: "1956",
+          qui: "Clair Patterson",
+          resume: "En datant des météorites par la désintégration radioactive du plomb, Patterson établit l'âge de la Terre : 4,54 milliards d'années.",
+          pourquoi: "Donne l'échelle de temps vertigineuse dont la géologie et l'évolution ont besoin. Sans temps long, ni montagnes érodées ni espèces transformées ne s'expliquent."
+        },
+        {
+          titre: "La dérive des continents",
+          annee: "1912",
+          qui: "Alfred Wegener",
+          resume: "Wegener remarque que les continents s'emboîtent comme un puzzle et propose qu'ils dérivent. Moqué de son vivant, il est confirmé dans les années 1960 par la tectonique des plaques.",
+          pourquoi: "Explique d'un coup la forme des continents, les chaînes de montagnes, et pourquoi séismes et volcans se concentrent aux mêmes endroits. Une des grandes unifications de la science."
+        },
+        {
+          titre: "L'intérieur de la Terre par les séismes",
+          annee: "1909-1936",
+          qui: "Andrija Mohorovičić, Inge Lehmann",
+          resume: "En étudiant comment les ondes des séismes se courbent et rebondissent en profondeur, on cartographie les couches internes — jusqu'à découvrir que le noyau a une graine solide (Lehmann).",
+          pourquoi: "On connaît l'intérieur de la Terre sans jamais y descendre : les séismes sont une échographie géante de la planète."
+        },
+        {
+          titre: "L'effet de serre calculé",
+          annee: "1896",
+          qui: "Svante Arrhenius",
+          resume: "Arrhenius calcule, à la main, de combien la température monterait si l'on doublait le CO₂ de l'atmosphère. Son ordre de grandeur reste étonnamment juste.",
+          pourquoi: "Acte de naissance de la science du climat : le lien entre CO₂ et température est établi plus d'un siècle avant les débats actuels."
+        },
+        {
+          titre: "Le champ magnétique et ses inversions",
+          annee: "1906",
+          qui: "Bernard Brunhes (puis la géomagnétique moderne)",
+          resume: "On découvre que certaines roches anciennes sont aimantées à l'envers : le champ magnétique terrestre s'est inversé de nombreuses fois au cours de l'histoire.",
+          pourquoi: "Ces bandes aimantées de part et d'autre des dorsales océaniques ont fourni la preuve décisive que les fonds marins s'écartent — confirmant la tectonique des plaques."
+        }
+      ],
+      notions: [
+        {
+          titre: "Un oignon de roche : la structure de la Terre",
+          accroche: "Sous tes pieds, la Terre est faite de couches, comme un oignon — et on les connaît grâce aux tremblements de terre.",
+          blocs: [
+            { h:"Trois grandes couches", t:"La croûte, mince pellicule solide sur laquelle on vit (quelques dizaines de km). Le manteau, épais, en roche brûlante qui flue très lentement comme une pâte. Le noyau, en métal (fer-nickel) : liquide à l'extérieur, solide au centre malgré 5000 °C, à cause de l'énorme pression." },
+            { h:"Comment on le sait", t:"On n'a jamais foré à plus de ~12 km. Mais les ondes d'un séisme traversent toute la planète en changeant de vitesse et de direction selon la matière rencontrée. En analysant leur trajet, on \"radiographie\" l'intérieur — c'est ainsi qu'on a déduit chaque couche." }
+          ],
+          retenir: "La Terre est faite de couches : croûte (fine), manteau (roche qui flue lentement), noyau (métal, liquide puis solide). On les connaît grâce aux ondes sismiques qui la traversent, comme une échographie."
+        },
+        {
+          titre: "La tectonique des plaques : un puzzle qui bouge",
+          accroche: "La surface de la Terre n'est pas d'un seul tenant : c'est un puzzle de grandes plaques qui glissent lentement, portées par le manteau.",
+          blocs: [
+            { t:"La croûte est découpée en une douzaine de plaques qui se déplacent de quelques centimètres par an — la vitesse de pousse de tes ongles. Elles flottent sur le manteau chaud, animé de lents mouvements de convection (la roche chaude monte, la froide redescend)." },
+            { t:"Tout se joue à leurs frontières. Quand deux plaques s'écartent (dorsales océaniques), de la roche neuve remonte. Quand elles se percutent, l'une plonge sous l'autre (subduction) ou elles se soulèvent en montagnes — l'Himalaya grandit encore parce que l'Inde pousse contre l'Asie. Quand elles frottent, elles accrochent puis lâchent d'un coup : un séisme." }
+          ],
+          retenir: "La surface terrestre est un puzzle de plaques qui glissent de quelques cm/an sur le manteau. À leurs frontières se forment montagnes, volcans et séismes selon qu'elles s'écartent, se percutent ou frottent."
+        },
+        {
+          titre: "Volcans et séismes : pourquoi là, et pas ailleurs",
+          accroche: "Regarde une carte des volcans et des séismes : ils dessinent des lignes. Ces lignes sont les coutures des plaques.",
+          blocs: [
+            { t:"Un séisme, c'est la libération brutale de tensions accumulées : deux plaques restent bloquées par le frottement, la contrainte monte, puis d'un coup ça rompt et le sol tremble. La fameuse \"ceinture de feu\" autour du Pacifique aligne la grande majorité des séismes et volcans du globe." },
+            { t:"Un volcan, c'est une remontée de roche fondue (magma) vers la surface, surtout là où une plaque plonge sous une autre et fond en profondeur. Quelques volcans font exception, au milieu des plaques (\"points chauds\", comme Hawaï), au-dessus d'un panache de chaleur venu du manteau profond." }
+          ],
+          retenir: "Séismes et volcans se concentrent aux frontières de plaques : les séismes viennent de la rupture brutale entre plaques bloquées, les volcans de la remontée de magma. La \"ceinture de feu\" du Pacifique en est la vitrine."
+        },
+        {
+          titre: "L'effet de serre : pourquoi la Terre est habitable",
+          accroche: "Sans effet de serre, la Terre serait un caillou gelé à -18 °C. Le problème n'est pas l'effet de serre : c'est de l'augmenter trop vite.",
+          blocs: [
+            { t:"Le Soleil chauffe le sol, qui renvoie de la chaleur vers l'espace. Certains gaz de l'atmosphère (vapeur d'eau, CO₂, méthane) interceptent une partie de cette chaleur sortante et la renvoient vers le sol, comme une couverture. Grâce à eux, la température moyenne est d'agréables +15 °C au lieu de -18 °C." },
+            { t:"En brûlant charbon, pétrole et gaz, on ajoute du CO₂ : la couverture s'épaissit, et la Terre retient un peu plus de chaleur. L'effet est lent mais cumulatif. Tout l'enjeu du climat tient dans ce déséquilibre entre la chaleur reçue et la chaleur qu'on laisse repartir." }
+          ],
+          retenir: "L'effet de serre naturel garde la Terre habitable (+15 °C au lieu de -18 °C). Ajouter du CO₂ épaissit la \"couverture\" et fait retenir plus de chaleur : c'est le moteur du réchauffement."
+        },
+        {
+          titre: "Le cycle de l'eau : une même eau, en boucle",
+          accroche: "L'eau que tu bois est peut-être passée par un dinosaure. Il n'y a pas d'eau \"neuve\" : la même tourne en boucle depuis des milliards d'années.",
+          blocs: [
+            { t:"Le Soleil évapore l'eau des océans ; la vapeur monte, refroidit en altitude et se condense en nuages ; il pleut ou il neige ; l'eau ruisselle vers les rivières et retourne à la mer, ou s'infiltre dans les nappes souterraines. Puis ça recommence, indéfiniment." },
+            { t:"Ce cycle redistribue l'eau douce sur les continents (toute la pluie vient de là) et transporte d'énormes quantités de chaleur, ce qui régule le climat. La quantité totale d'eau sur Terre, elle, ne change quasiment pas : on ne fait que la recycler." }
+          ],
+          retenir: "Le cycle de l'eau (évaporation → nuages → pluie → rivières → mer) recycle sans cesse une même réserve d'eau, alimente toute l'eau douce et transporte de la chaleur qui régule le climat."
+        }
+      ],
+      quotidien: [
+        {
+          titre: "Séisme : les bons réflexes",
+          danger: true,
+          texte: "Pendant la secousse, on ne court pas dehors (chutes d'objets, façades) : on se baisse, on s'abrite sous une table solide et on s'éloigne des fenêtres et des meubles hauts. Après la secousse principale, sortir calmement car des répliques peuvent suivre. La plupart des blessures viennent d'objets qui tombent, pas de l'effondrement."
+        },
+        {
+          titre: "Tsunami : si la mer se retire, fuis vers les hauteurs",
+          danger: true,
+          texte: "Un retrait brutal et anormal de la mer, ou un séisme ressenti en bord de côte, peut annoncer un tsunami quelques minutes plus tard. Le bon réflexe : ne pas rester à regarder, s'éloigner de la côte et gagner un point haut immédiatement. La vague n'est pas un rouleau de surf mais une montée massive et rapide de l'eau."
+        },
+        {
+          titre: "Le sol garde la chaleur : la géothermie",
+          texte: "À quelques mètres sous terre, la température reste stable toute l'année (~12-14 °C en France). C'est pourquoi une cave est fraîche l'été et hors gel l'hiver, et c'est ce que des pompes à chaleur géothermiques exploitent pour chauffer une maison à moindre coût."
+        }
+      ],
+      exos: [
+        {
+          q: "Comment connaît-on la structure interne de la Terre, sans y descendre ?",
+          choix: ["En creusant jusqu'au noyau", "Grâce aux ondes des séismes qui la traversent", "Grâce aux satellites", "On ne la connaît pas vraiment"],
+          bonne: 1,
+          explication: "Les ondes sismiques changent de vitesse et de direction selon les couches traversées : en les analysant, on \"radiographie\" l'intérieur. On n'a jamais foré au-delà de ~12 km."
+        },
+        {
+          q: "Pourquoi volcans et séismes se concentrent-ils sur certaines lignes du globe ?",
+          choix: ["Par hasard", "Ils suivent les frontières entre plaques tectoniques", "Là où il fait le plus chaud", "Là où il y a le plus d'eau"],
+          bonne: 1,
+          explication: "Ces lignes sont les coutures des plaques : elles s'y percutent, s'y écartent ou s'y frottent, ce qui provoque séismes et volcans (ex. la ceinture de feu du Pacifique)."
+        },
+        {
+          q: "Quel âge a la Terre, environ ?",
+          choix: ["6 000 ans", "1 million d'années", "4,5 milliards d'années", "14 milliards d'années"],
+          bonne: 2,
+          explication: "Environ 4,54 milliards d'années, déterminé par datation radioactive. (14 milliards, c'est l'âge de l'univers.)"
+        },
+        {
+          q: "Sans effet de serre, la température moyenne de la Terre serait…",
+          choix: ["La même", "Environ -18 °C (une planète gelée)", "Plus chaude", "Exactement 0 °C"],
+          bonne: 1,
+          explication: "L'effet de serre naturel nous fait passer de -18 °C à un habitable +15 °C. Le problème actuel, c'est de l'amplifier trop vite en ajoutant du CO₂."
+        },
+        {
+          q: "L'Himalaya continue de grandir. Pourquoi ?",
+          choix: ["L'érosion l'agrandit", "La plaque indienne pousse contre la plaque asiatique", "Les volcans l'alimentent", "La fonte des glaces"],
+          bonne: 1,
+          explication: "Deux plaques qui se percutent se soulèvent en montagnes. L'Inde avance toujours contre l'Asie : l'Himalaya gagne encore quelques millimètres par an."
+        },
+        {
+          q: "L'eau que tu bois aujourd'hui…",
+          choix: ["Vient d'être créée", "Est de l'eau recyclée en boucle depuis des milliards d'années", "Ne retournera jamais à la mer", "Disparaît après usage"],
+          bonne: 1,
+          explication: "Il n'y a pas d'eau \"neuve\" : le cycle de l'eau (évaporation, pluie, rivières, mer) recycle indéfiniment une même réserve."
+        },
+        {
+          q: "En bord de mer, la mer se retire soudainement de façon anormale. Que faire ?",
+          choix: ["Aller ramasser des coquillages", "S'éloigner vite de la côte et gagner un point haut (risque de tsunami)", "Attendre de voir", "Se baigner"],
+          bonne: 1,
+          explication: "Un retrait brutal peut précéder un tsunami de quelques minutes. Il faut immédiatement fuir vers les hauteurs, sans rester observer."
+        },
+        {
+          q: "Le noyau de la Terre est à ~5000 °C mais son centre est solide. Pourquoi ?",
+          choix: ["Il fait froid au centre", "L'énorme pression le maintient solide malgré la chaleur", "Il est en glace", "C'est une erreur de mesure"],
+          bonne: 1,
+          explication: "La pression colossale au centre force les atomes de fer à rester en solide, même à des milliers de degrés. La couche externe du noyau, moins comprimée, est liquide."
+        }
+      ]
+    },
+
+    /* ============================ LE CORPS HUMAIN ============================ */
+    {
+      id: "corps",
+      nom: "Le Corps humain",
+      emoji: "🫀",
+      accent: "#ef6b7d",
+      tagline: "La machine que tu habites.",
+      decouvertes: [
+        {
+          titre: "La circulation du sang",
+          annee: "1628",
+          qui: "William Harvey",
+          resume: "Harvey démontre que le cœur est une pompe et que le sang circule en boucle fermée dans le corps, au lieu d'être fabriqué puis consommé comme on le croyait depuis l'Antiquité.",
+          pourquoi: "Fondation de la physiologie moderne : le corps devient un système que l'on peut comprendre mécaniquement, mesurer, et un jour réparer."
+        },
+        {
+          titre: "Se laver les mains sauve des vies",
+          annee: "1847",
+          qui: "Ignace Semmelweis",
+          resume: "Dans une maternité, Semmelweis découvre que les médecins qui se désinfectent les mains font chuter drastiquement la mortalité des mères. On se moque de lui à l'époque.",
+          pourquoi: "Avant même de connaître les microbes, il établit le geste le plus rentable de toute la médecine. Confirmé ensuite par Pasteur et la théorie des germes."
+        },
+        {
+          titre: "Le neurone",
+          annee: "~1890",
+          qui: "Santiago Ramón y Cajal",
+          resume: "Cajal montre que le cerveau n'est pas un réseau continu mais un assemblage de cellules distinctes, les neurones, qui communiquent en se touchant presque.",
+          pourquoi: "Acte de naissance des neurosciences : penser, mémoriser, ressentir deviennent des affaires de cellules et de signaux. Prix Nobel 1906."
+        },
+        {
+          titre: "Les groupes sanguins",
+          annee: "1901",
+          qui: "Karl Landsteiner",
+          resume: "Landsteiner découvre les groupes A, B, AB, O : mélanger des sangs incompatibles provoque une réaction dangereuse.",
+          pourquoi: "Rend les transfusions sanguines sûres et possibles. Des millions de vies sauvées en chirurgie, accouchement, accident. Prix Nobel 1930."
+        },
+        {
+          titre: "Le génome humain séquencé",
+          annee: "2003",
+          qui: "Projet Génome Humain (consortium international)",
+          resume: "Lecture complète des ~3 milliards de \"lettres\" de l'ADN humain, réparties dans environ 20 000 gènes.",
+          pourquoi: "Une carte de référence du vivant humain, qui accélère la compréhension des maladies génétiques et ouvre la médecine personnalisée."
+        }
+      ],
+      notions: [
+        {
+          titre: "Le cœur : une pompe à deux circuits",
+          accroche: "Ton cœur bat ~100 000 fois par jour sans jamais se reposer. Ce n'est qu'une pompe — mais une pompe à deux étages, pour une bonne raison.",
+          blocs: [
+            { t:"Le sang a deux missions : aller se recharger en oxygène dans les poumons, et distribuer cet oxygène à tout le corps. Le cœur gère les deux avec deux moitiés. La moitié droite envoie le sang \"usé\" (pauvre en oxygène) vers les poumons ; la moitié gauche renvoie le sang \"rechargé\" vers tout l'organisme." },
+            { t:"Le sang circule donc en boucle fermée : cœur → poumons → cœur → corps → cœur. Les artères l'éloignent du cœur sous pression (le pouls que tu sens), les veines le ramènent. En moins d'une minute, une goutte fait le tour complet." }
+          ],
+          retenir: "Le cœur est une double pompe : la droite envoie le sang aux poumons pour l'oxygéner, la gauche l'envoie au reste du corps. Le sang tourne en boucle fermée, artères à l'aller, veines au retour."
+        },
+        {
+          titre: "Le cerveau : de l'électricité et de la chimie",
+          accroche: "Tes pensées, tes souvenirs, tes gestes : tout passe par ~86 milliards de neurones qui s'échangent des signaux.",
+          blocs: [
+            { t:"Un neurone est une cellule avec de longs prolongements. Il transmet un signal électrique le long de lui-même, très vite. Mais entre deux neurones, il y a un minuscule espace, la synapse : là, le signal électrique se convertit en messagers chimiques qui traversent et déclenchent (ou freinent) le neurone suivant." },
+            { t:"Apprendre, c'est renforcer certaines connexions entre neurones à force de les utiliser. La mémoire n'est pas rangée à un endroit précis comme un fichier, mais répartie dans des réseaux de connexions. C'est cette plasticité qui te permet de progresser à la guitare ou en langue." }
+          ],
+          retenir: "Le cerveau fonctionne par signaux : électriques dans chaque neurone, chimiques d'un neurone à l'autre (les synapses). Apprendre = renforcer des connexions. La mémoire est un réseau, pas un tiroir."
+        },
+        {
+          titre: "Respirer et digérer : faire tourner le moteur",
+          accroche: "Manger et respirer, ce n'est pas deux corvées sans rapport : c'est le carburant ET le comburant d'un même feu, celui qui fait vivre tes cellules.",
+          blocs: [
+            { h:"La digestion : casser pour reconstruire", t:"Les aliments sont de grosses molécules inutilisables telles quelles. La digestion les découpe en petites briques (sucres, acides aminés, graisses) assez fines pour passer dans le sang, qui les livre à chaque cellule. Là, elles servent de carburant ou de matériaux de construction." },
+            { h:"La respiration : apporter l'oxygène", t:"Pour \"brûler\" ce carburant et en tirer de l'énergie, tes cellules ont besoin d'oxygène — d'où la respiration. En échange, elles rejettent du CO₂, un déchet, que le sang ramène aux poumons pour l'expirer. Manger apporte le carburant, respirer apporte l'oxygène qui le fait brûler." }
+          ],
+          retenir: "La digestion découpe les aliments en briques que le sang distribue ; la respiration apporte l'oxygène pour les \"brûler\" et en tirer de l'énergie (en rejetant du CO₂). Nourriture + oxygène = énergie des cellules."
+        },
+        {
+          titre: "Les hormones : les messages lents du corps",
+          accroche: "À côté du réseau ultra-rapide des nerfs, le corps a un second système de communication, plus lent mais qui touche tout : les hormones.",
+          blocs: [
+            { t:"Une hormone est un messager chimique libéré dans le sang par une glande, qui va agir à distance sur d'autres organes. Là où le nerf envoie un signal ciblé en un éclair, l'hormone diffuse un message général qui dure." },
+            { t:"Exemples parlants : l'adrénaline prépare le corps à l'action en une bouffée (cœur qui s'emballe avant un examen) ; l'insuline commande aux cellules d'absorber le sucre du sang après un repas ; la mélatonine, le soir, donne le signal du sommeil. Un déséquilibre hormonal peut donc bouleverser l'humeur, le poids, l'énergie." }
+          ],
+          retenir: "Les hormones sont des messagers chimiques diffusés par le sang : action lente mais large (adrénaline, insuline, mélatonine…). Le pendant \"radio\" du système nerveux, qui, lui, est \"télégraphe ciblé\"."
+        },
+        {
+          titre: "À quoi sert le sommeil",
+          accroche: "On passe un tiers de sa vie à dormir. Loin d'être du temps perdu, c'est un chantier nocturne indispensable.",
+          blocs: [
+            { t:"Pendant le sommeil, le cerveau trie et consolide ce qu'on a appris dans la journée : c'est en dormant qu'un apprentissage \"s'imprime\" vraiment. Le corps, lui, répare les tissus, renforce l'immunité et régule les hormones (dont celles de l'appétit)." },
+            { t:"Le cerveau profite aussi du sommeil pour évacuer des déchets accumulés en journée. Voilà pourquoi une nuit trop courte dégrade mémoire, concentration, humeur et défenses — et pourquoi \"réviser en dormant assez\" bat souvent \"réviser toute la nuit\"." }
+          ],
+          retenir: "Le sommeil consolide la mémoire, répare le corps, régule les hormones et nettoie le cerveau. Bien dormir n'est pas du temps perdu : c'est là que l'apprentissage s'imprime et que les défenses se rechargent."
+        }
+      ],
+      quotidien: [
+        {
+          titre: "Reconnaître un AVC : la règle FAST / VITE",
+          danger: true,
+          texte: "Devant un visage qui s'affaisse d'un côté, un bras qui ne peut plus se lever, une parole qui devient confuse : c'est peut-être un AVC (accident vasculaire cérébral). Chaque minute compte, des zones du cerveau meurent. Le seul bon geste : appeler les secours (15 ou 112) immédiatement, en notant l'heure d'apparition des signes. Ne pas \"attendre que ça passe\"."
+        },
+        {
+          titre: "Les signes d'une crise cardiaque",
+          danger: true,
+          texte: "Une douleur ou une oppression au centre de la poitrine, qui peut irradier vers le bras gauche, la mâchoire ou le dos, avec sueurs, nausées ou essoufflement : possible infarctus. On appelle les secours sans attendre. Les signes peuvent être plus discrets (fatigue, gêne) surtout chez les femmes et les diabétiques."
+        },
+        {
+          titre: "Ton corps est surtout de l'eau",
+          texte: "Le corps humain est composé d'environ 60 % d'eau. On en perd en permanence (respiration, sueur, urine) et une baisse de seulement 1-2 % suffit à altérer concentration et performance. La soif est un signal déjà tardif : boire régulièrement, sans attendre d'avoir soif, surtout à l'effort ou par forte chaleur."
+        }
+      ],
+      exos: [
+        {
+          q: "Quelle est la fonction du cœur, démontrée par Harvey en 1628 ?",
+          choix: ["Fabriquer le sang", "Réchauffer le corps", "Pomper le sang qui circule en boucle fermée", "Filtrer l'air"],
+          bonne: 2,
+          explication: "Le cœur est une pompe ; le sang circule en boucle (cœur → poumons → cœur → corps). Avant Harvey, on croyait le sang fabriqué puis consommé."
+        },
+        {
+          q: "Entre deux neurones, comment passe le signal ?",
+          choix: ["Il saute électriquement sans interruption", "Il se convertit en messagers chimiques au niveau de la synapse", "Par magnétisme", "Il ne passe pas"],
+          bonne: 1,
+          explication: "Le signal est électrique DANS le neurone, mais chimique ENTRE deux neurones : des messagers traversent la synapse et activent (ou freinent) le neurone suivant."
+        },
+        {
+          q: "Pourquoi tes cellules ont-elles besoin d'oxygène ?",
+          choix: ["Pour se refroidir", "Pour \"brûler\" les nutriments et en tirer de l'énergie", "Pour se gonfler", "Elles n'en ont pas besoin"],
+          bonne: 1,
+          explication: "L'oxygène permet de \"brûler\" le carburant (sucres…) apporté par la digestion, libérant l'énergie des cellules. Le déchet, le CO₂, est expiré."
+        },
+        {
+          q: "Le visage d'un proche s'affaisse d'un côté et sa parole devient confuse. Que faire ?",
+          choix: ["Le faire s'allonger et attendre", "Lui donner à boire", "Appeler les secours immédiatement (signes d'AVC)", "Lui donner un médicament"],
+          bonne: 2,
+          explication: "Ce sont des signes d'AVC : chaque minute, des neurones meurent. On appelle le 15/112 tout de suite en notant l'heure d'apparition des symptômes."
+        },
+        {
+          q: "Quel est le rôle de l'insuline ?",
+          choix: ["Accélérer le cœur", "Faire absorber par les cellules le sucre présent dans le sang", "Déclencher le sommeil", "Digérer les graisses"],
+          bonne: 1,
+          explication: "L'insuline, hormone libérée après un repas, commande aux cellules de capter le sucre du sang. Son défaut ou son inefficacité, c'est le diabète."
+        },
+        {
+          q: "Pourquoi bien dormir aide-t-il à apprendre ?",
+          choix: ["Ça ne change rien", "Le cerveau consolide la mémoire pendant le sommeil", "On révise dans les rêves", "Ça repose seulement les yeux"],
+          bonne: 1,
+          explication: "Pendant le sommeil, le cerveau trie et fixe ce qui a été appris. Une nuit suffisante bat souvent une nuit blanche de révision."
+        },
+        {
+          q: "Le corps humain est composé d'environ…",
+          choix: ["10 % d'eau", "30 % d'eau", "60 % d'eau", "90 % d'eau"],
+          bonne: 2,
+          explication: "Environ 60 %. Une perte de seulement 1-2 % altère déjà la concentration : mieux vaut boire avant d'avoir soif, signal déjà tardif."
+        },
+        {
+          q: "Pourquoi les groupes sanguins (A, B, AB, O) sont-ils importants ?",
+          choix: ["Ils déterminent la personnalité", "Mélanger des sangs incompatibles lors d'une transfusion est dangereux", "Ils changent la couleur du sang", "Ils n'ont aucune importance"],
+          bonne: 1,
+          explication: "Une transfusion incompatible déclenche une réaction grave. La découverte des groupes (Landsteiner, 1901) a rendu les transfusions sûres."
+        }
+      ]
+    },
+
+    /* ============================ LES MATHÉMATIQUES ============================ */
+    {
+      id: "maths",
+      nom: "Les Mathématiques",
+      emoji: "🧮",
+      accent: "#6c8cff",
+      tagline: "Le langage caché du réel.",
+      decouvertes: [
+        {
+          titre: "Le théorème de Pythagore",
+          annee: "~530 av. J.-C.",
+          qui: "École de Pythagore (connu bien avant en Babylonie)",
+          resume: "Dans un triangle rectangle, le carré du grand côté égale la somme des carrés des deux autres (a² + b² = c²).",
+          pourquoi: "Une relation exacte et universelle entre des longueurs. Base de la géométrie, de l'arpentage, de la navigation, et aujourd'hui du calcul de distances dans un GPS ou un jeu vidéo."
+        },
+        {
+          titre: "L'invention du zéro",
+          annee: "~5e-7e siècle",
+          qui: "Mathématiciens indiens (Brahmagupta)",
+          resume: "Le zéro devient un nombre à part entière, et la numération de position (où la place du chiffre compte) permet d'écrire tous les nombres avec dix symboles.",
+          pourquoi: "Sans le zéro, pas de calcul efficace, pas d'algèbre, pas d'informatique. Une des inventions les plus sous-estimées de l'histoire humaine."
+        },
+        {
+          titre: "Le calcul des probabilités",
+          annee: "1654",
+          qui: "Blaise Pascal & Pierre de Fermat",
+          resume: "En résolvant un problème de jeu d'argent, Pascal et Fermat posent les bases d'une science du hasard : on peut chiffrer l'incertain.",
+          pourquoi: "Mesurer le risque transforme l'assurance, la finance, la médecine, la physique. Le hasard cesse d'être un mystère pour devenir un calcul."
+        },
+        {
+          titre: "Le calcul infinitésimal",
+          annee: "~1670",
+          qui: "Isaac Newton & Gottfried Leibniz",
+          resume: "Un outil pour décrire le changement instantané : vitesse, pente, accumulation. On apprend à manier l'infiniment petit.",
+          pourquoi: "C'est le langage de toute la physique (mouvement, forces, ondes) et de l'ingénierie. Sans lui, ni fusées, ni ponts calculés, ni prévisions."
+        },
+        {
+          titre: "Les infinis de Cantor",
+          annee: "~1874",
+          qui: "Georg Cantor",
+          resume: "Cantor prouve qu'il existe plusieurs \"tailles\" d'infini : l'infini des nombres entiers est strictement plus petit que celui des points d'une droite.",
+          pourquoi: "Vertigineux et fondateur : il donne aux mathématiques des fondations solides sur l'infini, longtemps tabou. On peut comparer ce qui n'a pas de fin."
+        }
+      ],
+      notions: [
+        {
+          titre: "Pourquoi les maths \"marchent\" dans le monde réel",
+          accroche: "Étrange, non ? Des symboles inventés dans une tête prédisent la trajectoire d'une planète ou la portance d'une aile. Pourquoi ça colle si bien ?",
+          blocs: [
+            { t:"Les mathématiques ne sont pas une description directe du monde : ce sont des règles logiques appliquées à des idées abstraites (nombres, formes, relations). Leur force est d'être exactes et sans exception : si les prémisses sont vraies, la conclusion l'est forcément." },
+            { t:"Quand une structure mathématique reflète bien la structure d'un phénomène réel (la géométrie pour l'espace, les équations pour le mouvement), on peut \"calculer le monde\" au lieu de l'observer à tâtons. On teste ensuite si la prédiction colle. C'est cette efficacité, presque déroutante, qui fait des maths le langage naturel de la science." }
+          ],
+          retenir: "Les maths sont un système de règles logiques exactes sur des idées abstraites. Quand une de ces structures épouse un phénomène réel, on peut le prédire par le calcul. C'est ce qui en fait le langage de la science."
+        },
+        {
+          titre: "La croissance exponentielle : l'intuition qui nous piège",
+          accroche: "Plie une feuille de papier 42 fois : son épaisseur atteindrait la Lune. Notre cerveau pense en ligne droite, mais le monde, souvent, double.",
+          blocs: [
+            { t:"Une croissance exponentielle, c'est quand une quantité est multipliée (et non augmentée) à chaque étape : elle double, puis re-double, puis encore. Au début ça paraît lent et anodin, puis ça explose brutalement. Le grain de riz doublé sur chaque case d'un échiquier finit en montagnes de riz impossibles." },
+            { t:"On la retrouve partout : une épidémie qui double tous les 3 jours, un placement à intérêts composés, la puissance des puces (loi de Moore), un buzz sur les réseaux. La leçon : sous-estimer l'exponentielle, c'est se faire surprendre par la phase où \"tout s'emballe d'un coup\"." }
+          ],
+          retenir: "Exponentiel = multiplié à chaque étape (ça double), pas augmenté d'un pas fixe. Trompeusement lent au début, foudroyant ensuite. Épidémies, intérêts composés, réseaux : notre intuition linéaire s'y casse les dents."
+        },
+        {
+          titre: "Les nombres premiers : les briques des nombres",
+          accroche: "Certains nombres ne se divisent par rien d'autre qu'eux-mêmes et 1. Ils sont les \"atomes\" à partir desquels tous les autres se construisent — et ils protègent tes mots de passe.",
+          blocs: [
+            { t:"Un nombre premier (2, 3, 5, 7, 11, 13…) n'a aucun diviseur à part 1 et lui-même. Tout autre nombre entier se décompose de façon unique en produit de premiers (12 = 2×2×3). Ils sont en nombre infini, et se raréfient sans jamais s'arrêter." },
+            { t:"Fait remarquable : multiplier deux grands nombres premiers est facile, mais retrouver ces deux facteurs à partir du résultat est extraordinairement long, même pour un ordinateur. Toute la cryptographie qui sécurise Internet (paiements, messages) repose sur cette asymétrie." }
+          ],
+          retenir: "Les nombres premiers (divisibles seulement par 1 et eux-mêmes) sont les briques uniques de tous les entiers. Multiplier deux grands premiers est facile, l'opération inverse quasi impossible : c'est le secret du chiffrement d'Internet."
+        },
+        {
+          titre: "Le hasard et la loi des grands nombres",
+          accroche: "Une pièce n'a pas de mémoire : après dix \"face\", le prochain lancer reste à 50/50. Pourtant, sur des millions de lancers, l'ordre émerge du désordre.",
+          blocs: [
+            { h:"L'illusion du joueur", t:"Chaque lancer est indépendant : la pièce ne \"doit\" rien rattraper. Croire qu'après une série de rouges à la roulette le noir est \"dû\" est une erreur classique. Le passé ne change pas la probabilité du prochain coup." },
+            { h:"L'ordre à grande échelle", t:"Mais plus on répète une expérience, plus la proportion de résultats se rapproche de la probabilité théorique : c'est la loi des grands nombres. C'est pourquoi un casino ou un assureur, qui jouent des millions de fois, gagnent à coup sûr sur la masse, même s'ils perdent parfois un coup." }
+          ],
+          retenir: "Chaque événement au hasard est indépendant (la pièce n'a pas de mémoire), mais sur un très grand nombre d'essais, les proportions convergent vers la probabilité théorique. L'imprévisible individuel devient prévisible en masse."
+        },
+        {
+          titre: "Pi et les nombres qui ne s'arrêtent jamais",
+          accroche: "Le rapport entre le tour d'un cercle et son diamètre vaut 3,14159… et ces décimales ne s'arrêtent jamais, ni ne se répètent. Étrange qu'une chose aussi simple qu'un cercle cache un nombre infini.",
+          blocs: [
+            { t:"Pi (π) est le même pour tous les cercles de l'univers : périmètre = π × diamètre. Mais c'est un nombre \"irrationnel\" : impossible de l'écrire comme une fraction exacte, et ses décimales défilent à l'infini sans motif. On en connaît des milliers de milliards, sans jamais toucher le \"bout\"." },
+            { t:"Ce n'est pas un cas isolé : la plupart des nombres sont irrationnels (comme la racine de 2). Cela révèle que même la géométrie la plus élémentaire contient de l'infini, et que nos écritures décimales ne \"contiennent\" pas tous les nombres." }
+          ],
+          retenir: "π (≈3,14159…) relie le tour d'un cercle à son diamètre, identique pour tout cercle. C'est un nombre irrationnel : décimales infinies, sans fraction exacte ni motif. La simplicité d'un cercle cache de l'infini."
+        }
+      ],
+      quotidien: [
+        {
+          titre: "Les intérêts composés : l'exponentielle à ton service (ou contre toi)",
+          texte: "Placer de l'argent qui rapporte des intérêts, lesquels rapportent à leur tour, c'est une croissance exponentielle. À 7 % par an, une somme double environ tous les 10 ans. À l'inverse, un crédit renouvelable à fort taux gonfle de la même façon contre toi. Comprendre l'exponentielle, c'est comprendre pourquoi commencer tôt change tout."
+        },
+        {
+          titre: "Le piège des pourcentages",
+          texte: "Une hausse de 50 % suivie d'une baisse de 50 % ne te ramène PAS au point de départ : 100 € → 150 € → 75 €. Les pourcentages se multiplient, ils ne s'additionnent pas. Ce piège se cache dans les soldes, les variations de salaire ou de Bourse."
+        },
+        {
+          titre: "Probabilités : pourquoi tu ne gagnes pas au loto",
+          texte: "À la loterie, chaque grille est indépendante et la probabilité de gagner le gros lot est de l'ordre de 1 sur des dizaines de millions. Jouer les mêmes numéros \"parce qu'ils vont finir par sortir\" ne change rien : le tirage n'a pas de mémoire. La seule certitude mathématique, c'est que l'organisateur gagne sur la masse (loi des grands nombres)."
+        }
+      ],
+      exos: [
+        {
+          q: "Que dit le théorème de Pythagore ?",
+          choix: ["a + b = c", "a² + b² = c² dans un triangle rectangle", "Tout nombre est premier", "π = 3"],
+          bonne: 1,
+          explication: "Dans un triangle rectangle, le carré de l'hypoténuse égale la somme des carrés des deux autres côtés. Base du calcul de distances, jusque dans un GPS."
+        },
+        {
+          q: "Tu pars de 100 €. +50 %, puis -50 %. Combien te reste-t-il ?",
+          choix: ["100 €", "75 €", "50 €", "125 €"],
+          bonne: 1,
+          explication: "100 → 150 (+50 %) → 75 (-50 % de 150). Les pourcentages se multiplient, ils ne s'annulent pas. Piège classique."
+        },
+        {
+          q: "Une rumeur double de partages toutes les heures. C'est une croissance…",
+          choix: ["Linéaire", "Exponentielle", "Nulle", "Décroissante"],
+          bonne: 1,
+          explication: "Multipliée (×2) à chaque étape : c'est exponentiel. Lent au début, puis explosif — notre intuition linéaire le sous-estime toujours."
+        },
+        {
+          q: "Sur quoi repose le chiffrement qui sécurise Internet ?",
+          choix: ["Le théorème de Pythagore", "La difficulté de retrouver deux grands nombres premiers à partir de leur produit", "Le nombre π", "Le hasard pur"],
+          bonne: 1,
+          explication: "Multiplier deux grands premiers est facile ; faire l'inverse (factoriser) est quasi impossible en un temps raisonnable. Cette asymétrie protège paiements et messages."
+        },
+        {
+          q: "À la roulette, le rouge est sorti 6 fois de suite. Au prochain tour, le noir est…",
+          choix: ["Plus probable, il est \"dû\"", "Ni plus ni moins probable : chaque tour est indépendant", "Certain", "Impossible"],
+          bonne: 1,
+          explication: "La roulette n'a pas de mémoire. Croire qu'un résultat est \"dû\" est l'illusion du joueur. Chaque tour repart à la même probabilité."
+        },
+        {
+          q: "Un nombre premier, c'est un nombre…",
+          choix: ["Toujours pair", "Divisible seulement par 1 et par lui-même", "Plus grand que 100", "Qui finit par 1"],
+          bonne: 1,
+          explication: "2, 3, 5, 7, 11… n'ont pas d'autre diviseur que 1 et eux-mêmes. Ce sont les \"briques\" à partir desquelles se construisent tous les entiers."
+        },
+        {
+          q: "Pourquoi l'invention du zéro fut-elle si importante ?",
+          choix: ["Pour compter les moutons", "Elle permet la numération de position et un calcul efficace", "Pour mesurer les angles", "Elle ne l'était pas"],
+          bonne: 1,
+          explication: "Avec le zéro et la position des chiffres, on écrit tous les nombres avec dix symboles et on calcule efficacement. Sans lui, pas d'algèbre ni d'informatique."
+        },
+        {
+          q: "π (pi) est un nombre dont les décimales…",
+          choix: ["S'arrêtent à 3,14", "Se répètent en boucle", "Défilent à l'infini sans motif régulier", "Sont toutes des 3"],
+          bonne: 2,
+          explication: "π est irrationnel : décimales infinies, sans période. La simplicité d'un cercle (périmètre = π × diamètre) cache pourtant de l'infini."
+        }
+      ]
+    },
+
+    /* ============================ LE NUMÉRIQUE ============================ */
+    {
+      id: "numerique",
+      nom: "Le Numérique",
+      emoji: "💻",
+      accent: "#b07bff",
+      tagline: "Comment les machines pensent.",
+      decouvertes: [
+        {
+          titre: "La machine de Turing",
+          annee: "1936",
+          qui: "Alan Turing",
+          resume: "Turing imagine une machine abstraite qui lit et écrit des symboles selon des règles simples, et démontre qu'elle peut effectuer n'importe quel calcul faisable.",
+          pourquoi: "Définition même de ce qu'est \"calculer\". Tous nos ordinateurs, si différents soient-ils, sont équivalents à cette machine. Fondement théorique de l'informatique."
+        },
+        {
+          titre: "La théorie de l'information",
+          annee: "1948",
+          qui: "Claude Shannon",
+          resume: "Shannon invente le \"bit\", unité de base de l'information, et montre comment transmettre un message de façon fiable malgré le bruit, et jusqu'à quel point on peut le compresser.",
+          pourquoi: "Le socle des télécommunications, de la compression (photos, musique), du stockage et d'Internet. Il transforme l'information en une grandeur que l'on mesure et manipule."
+        },
+        {
+          titre: "Le paquet et le réseau",
+          annee: "1969-1974",
+          qui: "ARPANET, puis Vinton Cerf & Robert Kahn",
+          resume: "Plutôt que d'ouvrir une ligne dédiée, on découpe l'information en petits \"paquets\" qui voyagent indépendamment et se recomposent à l'arrivée. Le protocole TCP/IP normalise l'ensemble.",
+          pourquoi: "C'est ce qui rend Internet robuste : si un chemin est coupé, les paquets passent par un autre. L'architecture de tout le réseau mondial."
+        },
+        {
+          titre: "Le Web",
+          annee: "1989",
+          qui: "Tim Berners-Lee",
+          resume: "Au CERN, Berners-Lee invente les pages liées entre elles par des hyperliens, les adresses (URL) et le navigateur : le World Wide Web.",
+          pourquoi: "Il rend Internet utilisable par tous et relie l'information du monde en un seul espace navigable. À ne pas confondre avec Internet (le réseau) : le Web est ce qui tourne dessus."
+        },
+        {
+          titre: "L'apprentissage profond",
+          annee: "2012",
+          qui: "Geoffrey Hinton et son équipe (AlexNet)",
+          resume: "Des réseaux de neurones artificiels à plusieurs couches, entraînés sur d'énormes quantités d'exemples, se mettent à reconnaître images et sons mieux que tout ce qu'on savait programmer à la main.",
+          pourquoi: "Le déclencheur de l'IA moderne (reconnaissance d'images, traduction, assistants, IA générative). Un changement de méthode : on n'écrit plus les règles, la machine les apprend."
+        }
+      ],
+      notions: [
+        {
+          titre: "Comment un ordinateur \"pense\" : 0, 1 et logique",
+          accroche: "Un ordinateur ne comprend rien. Il ne fait qu'enchaîner, à une vitesse folle, des opérations idiotes sur des 0 et des 1. Toute sa \"pensée\" naît de là.",
+          blocs: [
+            { t:"Tout, dans une machine, est codé en 0 et 1 (des interrupteurs ouverts/fermés). Sur ces bits, l'ordinateur applique des opérations logiques élémentaires : ET (vrai seulement si les deux entrées le sont), OU, NON. Ces \"portes logiques\" sont de simples arrangements de transistors." },
+            { t:"En combinant des millions de ces portes, on sait additionner, comparer, choisir, mémoriser. Un programme n'est qu'une longue recette : \"fais ceci, si telle condition alors cela, répète tant que…\". L'intelligence apparente vient de l'accumulation vertigineuse d'opérations triviales, des milliards par seconde." }
+          ],
+          retenir: "Un ordinateur manipule des 0/1 avec des opérations logiques de base (ET, OU, NON) faites de transistors. Un programme est une recette d'étapes. La \"pensée\" n'est qu'un empilement colossal d'opérations simples, très vite."
+        },
+        {
+          titre: "Un algorithme, c'est quoi au juste",
+          accroche: "Le mot fait savant, mais tu en exécutes tous les jours : une recette de cuisine est un algorithme.",
+          blocs: [
+            { t:"Un algorithme est une suite finie d'instructions précises pour résoudre un problème, étape par étape, sans ambiguïté. \"Pour trouver un mot dans le dictionnaire : ouvre au milieu, si le mot est avant va à gauche sinon à droite, recommence.\" C'est un algorithme de recherche, redoutablement efficace." },
+            { t:"La qualité d'un algorithme se mesure surtout à sa rapidité quand les données grandissent. Chercher un nom dans un annuaire trié en coupant en deux à chaque fois (dichotomie) trouve la bonne page en une vingtaine d'essais parmi un million de noms, là où une recherche page par page en demanderait des milliers. Bien choisir l'algorithme change tout." }
+          ],
+          retenir: "Un algorithme = une suite d'étapes précises et non ambiguës pour résoudre un problème (comme une recette). Son intérêt tient à son efficacité quand les données grossissent : le bon algorithme fait le travail en quelques étapes plutôt que des millions."
+        },
+        {
+          titre: "Comment marche Internet : tout voyage en morceaux",
+          accroche: "Quand tu envoies un message, il ne part pas d'un bloc par un tuyau qui te relierait au destinataire. Il est découpé, éclaté, puis rassemblé.",
+          blocs: [
+            { t:"Ton message est découpé en petits paquets. Chacun reçoit une adresse (l'adresse IP du destinataire) et part de son côté, sautant de routeur en routeur, chacun choisissant la meilleure direction du moment. Les paquets peuvent emprunter des chemins différents et arriver dans le désordre : ils sont renumérotés et recomposés à l'arrivée." },
+            { t:"Cette idée de \"paquets indépendants\" rend le réseau très robuste : si un câble est coupé, les paquets contournent par ailleurs. Internet, c'est le réseau qui achemine ces paquets ; le Web, les mails, les vidéos sont des services qui circulent dessus." }
+          ],
+          retenir: "Internet découpe toute information en paquets adressés qui voyagent indépendamment, par des chemins variables, et se recomposent à l'arrivée. D'où sa robustesse. Internet = le réseau ; le Web n'est qu'un service qui l'utilise."
+        },
+        {
+          titre: "Le chiffrement : comment un secret reste secret",
+          accroche: "Tes paquets traversent des dizaines de machines inconnues. Pourquoi personne ne peut lire ton mot de passe ou ton numéro de carte au passage ?",
+          blocs: [
+            { t:"On brouille le message avec une \"clé\" : sans elle, le texte intercepté n'est qu'une bouillie illisible. Le problème historique : comment se mettre d'accord sur une clé secrète avec quelqu'un qu'on n'a jamais rencontré, sur un réseau public ?" },
+            { t:"Solution géniale (clé publique) : chacun a deux clés liées, une publique (un cadenas ouvert qu'on distribue à tous) et une privée (la seule qui referme, gardée secrète). N'importe qui peut fermer le cadenas pour t'écrire, toi seul peux l'ouvrir. La sécurité repose sur des maths (les grands nombres premiers) faciles dans un sens, quasi impossibles à inverser. Le petit cadenas de ton navigateur, c'est ça." }
+          ],
+          retenir: "Le chiffrement brouille un message avec une clé. Le chiffrement à clé publique permet à des inconnus d'échanger en sécurité : cadenas public pour fermer, clé privée pour ouvrir. Sa solidité vient des maths des nombres premiers."
+        },
+        {
+          titre: "Comment une IA apprend (et pourquoi elle se trompe)",
+          accroche: "Une IA moderne n'est pas programmée avec des règles. On ne lui a pas écrit \"un chat a des moustaches\". Elle a appris toute seule, à partir d'exemples.",
+          blocs: [
+            { t:"Un réseau de neurones artificiels est une immense fonction avec des millions de \"boutons\" réglables. On lui montre des masses d'exemples (des images étiquetées \"chat\"/\"pas chat\"), et à chaque erreur on ajuste un peu les boutons pour qu'elle se rapproche de la bonne réponse. Répété des milliards de fois, elle finit par capter des régularités." },
+            { t:"D'où deux limites majeures. Un : elle ne \"comprend\" pas, elle reconnaît des motifs statistiques — elle peut donc se tromper avec aplomb, ou inventer (les \"hallucinations\"). Deux : elle hérite des biais de ses exemples. Une IA n'est jamais meilleure ni plus neutre que les données sur lesquelles on l'a entraînée." }
+          ],
+          retenir: "Une IA moderne apprend des régularités à partir d'énormes jeux d'exemples, en ajustant des millions de paramètres — au lieu de suivre des règles écrites. Elle reconnaît des motifs sans \"comprendre\", d'où erreurs, inventions et biais hérités des données."
+        }
+      ],
+      quotidien: [
+        {
+          titre: "Mots de passe et double authentification",
+          danger: true,
+          texte: "Un mot de passe long et unique par site vaut mieux qu'un mot compliqué réutilisé partout : si un site est piraté, les autres tombent. Un gestionnaire de mots de passe s'en souvient à ta place. Et la double authentification (un code en plus du mot de passe) bloque l'essentiel des piratages, même si ton mot de passe fuite."
+        },
+        {
+          titre: "Reconnaître un hameçonnage (phishing)",
+          danger: true,
+          texte: "Un message urgent (\"votre compte va être bloqué\", \"colis en attente\") qui pousse à cliquer vite et à saisir mot de passe ou carte : méfiance. On ne clique pas sur le lien ; on va sur le site officiel par ses propres moyens. Vérifier l'adresse de l'expéditeur et l'URL réelle du lien. La précipitation est l'arme n°1 de l'arnaqueur."
+        },
+        {
+          titre: "Ce que tu laisses derrière toi (les données)",
+          texte: "Chaque site visité, recherche, clic peut être enregistré et recoupé pour dresser un profil (souvent à des fins de publicité). Les cookies servent à ce suivi. Refuser les cookies non essentiels, utiliser la navigation privée pour les recherches sensibles et limiter les autorisations des applis réduit cette trace."
+        }
+      ],
+      exos: [
+        {
+          q: "Au niveau le plus bas, un ordinateur manipule…",
+          choix: ["Des mots", "Des 0 et des 1 avec des opérations logiques (ET, OU, NON)", "Des images", "Des ondes"],
+          bonne: 1,
+          explication: "Tout est codé en 0/1, traités par des portes logiques faites de transistors. La \"pensée\" de la machine n'est qu'un empilement d'opérations simples, très rapides."
+        },
+        {
+          q: "Un algorithme, c'est…",
+          choix: ["Un composant électronique", "Une suite d'étapes précises pour résoudre un problème", "Un virus", "Un langage secret"],
+          bonne: 1,
+          explication: "Comme une recette de cuisine : des instructions non ambiguës, étape par étape. Son intérêt : être efficace même quand les données grossissent."
+        },
+        {
+          q: "Comment une information voyage-t-elle sur Internet ?",
+          choix: ["D'un bloc, par un tuyau direct", "Découpée en paquets qui voyagent séparément et se recomposent à l'arrivée", "Par ondes radio uniquement", "Elle ne bouge pas"],
+          bonne: 1,
+          explication: "Le découpage en paquets adressés, empruntant des chemins variables, rend le réseau robuste : si un chemin est coupé, les paquets contournent."
+        },
+        {
+          q: "Le chiffrement à clé publique permet à deux inconnus d'échanger en sécurité grâce à…",
+          choix: ["Un mot de passe partagé d'avance", "Une clé publique pour fermer et une clé privée pour ouvrir", "La chance", "Un antivirus"],
+          bonne: 1,
+          explication: "Le cadenas public (distribué à tous) ferme le message, seule la clé privée l'ouvre. Sa solidité vient des maths des grands nombres premiers."
+        },
+        {
+          q: "Comment une IA moderne \"apprend\" à reconnaître un chat ?",
+          choix: ["On lui écrit la règle 'un chat a des moustaches'", "Elle ajuste des millions de paramètres à partir de nombreux exemples étiquetés", "Elle demande à un humain à chaque fois", "Elle devine au hasard"],
+          bonne: 1,
+          explication: "Pas de règles écrites : elle capte des régularités statistiques dans les exemples. D'où sa puissance, mais aussi ses erreurs, ses inventions et ses biais."
+        },
+        {
+          q: "Pourquoi ne faut-il pas réutiliser le même mot de passe partout ?",
+          choix: ["Ça ralentit la connexion", "Si un site est piraté, tous tes comptes tombent", "C'est interdit par la loi", "Ça n'a pas d'importance"],
+          bonne: 1,
+          explication: "Une seule fuite compromet alors tous tes comptes. Mieux : un mot de passe unique par site (via un gestionnaire) et la double authentification."
+        },
+        {
+          q: "Un mail \"urgent\" te demande de cliquer vite pour éviter le blocage de ton compte. C'est typiquement…",
+          choix: ["Un service utile", "Une tentative d'hameçonnage (phishing)", "Une mise à jour", "Sans risque"],
+          bonne: 1,
+          explication: "L'urgence qui pousse à cliquer et à saisir ses identifiants est l'arme n°1 de l'arnaque. On n'utilise pas le lien : on va au site officiel par soi-même."
+        },
+        {
+          q: "Quelle est la différence entre Internet et le Web ?",
+          choix: ["Aucune", "Internet est le réseau ; le Web est un service (pages liées) qui circule dessus", "Le Web est plus ancien", "Internet ne sert qu'aux mails"],
+          bonne: 1,
+          explication: "Internet achemine les paquets ; le Web (pages et hyperliens, 1989) n'est qu'un des services qui l'utilisent, au même titre que les mails ou la vidéo."
+        }
+      ]
+    },
+
+    /* ============================ ÉNERGIE & CHALEUR ============================ */
+    {
+      id: "energie",
+      nom: "Énergie & Chaleur",
+      emoji: "🔥",
+      accent: "#f0883e",
+      tagline: "Rien ne se perd, mais tout se dégrade.",
+      decouvertes: [
+        {
+          titre: "La conservation de l'énergie",
+          annee: "~1840-1847",
+          qui: "James Joule, Julius von Mayer, Hermann von Helmholtz",
+          resume: "L'énergie peut changer de forme (mouvement, chaleur, électricité, chimie) mais la quantité totale ne change jamais : c'est le premier principe de la thermodynamique.",
+          pourquoi: "Une des lois les plus solides de la physique. Elle interdit la machine à mouvement perpétuel et sert de règle de comptabilité à toute l'ingénierie."
+        },
+        {
+          titre: "L'entropie et le second principe",
+          annee: "1824-1865",
+          qui: "Sadi Carnot, Rudolf Clausius",
+          resume: "La chaleur va spontanément du chaud vers le froid, jamais l'inverse. Une grandeur, l'entropie (le \"désordre\"), ne peut qu'augmenter dans un système isolé.",
+          pourquoi: "Explique pourquoi aucune machine n'est parfaite, pourquoi le temps a un sens, et pourquoi on ne peut pas récupérer toute l'énergie. Peut-être la loi la plus profonde de la physique."
+        },
+        {
+          titre: "Le zéro absolu",
+          annee: "1848",
+          qui: "William Thomson (Lord Kelvin)",
+          resume: "Il existe une température minimale absolue, -273,15 °C (0 kelvin), en dessous de laquelle on ne peut pas descendre : l'agitation des atomes y serait au minimum.",
+          pourquoi: "Révèle ce qu'est vraiment la température (de l'agitation) et fonde l'échelle Kelvin utilisée par toute la science. On peut s'en approcher, jamais l'atteindre."
+        },
+        {
+          titre: "La chaleur, c'est du mouvement",
+          annee: "~1860-1870",
+          qui: "Ludwig Boltzmann, James Clerk Maxwell",
+          resume: "La chaleur n'est pas un fluide invisible : c'est l'agitation désordonnée des atomes et molécules. Plus ils s'agitent, plus c'est \"chaud\".",
+          pourquoi: "Relie le monde microscopique (atomes en mouvement) au monde qu'on ressent (chaud/froid). Fonde la physique statistique."
+        }
+      ],
+      notions: [
+        {
+          titre: "Chaleur et température, ce n'est pas pareil",
+          accroche: "Une étincelle à 1000 °C ne te brûle pas, une baignoire à 40 °C peut t'ébouillanter sur la durée. La différence entre chaleur et température est là.",
+          blocs: [
+            { h:"La température = l'agitation", t:"La température mesure à quel point les atomes s'agitent en moyenne. Plus ils vibrent vite, plus c'est chaud. C'est une intensité, indépendante de la quantité de matière." },
+            { h:"La chaleur = l'énergie transférée", t:"La chaleur, elle, est la quantité totale d'énergie qui passe d'un corps chaud à un corps froid. Une étincelle est à très haute température mais contient très peu de matière, donc très peu de chaleur : elle s'éteint sur ta peau sans dégât. La baignoire est à basse température mais contient énormément d'énergie. Température = qualité, chaleur = quantité." }
+          ],
+          retenir: "Température = à quel point les atomes s'agitent (une intensité). Chaleur = la quantité d'énergie transférée. Une étincelle : haute température, peu de chaleur. Une baignoire tiède : basse température, beaucoup de chaleur."
+        },
+        {
+          titre: "Premier principe : l'énergie se transforme, jamais ne disparaît",
+          accroche: "Tu ne \"consommes\" jamais d'énergie au sens strict : tu la transformes d'une forme en une autre. C'est pour ça que le mouvement perpétuel est impossible.",
+          blocs: [
+            { t:"L'énergie existe sous plein de formes : mouvement, hauteur (un objet en l'air), chaleur, électricité, énergie chimique (essence, aliments), lumière. Elle passe sans cesse de l'une à l'autre — une voiture change l'énergie chimique de l'essence en mouvement et en chaleur — mais le total ne change jamais." },
+            { t:"Conséquence directe : aucune machine ne peut produire plus d'énergie qu'elle n'en reçoit. La \"machine à mouvement perpétuel\" qui tournerait toute seule pour toujours est impossible, non par manque d'ingéniosité, mais parce qu'elle violerait cette loi fondamentale." }
+          ],
+          retenir: "Premier principe : l'énergie change de forme (chimique, mouvement, chaleur, électricité…) mais sa quantité totale est constante. On ne la crée ni ne la détruit — d'où l'impossibilité du mouvement perpétuel."
+        },
+        {
+          titre: "Second principe : pourquoi le café refroidit toujours",
+          accroche: "Un café chaud refroidit ; un café froid ne se réchauffe jamais tout seul. Cette évidence cache la loi la plus profonde de la physique : l'entropie.",
+          blocs: [
+            { t:"La chaleur se répand toujours du chaud vers le froid, jamais l'inverse spontanément. Plus généralement, tout système livré à lui-même évolue vers plus de désordre (l'entropie augmente) : l'ordre se défait facilement, l'inverse demande un effort. Une tasse se brise, elle ne se recolle pas toute seule." },
+            { t:"C'est aussi ce qui donne au temps une direction : on distingue le passé du futur justement parce que l'entropie augmente. Et c'est pourquoi aucune machine ne récupère 100 % de l'énergie : une part se dissipe fatalement en chaleur inutilisable. On peut créer de l'ordre localement (un frigo, un être vivant), mais toujours au prix de plus de désordre ailleurs." }
+          ],
+          retenir: "Second principe : la chaleur va du chaud vers le froid et le désordre (entropie) augmente toujours globalement. D'où la flèche du temps et le fait qu'aucune machine n'est parfaite : une part d'énergie se dégrade toujours en chaleur perdue."
+        },
+        {
+          titre: "Le frigo ne crée pas de froid : il déplace la chaleur",
+          accroche: "Un réfrigérateur ne \"fabrique\" pas du froid — ça n'existe pas. Il prend la chaleur là où tu n'en veux pas et la jette ailleurs.",
+          blocs: [
+            { t:"Le froid n'est que l'absence de chaleur. Un frigo pompe la chaleur de l'intérieur et la rejette à l'arrière (la grille arrière est tiède, c'est là que part la chaleur de tes aliments). Il faut de l'énergie pour ça : forcer la chaleur à aller du froid vers le chaud, c'est remonter la pente naturelle, donc ça se paie en électricité." },
+            { t:"Une pompe à chaleur, c'est le même appareil vu à l'envers : elle prend la chaleur de l'air extérieur (même frais) et la rejette dans la maison pour la chauffer. C'est pour ça qu'elle est si efficace : elle ne crée pas la chaleur, elle la déménage, et en déplace bien plus que l'électricité qu'elle consomme." }
+          ],
+          retenir: "Le \"froid\" n'existe pas, c'est l'absence de chaleur. Un frigo déplace la chaleur de l'intérieur vers l'arrière ; une pompe à chaleur déménage la chaleur de dehors vers dedans. Déplacer la chaleur coûte de l'énergie, mais bien moins que la créer."
+        },
+        {
+          titre: "Les trois façons dont la chaleur voyage",
+          accroche: "Pourquoi une poignée en métal semble plus froide qu'une poignée en bois, à la même température ? Parce que la chaleur se déplace de trois manières.",
+          blocs: [
+            { h:"Conduction (de proche en proche)", t:"Dans un solide, la chaleur se propage de contact en contact. Le métal conduit très bien : il évacue vite la chaleur de ta main, d'où la sensation de froid — alors que le bois, mauvais conducteur, te la laisse. Ils sont pourtant à la même température." },
+            { h:"Convection (par le mouvement d'un fluide)", t:"Dans l'air ou l'eau, le chaud monte et le froid descend, créant des courants qui brassent la chaleur. C'est ainsi qu'un radiateur réchauffe toute une pièce." },
+            { h:"Rayonnement (par ondes, sans contact)", t:"Tout corps chaud émet de la chaleur sous forme d'ondes, qui traversent même le vide — c'est ainsi que le Soleil nous chauffe. C'est ce que ta main sent face à un feu sans le toucher." }
+          ],
+          retenir: "La chaleur voyage par conduction (de proche en proche dans les solides), convection (courants dans l'air/l'eau) et rayonnement (ondes, même dans le vide). Bien isoler une maison, c'est bloquer ces trois chemins."
+        }
+      ],
+      quotidien: [
+        {
+          titre: "Bien isoler : bloquer les trois chemins de la chaleur",
+          texte: "Une maison perd sa chaleur par conduction (murs, fenêtres), convection (courants d'air, fuites) et rayonnement. Le double vitrage piège une couche d'air (ou de gaz) mauvaise conductrice entre deux vitres ; calfeutrer les fuites coupe la convection ; les isolants épais ralentissent la conduction. Moins de chaleur perdue = moins de chauffage = facture réduite."
+        },
+        {
+          titre: "Métal ou bois : la même température, pas la même sensation",
+          texte: "Au réveil, le carrelage semble glacé et le tapis doux, pourtant ils sont à la même température ambiante. Le carrelage (bon conducteur) aspire vite la chaleur de tes pieds ; le tapis (isolant) la garde. Ta peau ne mesure pas la température, mais la vitesse à laquelle elle perd (ou gagne) de la chaleur."
+        },
+        {
+          titre: "Pourquoi un thermos garde chaud ET froid",
+          texte: "Un thermos combat les trois transferts : double paroi avec du vide entre les deux (le vide ne conduit pas et empêche la convection), et surfaces réfléchissantes (contre le rayonnement). Résultat : il ralentit l'échange de chaleur dans les deux sens, donc il garde un café chaud comme une boisson fraîche."
+        }
+      ],
+      exos: [
+        {
+          q: "Une étincelle est à 1000 °C mais ne te brûle pas. Pourquoi ?",
+          choix: ["Elle n'est pas vraiment chaude", "Haute température mais très peu de matière, donc très peu de chaleur (énergie) transférée", "Ta peau est ignifugée", "C'est une illusion"],
+          bonne: 1,
+          explication: "Température = agitation (élevée ici) ; chaleur = énergie transférée (minuscule, car l'étincelle contient très peu de matière). Température et chaleur ne sont pas la même chose."
+        },
+        {
+          q: "Une machine à mouvement perpétuel qui tournerait pour toujours sans énergie est…",
+          choix: ["Possible mais chère", "Impossible : elle violerait la conservation de l'énergie", "Déjà inventée", "Interdite par la loi seulement"],
+          bonne: 1,
+          explication: "Aucune machine ne produit plus d'énergie qu'elle n'en reçoit (premier principe). Le mouvement perpétuel est impossible par principe physique."
+        },
+        {
+          q: "Pourquoi un café chaud refroidit-il toujours, et jamais l'inverse ?",
+          choix: ["Par hasard", "La chaleur va spontanément du chaud vers le froid (entropie qui augmente)", "À cause de la tasse", "Parce qu'on souffle dessus"],
+          bonne: 1,
+          explication: "Second principe : la chaleur se répand vers le froid et le désordre augmente. C'est aussi ce qui donne au temps une direction."
+        },
+        {
+          q: "Que fait réellement un réfrigérateur ?",
+          choix: ["Il fabrique du froid", "Il déplace la chaleur de l'intérieur vers l'arrière", "Il détruit la chaleur", "Il ralentit le temps"],
+          bonne: 1,
+          explication: "Le froid n'existe pas : c'est l'absence de chaleur. Le frigo pompe la chaleur des aliments et la rejette derrière (grille tiède). Ça coûte de l'électricité."
+        },
+        {
+          q: "Le carrelage semble plus froid que le tapis, à la même température. Pourquoi ?",
+          choix: ["Il est réellement plus froid", "Bon conducteur, il aspire vite la chaleur de tes pieds", "Il contient de la glace", "C'est faux"],
+          bonne: 1,
+          explication: "Ta peau ne mesure pas la température mais la vitesse de perte de chaleur. Le carrelage (bon conducteur) l'évacue vite, le tapis (isolant) la garde."
+        },
+        {
+          q: "Qu'est-ce que la chaleur, à l'échelle des atomes ?",
+          choix: ["Un fluide invisible", "L'agitation désordonnée des atomes et molécules", "De la lumière", "Du magnétisme"],
+          bonne: 1,
+          explication: "Chaud = atomes qui s'agitent beaucoup ; froid = atomes plus calmes. Au zéro absolu (-273,15 °C), l'agitation serait minimale."
+        },
+        {
+          q: "Le double vitrage isole surtout parce que…",
+          choix: ["Le verre est plus épais", "Une couche d'air/gaz emprisonnée entre deux vitres conduit mal la chaleur", "Il est teinté", "Il réfléchit le bruit"],
+          bonne: 1,
+          explication: "L'air (ou un gaz) piégé entre les deux vitres est un mauvais conducteur : il freine la fuite de chaleur par conduction. On bloque un des trois chemins de la chaleur."
+        },
+        {
+          q: "Aucune centrale ou moteur ne convertit 100 % de l'énergie en travail utile. Pourquoi ?",
+          choix: ["Manque de technologie", "Le second principe impose qu'une part se dissipe toujours en chaleur", "Les ingénieurs sont négligents", "C'est en fait possible"],
+          bonne: 1,
+          explication: "Le second principe (entropie) garantit qu'une part de l'énergie se dégrade fatalement en chaleur inutilisable. La perfection est physiquement interdite, pas juste difficile."
         }
       ]
     }
