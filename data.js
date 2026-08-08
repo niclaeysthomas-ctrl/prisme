@@ -2443,6 +2443,375 @@ const DATA = {
           explication: "Les gros postes sont puissants ET longtemps allumés : chauffage, eau chaude, sèche-linge. Les petites veilles pèsent peu à côté."
         }
       ]
+    },
+
+    /* ============================ ONDES, SON & LUMIÈRE ============================ */
+    {
+      id: "ondes",
+      nom: "Ondes, son & lumière",
+      emoji: "🌈",
+      accent: "#38bdf8",
+      tagline: "Tout ce qui vibre, voyage et nous informe.",
+      decouvertes: [
+        {
+          titre: "La décomposition de la lumière",
+          annee: "1666",
+          qui: "Isaac Newton",
+          resume: "Newton fait passer la lumière blanche à travers un prisme et la décompose en toutes les couleurs de l'arc-en-ciel — puis prouve qu'un second prisme les recombine en blanc.",
+          pourquoi: "La lumière blanche n'est pas \"pure\" : c'est un mélange de toutes les couleurs. Ça explique l'arc-en-ciel et la couleur des objets, et fonde l'optique. Le nom même de cette app, PRISME, vient de là."
+        },
+        {
+          titre: "La lumière est une onde (fentes de Young)",
+          annee: "1801",
+          qui: "Thomas Young",
+          resume: "En faisant passer la lumière par deux fentes proches, Young obtient des bandes claires et sombres alternées : la signature d'une onde qui interfère avec elle-même.",
+          pourquoi: "Preuve décisive que la lumière est une onde. La physique quantique montrera plus tard qu'elle est aussi faite de grains — la fameuse dualité onde-particule."
+        },
+        {
+          titre: "Les ondes radio",
+          annee: "1887",
+          qui: "Heinrich Hertz (d'après la théorie de Maxwell)",
+          resume: "Hertz produit et capte pour la première fois des ondes radio en laboratoire, confirmant que lumière et ondes invisibles sont de même nature électromagnétique.",
+          pourquoi: "Ouvre l'ère des télécommunications sans fil : radio, télévision, radar, Wi-Fi. Le hertz (Hz), unité de fréquence, lui rend hommage."
+        },
+        {
+          titre: "L'effet Doppler",
+          annee: "1842",
+          qui: "Christian Doppler",
+          resume: "Doppler montre que la fréquence perçue d'une onde change quand la source se rapproche (plus aiguë) ou s'éloigne (plus grave).",
+          pourquoi: "On l'entend dans une sirène qui passe, on l'utilise dans les radars et l'échographie… et c'est le décalage vers le rouge qui a révélé l'expansion de l'univers."
+        },
+        {
+          titre: "Le laser",
+          annee: "1960",
+          qui: "Theodore Maiman (principe : Einstein, 1917)",
+          resume: "Le laser produit une lumière d'une seule couleur, parfaitement ordonnée et concentrée en un faisceau très fin, au lieu de la lumière ordinaire dispersée.",
+          pourquoi: "Partout : lecteurs de codes-barres et de disques, fibre optique d'Internet, chirurgie de l'œil, découpe industrielle, mesures de distances ultra-précises."
+        }
+      ],
+      notions: [
+        {
+          titre: "Qu'est-ce qu'une onde ?",
+          accroche: "Fais une \"ola\" dans un stade : la vague fait le tour, mais chaque spectateur reste à sa place. Une onde transporte de l'énergie, pas de la matière.",
+          blocs: [
+            { t:"Une onde est une vibration qui se propage. Sur l'eau, un bouchon monte et descend sur place pendant que la vague, elle, avance : ce n'est pas l'eau qui voyage, c'est le mouvement. Le son, la lumière, les vagues, une corde qu'on secoue : toutes sont des ondes." },
+            { t:"On la décrit par trois nombres : la fréquence (combien de vibrations par seconde, en hertz), la longueur d'onde (la distance entre deux crêtes) et l'amplitude (la taille de la vibration — pour le son, le volume ; pour la lumière, l'intensité)." }
+          ],
+          retenir: "Une onde est une vibration qui se propage en transportant de l'énergie, pas de la matière (comme la \"ola\"). On la mesure par sa fréquence, sa longueur d'onde et son amplitude."
+        },
+        {
+          titre: "Le son : de la matière qui vibre",
+          accroche: "Dans l'espace, personne ne t'entend crier — et ce n'est pas une exagération de cinéma. Le son a besoin de matière pour voyager.",
+          blocs: [
+            { t:"Un son, c'est de la matière qui vibre et pousse ses voisines de proche en proche : tes cordes vocales font vibrer l'air, l'air fait vibrer ton tympan. Sans milieu (air, eau, solide), pas de son — d'où le silence total du vide spatial. Dans l'eau ou le métal, le son va même plus vite que dans l'air." },
+            { t:"La fréquence donne la hauteur (aigu/grave), l'amplitude donne le volume. Et le son est bien plus lent que la lumière (~340 m/s contre 300 000 km/s) : c'est pourquoi on voit l'éclair avant d'entendre le tonnerre." }
+          ],
+          retenir: "Le son est une vibration de la matière qui se propage de proche en proche : pas de matière, pas de son (silence du vide spatial). Fréquence = hauteur, amplitude = volume. Il est bien plus lent que la lumière."
+        },
+        {
+          titre: "La lumière : une onde qui n'a besoin de rien",
+          accroche: "Contrairement au son, la lumière traverse le vide — sinon celle du Soleil ne nous parviendrait jamais.",
+          blocs: [
+            { t:"La lumière est une onde électromagnétique : une vibration de champs électrique et magnétique qui se propage sans support, même dans le vide, à 300 000 km/s (la vitesse limite de l'univers). C'est ce que Maxwell a compris au XIXe siècle." },
+            { t:"Ce que nos yeux voient — l'arc-en-ciel, du rouge au violet — n'est qu'une toute petite fenêtre. Juste au-delà du rouge commence l'infrarouge (la chaleur qu'on sent d'un feu), juste avant le violet l'ultraviolet. Même nature, mais des fréquences que nos yeux ne captent pas." }
+          ],
+          retenir: "La lumière est une onde électromagnétique qui voyage même dans le vide, à 300 000 km/s. Le visible (rouge→violet) n'est qu'une petite fenêtre ; au-delà, mêmes ondes invisibles (infrarouge, UV…)."
+        },
+        {
+          titre: "Le spectre électromagnétique : une seule famille",
+          accroche: "Les ondes radio, le Wi-Fi, la chaleur, la lumière, les rayons X : tout cela est la même chose, à des fréquences différentes.",
+          blocs: [
+            { t:"Du plus \"calme\" au plus énergique : ondes radio → micro-ondes → infrarouge → lumière visible → ultraviolet → rayons X → rayons gamma. Toutes sont des ondes électromagnétiques ; seule leur fréquence (donc leur énergie) change. Plus la fréquence est haute, plus l'onde est énergique." },
+            { t:"C'est cette énergie qui décide de tout : les ondes radio et le Wi-Fi (basse énergie) traversent les murs sans danger ; les rayons X et gamma (haute énergie) peuvent casser l'ADN. Chaque technologie choisit sa \"case\" du spectre selon l'usage." }
+          ],
+          retenir: "Radio, micro-ondes, infrarouge, visible, UV, X, gamma : une seule famille d'ondes électromagnétiques, classées par énergie croissante. Basse énergie = inoffensif et traversant ; haute énergie (X, gamma) = ionisant."
+        },
+        {
+          titre: "Pourquoi les objets ont une couleur",
+          accroche: "Une pomme n'est pas \"rouge\" en soi. Elle renvoie le rouge et avale le reste — la couleur naît de cette sélection.",
+          blocs: [
+            { t:"La lumière blanche contient toutes les couleurs. Quand elle frappe un objet, celui-ci en absorbe certaines et renvoie les autres. Une pomme rouge absorbe le bleu et le vert, et te renvoie le rouge : c'est cette lumière renvoyée que tu vois. Un objet noir absorbe presque tout, un objet blanc renvoie presque tout." },
+            { t:"Deux conséquences très concrètes : sous une lumière colorée, les couleurs semblent changer (il n'y a plus toutes les couleurs disponibles à renvoyer), et un vêtement noir chauffe plus au soleil qu'un blanc, car il absorbe davantage d'énergie lumineuse." }
+          ],
+          retenir: "La couleur d'un objet, c'est la lumière qu'il RENVOIE (il absorbe le reste). Rouge = renvoie le rouge. Noir = absorbe presque tout (et chauffe) ; blanc = renvoie presque tout."
+        },
+        {
+          titre: "L'effet Doppler : le son qui monte et descend",
+          accroche: "La sirène d'une ambulance semble plus aiguë quand elle arrive, plus grave quand elle s'éloigne. Pourtant le son émis ne change jamais.",
+          blocs: [
+            { t:"Quand la source se rapproche, chaque vibration est émise un peu plus près que la précédente : les ondes se tassent, la fréquence perçue monte (plus aigu). Quand elle s'éloigne, les ondes s'étirent, la fréquence baisse (plus grave). Le son réel est constant ; c'est le mouvement qui change ce que tu perçois." },
+            { t:"Le même effet vaut pour la lumière : une source qui s'éloigne paraît légèrement plus rouge (décalage vers le rouge). C'est ainsi qu'on a découvert que les galaxies s'éloignent et que l'univers est en expansion. Le radar routier et l'échographie l'exploitent aussi." }
+          ],
+          retenir: "Effet Doppler : une source qui s'approche \"tasse\" ses ondes (son plus aigu, lumière plus bleue) ; qui s'éloigne les étire (plus grave, plus rouge). D'où la sirène, le radar, et le décalage vers le rouge des galaxies."
+        }
+      ],
+      quotidien: [
+        {
+          titre: "Le bruit abîme l'oreille pour de bon",
+          danger: true,
+          texte: "Le volume se mesure en décibels, une échelle logarithmique : +10 dB, c'est déjà 10 fois plus d'énergie sonore. Au-delà de ~85 dB (trafic dense, concert), une exposition prolongée détruit peu à peu les cellules de l'oreille interne, qui ne repoussent jamais. Acouphènes et perte d'audition sont irréversibles : baisser le volume des écouteurs et faire des pauses est la seule vraie prévention."
+        },
+        {
+          titre: "Estimer la distance d'un orage",
+          texte: "La lumière de l'éclair arrive quasi instantanément, mais le son (le tonnerre) ne parcourt que ~340 m par seconde. Compte les secondes entre l'éclair et le tonnerre et divise par 3 : tu obtiens la distance en kilomètres. Moins de 10 secondes (≈3 km), l'orage est proche : mets-toi à l'abri."
+        },
+        {
+          titre: "Pourquoi ta voix enregistrée te semble étrange",
+          texte: "Quand tu parles, tu t'entends de deux façons : par l'air (comme les autres) et par les vibrations transmises à travers les os de ton crâne, qui ajoutent des graves. Un enregistrement ne capte que la voie aérienne — c'est ta \"vraie\" voix, celle que les autres entendent. Elle te paraît bizarre simplement parce que tu n'as pas l'habitude de l'entendre sans les graves internes."
+        }
+      ],
+      exos: [
+        {
+          q: "Dans une vague sur l'eau, qu'est-ce qui avance réellement ?",
+          choix: ["L'eau, d'un bout à l'autre", "L'énergie / le mouvement, pas l'eau elle-même", "Rien", "Le fond marin"],
+          bonne: 1,
+          explication: "Un bouchon monte et descend sur place : l'eau reste là, c'est la vague (l'énergie) qui voyage. Toute onde transporte de l'énergie, pas de la matière."
+        },
+        {
+          q: "Pourquoi n'y a-t-il aucun son dans l'espace ?",
+          choix: ["Il y fait trop froid", "Le son a besoin de matière pour se propager, et le vide n'en a pas", "Les ondes sonores gèlent", "Il y en a, mais très faible"],
+          bonne: 1,
+          explication: "Le son est une vibration de la matière, transmise de proche en proche. Sans air (ni eau, ni solide), rien ne porte la vibration : silence total."
+        },
+        {
+          q: "Pourquoi voit-on l'éclair avant d'entendre le tonnerre ?",
+          choix: ["L'éclair est émis avant", "La lumière va bien plus vite que le son", "Le tonnerre vient d'un autre nuage", "C'est une illusion"],
+          bonne: 1,
+          explication: "Lumière : 300 000 km/s ; son : ~340 m/s. La lumière arrive quasi instantanément, le son traîne. L'écart permet d'estimer la distance de l'orage."
+        },
+        {
+          q: "Les ondes radio, la lumière visible et les rayons X sont…",
+          choix: ["Trois choses sans rapport", "La même famille d'ondes électromagnétiques, à des fréquences différentes", "Des sons", "Des particules de matière"],
+          bonne: 1,
+          explication: "Une seule famille, classée par énergie. Basse énergie (radio) : inoffensive et traversante ; haute énergie (X, gamma) : ionisante."
+        },
+        {
+          q: "Pourquoi une pomme paraît-elle rouge ?",
+          choix: ["Elle produit de la lumière rouge", "Elle renvoie le rouge et absorbe les autres couleurs", "Elle est rouge à l'intérieur", "Nos yeux inventent le rouge"],
+          bonne: 1,
+          explication: "La lumière blanche contient tout ; la pomme absorbe le bleu et le vert et te renvoie le rouge. La couleur, c'est la lumière renvoyée."
+        },
+        {
+          q: "Pourquoi un tee-shirt noir chauffe-t-il plus au soleil qu'un blanc ?",
+          choix: ["Le noir attire le soleil", "Le noir absorbe presque toute la lumière (donc l'énergie), le blanc la renvoie", "Le blanc est plus fin", "Aucune différence réelle"],
+          bonne: 1,
+          explication: "Absorber la lumière, c'est absorber son énergie, qui devient chaleur. Le noir absorbe presque tout, le blanc renvoie presque tout."
+        },
+        {
+          q: "La sirène d'une ambulance qui s'éloigne devient plus grave. C'est…",
+          choix: ["Elle baisse le son exprès", "L'effet Doppler : les ondes s'étirent quand la source s'éloigne", "Le vent", "Une panne de sirène"],
+          bonne: 1,
+          explication: "En s'éloignant, la source étire ses ondes : fréquence perçue plus basse (plus grave). En approchant, elles se tassent (plus aigu). Le son émis, lui, ne change pas."
+        },
+        {
+          q: "Comment sait-on que les galaxies lointaines s'éloignent de nous ?",
+          choix: ["On les voit bouger à l'œil nu", "Leur lumière est décalée vers le rouge (effet Doppler)", "Elles disparaissent", "On ne le sait pas vraiment"],
+          bonne: 1,
+          explication: "Une source qui s'éloigne voit sa lumière étirée vers le rouge. Ce \"décalage vers le rouge\" des galaxies a révélé l'expansion de l'univers."
+        },
+        {
+          q: "L'échelle des décibels est logarithmique. Passer de 70 à 80 dB, c'est…",
+          choix: ["Un peu plus fort", "10 fois plus d'énergie sonore", "10 dB sans importance", "2 fois moins fort"],
+          bonne: 1,
+          explication: "Chaque +10 dB = ×10 en énergie sonore. C'est pourquoi le bruit fort devient vite dangereux : l'échelle cache d'énormes écarts."
+        },
+        {
+          q: "Qu'est-ce qui distingue la lumière d'un laser de celle d'une ampoule ?",
+          choix: ["Elle est plus chaude", "Elle est d'une seule couleur, ordonnée et concentrée en un fin faisceau", "Elle est invisible", "Elle ne voyage pas"],
+          bonne: 1,
+          explication: "Le laser produit une lumière cohérente (une couleur, ondes alignées, faisceau fin), d'où son usage en fibre optique, lecture de disques, chirurgie, mesures."
+        },
+        {
+          q: "L'expérience des deux fentes de Young (1801) a prouvé que la lumière…",
+          choix: ["N'existe pas", "Se comporte comme une onde (elle forme des interférences)", "Est uniquement faite de billes", "Va moins vite que le son"],
+          bonne: 1,
+          explication: "Les bandes claires/sombres sont la signature d'une onde qui interfère. La quantique montrera plus tard qu'elle est AUSSI faite de grains : la dualité."
+        }
+      ]
+    },
+
+    /* ============================ LE CERVEAU & L'ESPRIT ============================ */
+    {
+      id: "cerveau",
+      nom: "Le Cerveau & l'esprit",
+      emoji: "🧠",
+      accent: "#d98cf0",
+      tagline: "L'organe qui essaie de se comprendre lui-même.",
+      decouvertes: [
+        {
+          titre: "La localisation des fonctions",
+          annee: "1861",
+          qui: "Paul Broca",
+          resume: "En étudiant un patient ayant perdu la parole, Broca identifie une zone précise du cerveau responsable du langage — la première fonction mentale localisée.",
+          pourquoi: "Le cerveau n'est pas une masse uniforme : il est spécialisé par régions. Fondation de la neurologie moderne."
+        },
+        {
+          titre: "Le conditionnement",
+          annee: "~1900",
+          qui: "Ivan Pavlov",
+          resume: "Pavlov fait sonner une cloche avant de nourrir des chiens ; bientôt, la cloche seule déclenche leur salivation. L'apprentissage par association est né.",
+          pourquoi: "Explique une grande part de nos habitudes, peurs et automatismes : le cerveau relie ce qui arrive ensemble. Base du conditionnement, jusqu'aux réflexes des applis."
+        },
+        {
+          titre: "Les biais cognitifs",
+          annee: "années 1970",
+          qui: "Daniel Kahneman & Amos Tversky",
+          resume: "Ils montrent que l'esprit humain suit des raccourcis mentaux systématiques qui faussent nos jugements de façon prévisible.",
+          pourquoi: "Nos erreurs de raisonnement ne sont pas aléatoires mais régulières, donc étudiables. Révolutionne la psychologie et l'économie. Prix Nobel 2002."
+        },
+        {
+          titre: "La plasticité cérébrale",
+          annee: "fin XXe siècle",
+          qui: "Neurosciences (nombreux travaux)",
+          resume: "Contre l'idée d'un cerveau figé à l'âge adulte, on découvre qu'il se remodèle en permanence : les connexions se renforcent ou s'effacent selon l'usage.",
+          pourquoi: "On peut apprendre, changer une habitude et récupérer après une lésion à tout âge. Le cerveau est sculpté par ce qu'on en fait."
+        },
+        {
+          titre: "Voir le cerveau en action (IRMf)",
+          annee: "~1990",
+          qui: "Seiji Ogawa et al.",
+          resume: "L'IRM fonctionnelle permet de voir quelles régions du cerveau consomment plus d'énergie pendant qu'une personne pense, parle ou bouge.",
+          pourquoi: "Pour la première fois, on observe le cerveau au travail sans l'ouvrir. Un outil central des neurosciences — à interpréter avec prudence, car \"une zone s'active\" ne dit pas tout."
+        }
+      ],
+      notions: [
+        {
+          titre: "La perception est une construction",
+          accroche: "Tu crois voir le monde \"tel qu'il est\". En réalité, ton cerveau t'en fabrique une version — et il prend des raccourcis.",
+          blocs: [
+            { t:"Les yeux ne \"filment\" pas la réalité : ils envoient des signaux partiels et bruités que le cerveau interprète, complète et corrige. Il bouche même en permanence un trou dans ta vision (l'angle mort, là où part le nerf optique) sans que tu le remarques. Les illusions d'optique ne sont pas des bugs : ce sont ces raccourcis pris en flagrant délit." },
+            { t:"C'est vrai de tous les sens : le cerveau construit une expérience cohérente à partir d'informations incomplètes, en s'appuyant sur ses attentes. D'où le fait que deux personnes peuvent honnêtement \"voir\" ou \"entendre\" des choses différentes." }
+          ],
+          retenir: "Le cerveau ne reçoit pas la réalité, il la reconstruit à partir de signaux partiels, en comblant les trous avec ses attentes. Les illusions d'optique révèlent ces raccourcis. Percevoir est un acte actif, pas un enregistrement."
+        },
+        {
+          titre: "Les deux vitesses de la pensée",
+          accroche: "38 × 27, combien ? Et : 2 + 2 ? Tu viens d'utiliser deux modes de pensée radicalement différents.",
+          blocs: [
+            { t:"Le Système 1 est rapide, automatique, sans effort : il reconnaît un visage, lit \"2+2\", sent un danger. Le Système 2 est lent, coûteux, réfléchi : il calcule 38×27, pèse un argument, résiste à une tentation. Le premier tourne en permanence ; le second, un peu paresseux, ne s'active que si nécessaire." },
+            { t:"Le Système 1 est génial pour le quotidien, mais se trompe sur ce qui est nouveau, abstrait ou statistique — et c'est là que naissent la plupart des biais. Savoir \"passer en Système 2\" sur les décisions importantes est une compétence en soi." }
+          ],
+          retenir: "Deux modes de pensée : le Système 1 (rapide, intuitif, automatique) et le Système 2 (lent, réfléchi, coûteux). Le 1 gère le quotidien mais génère les biais ; les décisions importantes méritent qu'on active le 2."
+        },
+        {
+          titre: "Les biais cognitifs",
+          accroche: "Ton cerveau prend des raccourcis pour aller vite. Souvent utiles — parfois ils te font tomber dans le même piège que tout le monde.",
+          blocs: [
+            { h:"Quelques classiques", t:"Le biais de confirmation : on remarque et on retient ce qui confirme ce qu'on croit déjà, et on ignore le reste. L'ancrage : le premier chiffre entendu (un prix de départ) déforme tout jugement suivant. La disponibilité : on surestime ce qui vient facilement à l'esprit (un crash d'avion marque plus que des milliers de trajets en voiture)." },
+            { t:"Ces biais ne sont pas de la bêtise : ce sont des raccourcis efficaces la plupart du temps. Le problème, c'est qu'ils sont systématiques et invisibles de l'intérieur. On ne s'en corrige pas en \"faisant attention\" ; on s'en protège par des méthodes (chercher activement ce qui nous contredit, comparer des données plutôt que des impressions)." }
+          ],
+          retenir: "Les biais cognitifs sont des raccourcis mentaux systématiques (confirmation, ancrage, disponibilité…). Utiles souvent, trompeurs parfois, et invisibles de l'intérieur. On s'en protège par des méthodes, pas par la seule bonne volonté."
+        },
+        {
+          titre: "La mémoire n'est pas un enregistreur",
+          accroche: "Tu ne \"relis\" pas un souvenir comme une vidéo : tu le reconstruis à chaque fois — et tu le modifies au passage.",
+          blocs: [
+            { t:"Se souvenir, c'est reconstruire une scène à partir de fragments, en comblant les trous avec du plausible. Chaque rappel peut légèrement réécrire le souvenir. C'est pourquoi des faux souvenirs sincères existent, et pourquoi les témoignages oculaires sont faillibles." },
+            { t:"Conséquence pratique pour apprendre : relire passivement donne l'illusion de savoir. Ce qui grave vraiment, c'est de se tester (récupérer l'information de mémoire) et d'espacer les révisions dans le temps. L'effort de rappel est précisément ce qui renforce la trace." }
+          ],
+          retenir: "La mémoire reconstruit, elle n'enregistre pas : d'où les faux souvenirs. Pour retenir, se tester (récupération active) et espacer les révisions bat de loin la relecture passive — l'effort de rappel est ce qui fixe le souvenir."
+        },
+        {
+          titre: "La dopamine : l'anticipation, pas le plaisir",
+          accroche: "On appelle la dopamine \"l'hormone du plaisir\". C'est faux — et cette erreur explique pourquoi les notifications sont si accrocheuses.",
+          blocs: [
+            { t:"La dopamine n'est pas le signal du plaisir, mais celui de l'ANTICIPATION d'une récompense : elle te pousse à chercher, à vouloir. Elle grimpe surtout quand la récompense est incertaine — c'est le moteur de la curiosité… et des machines à sous." },
+            { t:"Les applis exploitent exactement ça : notifications imprévisibles, \"tirer pour rafraîchir\", likes qui arrivent au hasard. Chaque incertitude relance la dopamine et l'envie de vérifier. Comprendre ce mécanisme, c'est déjà reprendre un peu la main (couper les notifs, retirer l'aléa)." }
+          ],
+          retenir: "La dopamine signale l'anticipation d'une récompense (le \"vouloir\"), pas le plaisir lui-même — et elle s'emballe sur les récompenses incertaines. C'est le ressort des notifications et du scroll. Le savoir aide à reprendre le contrôle."
+        },
+        {
+          titre: "La plasticité : le cerveau se sculpte",
+          accroche: "Chaque chose que tu répètes creuse un chemin dans ton cerveau. Les habitudes, bonnes comme mauvaises, sont des sentiers de plus en plus faciles à emprunter.",
+          blocs: [
+            { t:"Le cerveau se remodèle toute la vie : les connexions souvent utilisées se renforcent, celles délaissées s'effacent (\"ce qui s'active ensemble se lie ensemble\"). Apprendre la guitare, une langue ou un geste, c'est littéralement re-câbler des circuits — d'où l'intérêt de la répétition régulière plutôt que du bachotage." },
+            { t:"Bonne nouvelle : cette plasticité n'a pas d'âge limite, même si elle ralentit. On peut apprendre du neuf, défaire une habitude (en cessant de nourrir le sentier) et récupérer après une lésion. Le cerveau est un peu comme un muscle qu'on façonne par l'usage." }
+          ],
+          retenir: "Le cerveau se remodèle en continu : ce qu'on répète se renforce, ce qu'on délaisse s'efface. Les habitudes sont des sentiers neuronaux. On peut apprendre et changer à tout âge — par la répétition régulière, pas le bachotage."
+        }
+      ],
+      quotidien: [
+        {
+          titre: "Écrans, notifications et dopamine",
+          texte: "Les applications sont conçues pour capter ton attention via l'imprévisibilité (notifications au hasard, fils sans fin), qui relance sans cesse la dopamine. Quelques leviers efficaces : couper les notifications non essentielles, passer l'écran en noir et blanc, ranger les applis \"aspirantes\" hors de la première page, et poser le téléphone dans une autre pièce pour travailler. On ne lutte pas contre sa volonté, on réduit les déclencheurs."
+        },
+        {
+          titre: "Mieux apprendre : se tester et espacer",
+          texte: "Relire ses notes donne un faux sentiment de maîtrise. Deux méthodes prouvées font la vraie différence : se tester (fermer le cours et tenter de tout restituer) et espacer les révisions (revoir à J+1, J+3, J+7 plutôt que tout d'un coup). L'effort de se rappeler est exactement ce qui grave le souvenir. C'est tout le principe des cartes de révision."
+        },
+        {
+          titre: "Le mythe du multitâche",
+          texte: "Le cerveau ne fait pas vraiment deux tâches attentionnelles à la fois : il bascule très vite de l'une à l'autre, et chaque bascule a un coût (temps perdu, erreurs). Répondre à un message en travaillant fragmente l'attention et allonge le tout. Faire une seule chose à la fois, par blocs, est plus rapide et moins fatigant qu'il n'y paraît."
+        }
+      ],
+      exos: [
+        {
+          q: "Qu'a révélé la découverte de Broca en 1861 ?",
+          choix: ["Le cerveau est une masse uniforme", "Des fonctions précises (comme le langage) sont localisées dans des zones précises", "Le cerveau ne sert à rien", "La mémoire est dans le cœur"],
+          bonne: 1,
+          explication: "Une zone dédiée au langage : le cerveau est spécialisé par régions. Fondation de la neurologie moderne."
+        },
+        {
+          q: "Un chien salive au son d'une cloche annonçant le repas. C'est…",
+          choix: ["Un réflexe inné", "Un apprentissage par association (conditionnement de Pavlov)", "De la télépathie", "Une maladie"],
+          bonne: 1,
+          explication: "Le cerveau relie ce qui arrive ensemble (cloche + nourriture). Ce conditionnement explique beaucoup d'habitudes, de peurs et d'automatismes humains."
+        },
+        {
+          q: "Ta perception visuelle du monde est…",
+          choix: ["Une copie fidèle de la réalité", "Une reconstruction du cerveau à partir de signaux partiels", "Parfaite et sans trou", "Identique pour tous"],
+          bonne: 1,
+          explication: "Le cerveau interprète et complète des signaux incomplets (il masque même ton angle mort). Les illusions d'optique révèlent ces raccourcis."
+        },
+        {
+          q: "Résister à une tentation ou calculer 38×27 mobilise surtout…",
+          choix: ["Le Système 1 (rapide, automatique)", "Le Système 2 (lent, réfléchi, coûteux)", "Aucun des deux", "Le cœur"],
+          bonne: 1,
+          explication: "Le Système 2 gère l'effort et la réflexion ; le Système 1, rapide et automatique, gère l'intuitif (reconnaître un visage, 2+2)."
+        },
+        {
+          q: "Le biais de confirmation, c'est la tendance à…",
+          choix: ["Tout remettre en question", "Ne retenir que ce qui confirme ce qu'on croit déjà", "Changer d'avis sans cesse", "Oublier les chiffres"],
+          bonne: 1,
+          explication: "On remarque ce qui nous donne raison et on ignore le reste. Invisible de l'intérieur : on s'en protège en cherchant activement ce qui nous contredit."
+        },
+        {
+          q: "Se souvenir d'un événement, c'est…",
+          choix: ["Rejouer une vidéo exacte", "Reconstruire la scène (et parfois la modifier au passage)", "Impossible", "Lire un fichier figé"],
+          bonne: 1,
+          explication: "La mémoire reconstruit à partir de fragments, d'où les faux souvenirs sincères et la faillibilité des témoignages oculaires."
+        },
+        {
+          q: "Pour vraiment retenir un cours, le plus efficace est de…",
+          choix: ["Le relire plusieurs fois", "Se tester de mémoire et espacer les révisions", "Le surligner en couleurs", "L'écouter en dormant"],
+          bonne: 1,
+          explication: "La relecture donne une illusion de savoir. Se tester (récupération active) + espacer grave durablement : l'effort de rappel renforce la trace."
+        },
+        {
+          q: "La dopamine est surtout le signal…",
+          choix: ["Du plaisir ressenti", "De l'anticipation d'une récompense (le \"vouloir\")", "De la douleur", "Du sommeil"],
+          bonne: 1,
+          explication: "Elle pousse à chercher et à vouloir, et s'emballe sur les récompenses incertaines — d'où l'efficacité des notifications imprévisibles."
+        },
+        {
+          q: "Peut-on encore re-câbler son cerveau à l'âge adulte ?",
+          choix: ["Non, il est figé après l'enfance", "Oui : il se remodèle toute la vie selon l'usage (plasticité)", "Seulement après une lésion", "Seulement en dormant"],
+          bonne: 1,
+          explication: "La plasticité dure toute la vie (même ralentie) : ce qu'on répète se renforce. On peut apprendre, défaire une habitude, récupérer."
+        },
+        {
+          q: "Faire deux tâches attentionnelles \"en même temps\", pour le cerveau, c'est…",
+          choix: ["Naturel et gratuit", "En réalité basculer vite de l'une à l'autre, avec un coût à chaque fois", "Totalement impossible", "Plus rapide que se concentrer"],
+          bonne: 1,
+          explication: "Le cerveau alterne au lieu de vraiment paralléliser ; chaque bascule coûte du temps et des erreurs. Une chose à la fois est plus efficace."
+        },
+        {
+          q: "Un premier prix affiché à 200 € fait paraître 120 € \"raisonnable\". C'est…",
+          choix: ["Le biais d'ancrage", "Le hasard", "Une bonne affaire garantie", "Le biais de confirmation"],
+          bonne: 0,
+          explication: "L'ancrage : le premier chiffre rencontré déforme les jugements suivants. Très utilisé en négociation et en marketing."
+        }
+      ]
     }
 
   ]
