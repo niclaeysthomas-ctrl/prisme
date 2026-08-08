@@ -75,6 +75,26 @@ main{flex:1;width:100%;max-width:720px;margin:0 auto;padding:18px 16px 40px}
 .domProg i{display:block;height:100%;width:0;border-radius:6px}
 .domMeta{display:flex;justify-content:space-between;margin-top:7px;font-size:10.5px;color:var(--ink-dim)}
 
+/* Carte Mode Défi */
+.defiCard{
+  display:flex;align-items:center;gap:14px;width:100%;text-align:left;cursor:pointer;
+  margin:0 0 22px;padding:16px;border-radius:var(--radius);
+  border:1px solid #3a3470;
+  background:linear-gradient(135deg,rgba(139,125,255,.22),rgba(79,209,197,.14));
+  transition:transform .12s ease;
+}
+.defiCard:active{transform:scale(.99)}
+.defiCard .defiIcon{font-size:30px;line-height:1}
+.defiCard .defiTxt{flex:1;display:flex;flex-direction:column;gap:3px}
+.defiCard .defiTxt b{font-size:16px;letter-spacing:.02em}
+.defiCard .defiTxt small{font-size:12px;color:var(--ink-soft);line-height:1.4}
+.defiCard .defiGo{font-size:12px;font-weight:800;color:var(--accent);white-space:nowrap}
+
+/* Thème d'une question de défi */
+.qTheme{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.03em;color:var(--ink-soft);
+  background:var(--bg2);border:1px solid var(--line);padding:5px 10px;border-radius:20px;margin-bottom:12px}
+.ghostBtn{background:none !important;color:var(--ink-soft) !important;border:1px solid var(--line) !important;margin-top:9px}
+
 /* ---------- Domain page ---------- */
 .domHead{display:flex;align-items:center;gap:12px;margin:2px 2px 4px}
 .domHead .big{font-size:34px}

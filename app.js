@@ -44,8 +44,32 @@ function go(view, arg){
   window.scrollTo(0,0);
   if(view === 'home'){ backBtn.hidden = true; renderHome(); }
   else if(view === 'domain'){ backBtn.hidden = false; renderDomain(arg); }
+  else if(view === 'defi'){ backBtn.hidden = false; renderDefi(); }
 }
 backBtn.onclick = ()=> go('home');
+
+/* ---------- Outils communs ---------- */
+function shuffle(arr){
+  for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; }
+  return arr;
+}
+// Renvoie une copie d'un exo avec l'ordre des choix mélangé (et 'bonne' recalculé).
+function shuffledExo(e){
+  const order = shuffle(e.choix.map((_,k)=>k));
+  return {
+    q: e.q,
+    choix: order.map(k=>e.choix[k]),
+    bonne: order.indexOf(e.bonne),
+    explication: e.explication,
+    tags: e.tags
+  };
+}
+const DOM_BY_ID = {};
+DATA.domaines.forEach(d=> DOM_BY_ID[d.id] = { emoji:d.emoji, nom:d.nom });
+function themeLabel(tags){
+  if(!tags || !tags.length) return '';
+  return tags.map(t=> DOM_BY_ID[t] ? `${DOM_BY_ID[t].emoji} ${DOM_BY_ID[t].nom}` : t).join('  ×  ');
+}
 
 /* ---------- Accueil ---------- */
 function domainProgress(d){
@@ -61,7 +85,8 @@ function domainProgress(d){
 function renderHome(){
   const totalFiches = DATA.domaines.reduce((a,d)=>a+d.decouvertes.length,0);
   const totalExos = DATA.domaines.reduce((a,d)=>a+d.exos.length,0);
-  const explored = DATA.domaines.filter(d=> (state.done[d.id]||{}).fiches).length;
+  const nbDefis = (DATA.defis||[]).length;
+  const best = state.defiBest||0;
 
   APP.className = 'fade';
   APP.innerHTML = `
@@ -74,8 +99,17 @@ function renderHome(){
     <div class="statRow">
       <div class="statBox"><b>${DATA.domaines.length}</b><span>Domaines</span></div>
       <div class="statBox"><b>${totalFiches}</b><span>Découvertes</span></div>
-      <div class="statBox"><b>${totalExos}</b><span>Exercices</span></div>
+      <div class="statBox"><b>${totalExos + nbDefis}</b><span>Exercices</span></div>
     </div>
+
+    <button class="defiCard" id="defiBtn">
+      <span class="defiIcon">🎯</span>
+      <span class="defiTxt">
+        <b>Mode Défi</b>
+        <small>${DEFI_N} questions au hasard, tous domaines mêlés — plus poussées, faites pour réfléchir.</small>
+      </span>
+      <span class="defiGo">${best?`record ${best}/${DEFI_N}`:'▶'}</span>
+    </button>
 
     <div class="sectionTitle">Explore un domaine</div>
     <div class="domGrid">
@@ -96,6 +130,8 @@ function renderHome(){
   APP.querySelectorAll('.domCard').forEach(b=>{
     b.onclick = ()=> go('domain', b.dataset.id);
   });
+  const db = document.getElementById('defiBtn');
+  if(db) db.onclick = ()=> go('defi');
   renderXP();
 }
 
@@ -183,17 +219,22 @@ function viewQuotidien(d){
   `).join('');
 }
 
-/* ---------- Quiz ---------- */
-function mountQuiz(d, body){
-  if(!d.exos.length){ body.innerHTML = `<div class="emptyExo">Pas encore d'exercices ici.</div>`; return; }
+/* ---------- Moteur de quiz générique ---------- */
+// list : tableau d'exos {q, choix, bonne, explication, tags?}
+// opts : { label, showTheme, onFinish(score,total) }
+function runQuiz(list, body, opts){
+  opts = opts || {};
+  const total = list.length;
   let i = 0, score = 0, answered = false;
 
   function paint(){
-    const q = d.exos[i];
+    const q = list[i];
+    const theme = (opts.showTheme && q.tags) ? `<div class="qTheme">${themeLabel(q.tags)}</div>` : '';
     body.innerHTML = `
       <div class="quizWrap">
-        <div class="quizTop"><span>Question ${i+1}/${d.exos.length}</span><span>Score ${score}</span></div>
-        <div class="quizProg"><i style="width:${(i)/d.exos.length*100}%"></i></div>
+        <div class="quizTop"><span>${opts.label||'Question'} ${i+1}/${total}</span><span>Score ${score}</span></div>
+        <div class="quizProg"><i style="width:${(i)/total*100}%"></i></div>
+        ${theme}
         <p class="question">${q.q}</p>
         <div class="choices">
           ${q.choix.map((c,idx)=>`<button class="choice" data-i="${idx}">${c}</button>`).join('')}
@@ -209,8 +250,7 @@ function mountQuiz(d, body){
   function pick(idx, q){
     if(answered) return;
     answered = true;
-    const btns = body.querySelectorAll('.choice');
-    btns.forEach((b,k)=>{
+    body.querySelectorAll('.choice').forEach((b,k)=>{
       if(k===q.bonne) b.classList.add('correct');
       else if(k===idx) b.classList.add('wrong');
       else b.classList.add('dim');
@@ -221,38 +261,91 @@ function mountQuiz(d, body){
     const after = body.querySelector('#afterQ');
     after.innerHTML = `
       <div class="explain ${ok?'ok':'no'}">${ok?'✓ ':'✗ '}${q.explication}</div>
-      <button class="nextBtn">${i < d.exos.length-1 ? 'Question suivante' : 'Voir le résultat'}</button>`;
+      <button class="nextBtn">${i < total-1 ? 'Question suivante' : 'Voir le résultat'}</button>`;
     after.querySelector('.nextBtn').onclick = ()=>{
-      if(i < d.exos.length-1){ i++; paint(); }
-      else finish();
+      if(i < total-1){ i++; paint(); }
+      else opts.onFinish(score, total);
     };
   }
 
-  function finish(){
-    // XP : 10 par bonne réponse, sauf ce qui a déjà été gagné (on récompense le progrès)
-    const done = state.done[d.id] || (state.done[d.id]={});
-    const prevBest = done.quizBest || 0;
-    if(score > prevBest){
-      addXP( (score - prevBest) * 10 );
-      done.quizBest = score;
-      store.save(state);
-    }
-    const pct = Math.round(score/d.exos.length*100);
-    const msg = pct===100 ? "Sans faute. Ce domaine n'a plus de secret pour toi." :
-                pct>=60  ? "Solide. Relis les fiches sur ce qui a coincé et retente." :
-                           "Le quiz t'a piégée — c'est le moment de relire les découvertes et notions.";
-    body.innerHTML = `
-      <div class="quizWrap result">
-        <div>Résultat</div>
-        <div class="score" style="color:${pct===100?'var(--good)':pct>=60?'var(--warn)':'var(--bad)'}">${score}/${d.exos.length}</div>
-        <div class="msg">${msg}</div>
-        ${score>prevBest?`<div class="xpGain">+${(score-prevBest)*10} XP</div>`:`<div class="xpGain" style="color:var(--ink-dim)">Meilleur score déjà enregistré : ${prevBest}/${d.exos.length}</div>`}
-        <button class="nextBtn" id="retry">Recommencer le quiz</button>
-      </div>`;
-    body.querySelector('#retry').onclick = ()=> mountQuiz(d, body);
-  }
-
   paint();
+}
+
+/* ---------- Quiz d'un domaine ---------- */
+function mountQuiz(d, body){
+  if(!d.exos.length){ body.innerHTML = `<div class="emptyExo">Pas encore d'exercices ici.</div>`; return; }
+  runQuiz(d.exos, body, {
+    onFinish(score, total){
+      const done = state.done[d.id] || (state.done[d.id]={});
+      const prevBest = done.quizBest || 0;
+      const gain = score > prevBest ? (score - prevBest) * 10 : 0;
+      if(gain){ addXP(gain); done.quizBest = score; store.save(state); }
+      const pct = Math.round(score/total*100);
+      const msg = pct===100 ? "Sans faute. Ce domaine n'a plus de secret pour toi." :
+                  pct>=60  ? "Solide. Relis les fiches sur ce qui a coincé et retente." :
+                             "Le quiz t'a piégée — c'est le moment de relire les découvertes et notions.";
+      body.innerHTML = `
+        <div class="quizWrap result">
+          <div>Résultat</div>
+          <div class="score" style="color:${pct===100?'var(--good)':pct>=60?'var(--warn)':'var(--bad)'}">${score}/${total}</div>
+          <div class="msg">${msg}</div>
+          ${gain?`<div class="xpGain">+${gain} XP</div>`:`<div class="xpGain" style="color:var(--ink-dim)">Meilleur score déjà enregistré : ${prevBest}/${total}</div>`}
+          <button class="nextBtn" id="retry">Recommencer le quiz</button>
+        </div>`;
+      body.querySelector('#retry').onclick = ()=> mountQuiz(d, body);
+    }
+  });
+}
+
+/* ---------- Mode Défi (transversal, aléatoire) ---------- */
+const DEFI_N = 10; // questions par défi
+
+function renderDefi(){
+  APP.className = 'fade';
+  APP.innerHTML = `
+    <div class="domHead">
+      <span class="big">🎯</span>
+      <div>
+        <h2>Mode Défi</h2>
+        <p class="sub">Questions mêlées, tous domaines — pensées pour te faire réfléchir.</p>
+      </div>
+    </div>
+    <div id="defiBody"></div>`;
+  mountDefi(document.getElementById('defiBody'));
+}
+
+function mountDefi(body){
+  const pool = DATA.defis || [];
+  if(pool.length < 1){ body.innerHTML = `<div class="emptyExo">Aucun défi disponible.</div>`; return; }
+  const n = Math.min(DEFI_N, pool.length);
+  const set = shuffle(pool.slice()).slice(0, n).map(shuffledExo); // tirage + choix mélangés
+  runQuiz(set, body, {
+    label: 'Défi', showTheme: true,
+    onFinish(score, total){
+      addXP(score * 10); // les défis rapportent, et sont rejouables
+      const prevBest = state.defiBest || 0;
+      const record = score > prevBest;
+      if(record) state.defiBest = score;
+      state.defiPlayed = (state.defiPlayed||0) + 1;
+      store.save(state);
+      const pct = Math.round(score/total*100);
+      const msg = pct===100 ? "Parfait. Tu ne fais pas que réviser : tu raisonnes." :
+                  pct>=70  ? "Très bon niveau — ces questions ne sont pas données." :
+                  pct>=40  ? "Pas mal ! Relis les notions croisées et retente un tirage." :
+                             "Ces défis piochent partout et croisent les idées : reviens-y, c'est comme ça qu'on progresse.";
+      body.innerHTML = `
+        <div class="quizWrap result">
+          <div>${record?'🏆 Nouveau record !':'Résultat du défi'}</div>
+          <div class="score" style="color:${pct>=70?'var(--good)':pct>=40?'var(--warn)':'var(--bad)'}">${score}/${total}</div>
+          <div class="msg">${msg}</div>
+          <div class="xpGain">+${score*10} XP${record?` · record ${state.defiBest}/${total}`:` · record ${state.defiBest}/${total}`}</div>
+          <button class="nextBtn" id="again">Nouveau défi</button>
+          <button class="nextBtn ghostBtn" id="home">Retour à l'accueil</button>
+        </div>`;
+      body.querySelector('#again').onclick = ()=> mountDefi(body);
+      body.querySelector('#home').onclick = ()=> go('home');
+    }
+  });
 }
 
 /* ---------- utils ---------- */

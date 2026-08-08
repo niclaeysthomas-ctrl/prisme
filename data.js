@@ -2814,5 +2814,354 @@ const DATA = {
       ]
     }
 
+  ],
+
+  /* ================= MODE DÉFI — questions poussées, transversales ================= */
+  // tags = domaines mobilisés (affichés comme thème). Pensées pour faire raisonner,
+  // souvent en croisant deux notions.
+  defis: [
+    {
+      q: "Deux ampoules prévues pour le secteur, 60 W et 100 W, sont branchées en SÉRIE. Laquelle brille le plus ?",
+      choix: ["La 100 W", "La 60 W", "Les deux pareil", "Aucune ne s'allume"],
+      bonne: 1,
+      explication: "En série, le courant est le même partout. La 60 W a la plus grande résistance (moins de puissance à 230 V = plus de R). Or la puissance dissipée vaut R·I² : à courant égal, la plus résistante (60 W) chauffe le plus. Contre-intuitif !",
+      tags: ["electricite"]
+    },
+    {
+      q: "À puissance transportée constante, on double la tension d'une ligne électrique. Les pertes par effet Joule sont…",
+      choix: ["Doublées", "Divisées par 2", "Divisées par 4", "Inchangées"],
+      bonne: 2,
+      explication: "Doubler U à puissance constante divise le courant I par 2. Les pertes valent R·I² : diviser I par 2 les divise par 4. D'où la très haute tension sur les lignes.",
+      tags: ["electricite","energie"]
+    },
+    {
+      q: "Une bouilloire de 2000 W chauffe 1 L en 3 min. Une bouilloire de 1000 W (même eau) mettra environ…",
+      choix: ["1,5 min", "3 min", "6 min", "12 min"],
+      bonne: 2,
+      explication: "Il faut la même ÉNERGIE pour chauffer la même eau. Moitié de puissance = double de temps ≈ 6 min. (Énergie = puissance × temps.)",
+      tags: ["energie","electricite"]
+    },
+    {
+      q: "Un article est soldé à -20 %, puis -10 % supplémentaires en caisse. La réduction totale réelle est…",
+      choix: ["-30 %", "-28 %", "-25 %", "-32 %"],
+      bonne: 1,
+      explication: "Les pourcentages se multiplient : 0,8 × 0,9 = 0,72, soit -28 %. On n'additionne pas les pourcentages.",
+      tags: ["maths"]
+    },
+    {
+      q: "Un placement perd 50 % une année. Quel gain l'année suivante pour revenir au point de départ ?",
+      choix: ["+50 %", "+75 %", "+100 %", "+150 %"],
+      bonne: 2,
+      explication: "Après -50 %, il reste la moitié. Pour doubler et revenir au départ, il faut +100 %. Une baisse et une hausse de même pourcentage ne s'annulent pas.",
+      tags: ["maths"]
+    },
+    {
+      q: "Une bactérie se divise toutes les 20 min. En partant d'une seule, combien après 3 heures ?",
+      choix: ["9", "180", "512", "1024"],
+      bonne: 2,
+      explication: "3 h = 9 périodes de 20 min, donc 9 doublements : 2⁹ = 512. La croissance exponentielle explose vite.",
+      tags: ["vivant","maths"]
+    },
+    {
+      q: "La lumière d'une galaxie est fortement décalée vers le rouge. On en déduit qu'elle…",
+      choix: ["Se rapproche de nous", "S'éloigne rapidement de nous", "Est très chaude", "Est une étoile jeune"],
+      bonne: 1,
+      explication: "Décalage vers le rouge = ondes étirées = source qui s'éloigne (effet Doppler). Plus il est fort, plus elle s'éloigne vite : c'est la preuve de l'expansion de l'univers.",
+      tags: ["astrophysique","ondes"]
+    },
+    {
+      q: "Une étoile très massive a bien plus de carburant qu'une petite. Pourtant elle vit…",
+      choix: ["Bien plus longtemps", "Bien moins longtemps", "Aussi longtemps", "Éternellement"],
+      bonne: 1,
+      explication: "Elle brûle son carburant énormément plus vite pour contrer sa gravité colossale : quelques millions d'années au lieu de milliards. Plus c'est gros, plus ça flambe.",
+      tags: ["astrophysique"]
+    },
+    {
+      q: "Proxima du Centaure est à ~4 années-lumière. Si elle explosait aujourd'hui, on le verrait…",
+      choix: ["Instantanément", "Dans 4 ans", "Dans 4 mois", "Jamais"],
+      bonne: 1,
+      explication: "Sa lumière met 4 ans à nous parvenir. Voir loin, c'est voir le passé : on n'observerait l'explosion que 4 ans plus tard.",
+      tags: ["astrophysique"]
+    },
+    {
+      q: "La rouille dégage de la chaleur (réaction exothermique). Est-elle pour autant rapide ?",
+      choix: ["Oui, exothermique = rapide", "Non : l'énergie libérée n'a rien à voir avec la vitesse", "Elle est endothermique", "Ce n'est pas une réaction"],
+      bonne: 1,
+      explication: "Énergie et vitesse sont indépendantes. La rouille est exothermique mais lente ; une explosion est exothermique et rapide. Un catalyseur agit sur la vitesse, pas sur le bilan d'énergie.",
+      tags: ["chimie"]
+    },
+    {
+      q: "Un catalyseur accélère une réaction. Change-t-il la quantité d'énergie qu'elle libère au total ?",
+      choix: ["Oui, il l'augmente", "Oui, il la diminue", "Non : il change la vitesse, pas le bilan d'énergie", "Il l'annule"],
+      bonne: 2,
+      explication: "Le catalyseur offre un chemin plus rapide mais ressort intact : départ et arrivée inchangés, donc énergie libérée identique. Seule la vitesse change.",
+      tags: ["chimie"]
+    },
+    {
+      q: "Une enzyme accélère une réaction dans une cellule. Après la réaction, elle est…",
+      choix: ["Détruite", "Intacte et réutilisable", "Transformée en déchet", "Divisée en deux"],
+      bonne: 1,
+      explication: "Une enzyme est un catalyseur biologique : elle accélère sans être consommée. C'est ce qui rend la chimie du vivant possible à 37 °C.",
+      tags: ["vivant","chimie"]
+    },
+    {
+      q: "Pourquoi refait-on le vaccin contre la grippe chaque année, mais pas celui contre la rougeole ?",
+      choix: ["La grippe est plus grave", "Le virus de la grippe mute vite (évolution), pas celui de la rougeole", "Le vaccin s'évapore", "Par habitude commerciale"],
+      bonne: 1,
+      explication: "Le virus grippal évolue vite : les défenses apprises deviennent vite dépassées. La rougeole change peu, un vaccin protège durablement. L'évolution en action.",
+      tags: ["vivant"]
+    },
+    {
+      q: "Un test détecte une maladie rare avec 99 % de fiabilité et te déclare positif. Es-tu presque sûr d'être malade ?",
+      choix: ["Oui, à 99 %", "Pas forcément : si la maladie est très rare, beaucoup de positifs sont faux", "Oui, à 100 %", "Non, jamais malade"],
+      bonne: 1,
+      explication: "Si la maladie touche 1 personne sur 10 000, les faux positifs (1 %) sont bien plus nombreux que les vrais malades. Un positif se lit avec la rareté de la maladie (raisonnement bayésien).",
+      tags: ["maths","corps"]
+    },
+    {
+      q: "Après un crash d'avion médiatisé, on surestime le danger de l'avion face à la voiture. Quel biais ?",
+      choix: ["L'ancrage", "Le biais de disponibilité", "Le biais de confirmation", "L'effet Doppler"],
+      bonne: 1,
+      explication: "Le biais de disponibilité : on juge un risque à la facilité avec laquelle un exemple vient à l'esprit. Un crash marque ; des milliers de trajets en voiture non.",
+      tags: ["cerveau"]
+    },
+    {
+      q: "Un aliment 'double le risque' d'une maladie qui touche 1 personne sur 100 000. Faut-il paniquer ?",
+      choix: ["Oui, +100 % c'est énorme", "Non : passer à 2 sur 100 000 reste minuscule", "Oui, on va tous l'attraper", "Impossible à dire"],
+      bonne: 1,
+      explication: "Doubler un risque infime donne un risque encore infime. Un pourcentage relatif n'a de sens qu'avec le risque absolu de départ — piège classique des titres.",
+      tags: ["maths","cerveau"]
+    },
+    {
+      q: "Le four à micro-ondes chauffe un plat humide mais peine sur un aliment très sec. Pourquoi ?",
+      choix: ["Le sec réfléchit les ondes", "Les micro-ondes font surtout vibrer les molécules d'eau", "Le sec est trop froid", "Le four est en panne"],
+      bonne: 1,
+      explication: "Les micro-ondes excitent les molécules d'eau, qui chauffent par friction. Sans eau, peu de molécules à agiter, donc peu de chauffe. (Le métal, lui, réfléchit les ondes → arcs.)",
+      tags: ["ondes","chimie"]
+    },
+    {
+      q: "Pourquoi transpirer rafraîchit-il le corps ?",
+      choix: ["La sueur est froide", "L'évaporation de l'eau absorbe de la chaleur sur la peau", "La sueur bloque le soleil", "Ça ne rafraîchit pas"],
+      bonne: 1,
+      explication: "Passer de liquide à vapeur demande de l'énergie, prélevée en chaleur sur la peau : refroidissement par évaporation. D'où l'inconfort quand l'air est très humide (l'eau s'évapore mal).",
+      tags: ["corps","energie"]
+    },
+    {
+      q: "Une rampe en métal et une en bois, même pièce. Le métal semble plus froid. En réalité…",
+      choix: ["Il est plus froid", "Ils sont à la même température ; le métal évacue la chaleur plus vite", "Le bois est chauffé", "La perception ne trompe jamais"],
+      bonne: 1,
+      explication: "Même température ambiante. La peau ne mesure pas la température mais la vitesse de perte de chaleur : le métal, bon conducteur, l'aspire vite. Ta perception te trompe.",
+      tags: ["energie","cerveau"]
+    },
+    {
+      q: "Un fil supraconducteur a une résistance nulle. Que deviennent les pertes par effet Joule ?",
+      choix: ["Elles doublent", "Elles deviennent nulles", "Elles restent les mêmes", "Le fil fond"],
+      bonne: 1,
+      explication: "Les pertes valent R·I². Si R = 0, aucune énergie n'est dissipée en chaleur : le courant circule sans perte. Tout l'intérêt (et la difficulté) des supraconducteurs.",
+      tags: ["electricite","energie"]
+    },
+    {
+      q: "Young montre que la lumière est une onde ; l'effet photoélectrique, qu'elle est faite de grains. La bonne conclusion ?",
+      choix: ["L'une des deux est fausse", "La lumière a les deux aspects selon l'expérience (dualité)", "La lumière n'existe pas", "Le débat n'est pas tranché"],
+      bonne: 1,
+      explication: "Les deux expériences sont justes : c'est la dualité onde-particule. La lumière n'est ni tout à fait l'un ni l'autre — nos catégories classiques ne suffisent pas.",
+      tags: ["physique","ondes"]
+    },
+    {
+      q: "L'effet tunnel explique à la fois pourquoi le Soleil brille et pourquoi une clé USB fonctionne. Leur point commun ?",
+      choix: ["La chaleur", "Une particule franchit une barrière qu'elle ne 'devrait' pas pouvoir passer", "Le magnétisme", "La gravité"],
+      bonne: 1,
+      explication: "Fusion solaire (noyaux qui se repoussent) et mémoire flash (électrons piégés) reposent tous deux sur des particules qui traversent une barrière d'énergie par effet tunnel.",
+      tags: ["physique"]
+    },
+    {
+      q: "Deux particules intriquées sont aux deux bouts de la galaxie. Peut-on s'en servir pour communiquer instantanément ?",
+      choix: ["Oui", "Non : chaque mesure est aléatoire, aucune info ne dépasse la vitesse de la lumière", "Oui, mais lentement", "Seulement avec un laser"],
+      bonne: 1,
+      explication: "La corrélation est réelle et instantanée, mais comme les résultats sont aléatoires, on ne peut coder aucun message. Rien ne dépasse la vitesse de la lumière.",
+      tags: ["physique"]
+    },
+    {
+      q: "Une pile 'vide' n'a plus de tension. Que s'est-il passé chimiquement ?",
+      choix: ["Les électrons se sont échappés", "Les réactifs de l'oxydoréduction sont épuisés", "Elle a trop chauffé", "Le métal a fondu"],
+      bonne: 1,
+      explication: "Une pile est une oxydoréduction canalisée dans un fil. Réactifs consommés = réaction terminée = plus de courant. Une pile ne 'contient' pas d'électricité, elle la produit.",
+      tags: ["chimie","electricite"]
+    },
+    {
+      q: "Une IA 'reconnaît' un chat sur une photo. En quoi diffère-t-elle d'un humain qui le reconnaît ?",
+      choix: ["Aucune différence", "Elle détecte des motifs statistiques sans comprendre, d'où erreurs et biais", "Elle voit mieux", "Elle réfléchit comme nous"],
+      bonne: 1,
+      explication: "L'IA capte des régularités dans des millions d'exemples, sans concept de 'chat'. D'où des erreurs absurdes possibles et des biais hérités des données. L'humain, lui, comprend.",
+      tags: ["numerique","cerveau"]
+    },
+    {
+      q: "La sécurité du chiffrement d'Internet repose surtout sur le fait que…",
+      choix: ["Les ordinateurs sont lents", "Multiplier deux grands nombres premiers est facile, mais retrouver ces facteurs est quasi impossible", "Personne ne connaît les maths", "Les données sont cachées"],
+      bonne: 1,
+      explication: "Cette asymétrie (facile dans un sens, quasi impossible dans l'autre) protège paiements et messages. Un ordinateur quantique menacerait justement cette difficulté.",
+      tags: ["numerique","maths"]
+    },
+    {
+      q: "Pourquoi se tester de mémoire fait-il mieux retenir que relire ses notes ?",
+      choix: ["C'est plus rapide", "L'effort de rappel renforce la trace mémorielle", "La relecture efface la mémoire", "Aucune différence"],
+      bonne: 1,
+      explication: "Récupérer une info de mémoire consolide le souvenir, alors que relire donne surtout une illusion de savoir. C'est le principe des cartes de révision espacée.",
+      tags: ["cerveau"]
+    },
+    {
+      q: "Le 'trou dans la couche d'ozone' et le réchauffement climatique, c'est…",
+      choix: ["Le même problème", "Deux problèmes distincts (UV d'un côté, effet de serre de l'autre)", "L'ozone qui cause le réchauffement", "Le CO₂ qui crée le trou d'ozone"],
+      bonne: 1,
+      explication: "Distincts : l'ozone protège des UV (abîmé par les CFC, en réparation) ; le réchauffement vient des gaz à effet de serre comme le CO₂. On les confond souvent.",
+      tags: ["terre"]
+    },
+    {
+      q: "Comment 'voit-on' l'intérieur de la Terre sans y descendre ?",
+      choix: ["Avec des satellites", "Grâce aux ondes sismiques qui la traversent, comme une échographie", "En creusant jusqu'au noyau", "On ne le voit pas"],
+      bonne: 1,
+      explication: "Les ondes des séismes changent de vitesse selon les couches : en les analysant, on reconstitue la structure interne. Même principe qu'une échographie par ultrasons.",
+      tags: ["terre","ondes"]
+    },
+    {
+      q: "Les atomes de fer de ton sang ont été fabriqués…",
+      choix: ["Sur Terre", "Au cœur d'étoiles, puis dispersés par leurs explosions", "Par le Soleil aujourd'hui", "Lors du Big Bang"],
+      bonne: 1,
+      explication: "Le Big Bang n'a produit presque que H et He. Les éléments lourds (carbone, oxygène, fer) sont forgés par la fusion dans les étoiles et libérés en supernova. Nous sommes de la matière recyclée d'étoiles.",
+      tags: ["astrophysique","chimie"]
+    },
+    {
+      q: "L'affirmation correcte sur l'effet de serre est :",
+      choix: ["Il est entièrement néfaste", "Sans lui la Terre serait glaciale ; le problème est de l'AUGMENTER trop vite", "Il n'existe pas", "Il refroidit la Terre"],
+      bonne: 1,
+      explication: "L'effet de serre naturel nous maintient à +15 °C au lieu de -18 °C. C'est son renforcement rapide par nos émissions qui pose problème, pas son existence.",
+      tags: ["terre","energie"]
+    },
+    {
+      q: "Dans un film, un vaisseau explose avec un grand BOUM dans l'espace. Réaliste ?",
+      choix: ["Oui", "Non : sans matière, le son ne se propage pas (vide = silence)", "Oui, mais assourdi", "Seulement près d'une planète"],
+      bonne: 1,
+      explication: "Le son a besoin d'un milieu matériel. Le vide spatial est silencieux. (La lumière de l'explosion, elle, nous parviendrait.)",
+      tags: ["ondes"]
+    },
+    {
+      q: "Répondre à des messages tout en rédigeant un rapport, pour le cerveau, c'est…",
+      choix: ["Du vrai parallélisme efficace", "Des bascules rapides et coûteuses entre tâches", "Reposant", "Plus rapide que se concentrer"],
+      bonne: 1,
+      explication: "Le cerveau ne parallélise pas les tâches attentionnelles : il alterne, et chaque bascule coûte temps et erreurs. Une chose à la fois est plus rapide au total.",
+      tags: ["cerveau"]
+    },
+    {
+      q: "Pourquoi le courant du secteur est-il alternatif plutôt que continu ?",
+      choix: ["Par choix arbitraire", "Un aimant qui tourne pousse les électrons en va-et-vient, et l'alternatif se transforme facilement en haute tension", "Parce que c'est moins cher", "Pour économiser les électrons"],
+      bonne: 1,
+      explication: "L'aimant tournant génère naturellement un va-et-vient (induction), et l'alternatif se transforme aisément pour le transport à haute tension. D'où sa victoire sur le continu.",
+      tags: ["electricite"]
+    },
+    {
+      q: "Le diamant (le plus dur) et le graphite (tendre) sont tous deux du carbone pur. La différence vient…",
+      choix: ["D'atomes différents", "De l'arrangement des atomes", "De la couleur", "De l'âge"],
+      bonne: 1,
+      explication: "Mêmes atomes de carbone, agencement différent : réseau 3D très rigide (diamant) vs feuillets qui glissent (graphite). L'arrangement fait tout.",
+      tags: ["chimie"]
+    },
+    {
+      q: "Que se passe-t-il, pour la matière, au zéro absolu (-273,15 °C) ?",
+      choix: ["L'eau bout", "L'agitation des atomes est minimale (on ne peut pas descendre plus bas)", "Les atomes accélèrent", "La gravité s'annule"],
+      bonne: 1,
+      explication: "La température mesure l'agitation des atomes. Au zéro absolu, elle est au minimum : c'est la température la plus basse possible, qu'on approche sans jamais l'atteindre.",
+      tags: ["energie","physique"]
+    },
+    {
+      q: "Sous une lumière purement rouge, une feuille verte apparaît…",
+      choix: ["Verte", "Presque noire", "Rouge vif", "Blanche"],
+      bonne: 1,
+      explication: "Une feuille verte renvoie le vert et absorbe le reste. Éclairée seulement en rouge, il n'y a pas de vert à renvoyer : elle absorbe le rouge et paraît sombre. La couleur dépend de la lumière disponible.",
+      tags: ["ondes"]
+    },
+    {
+      q: "Un vendeur annonce d'abord 300 €, puis 'fait un geste' à 180 €. Pourquoi ça fonctionne ?",
+      choix: ["180 € est objectivement bas", "Le biais d'ancrage : le premier prix sert de référence et fait paraître 180 raisonnable", "C'est une vraie affaire", "Le hasard"],
+      bonne: 1,
+      explication: "L'ancrage : le premier chiffre entendu déforme le jugement suivant. 180 € semble une affaire uniquement par comparaison avec l'ancre de 300 €.",
+      tags: ["cerveau"]
+    },
+    {
+      q: "Nos centrales utilisent la fission (casser l'uranium). Pourquoi pas la fusion, comme le Soleil ?",
+      choix: ["La fusion ne libère pas d'énergie", "Elle exige des conditions extrêmes très difficiles à maîtriser sur Terre", "La fusion est interdite", "On l'utilise déjà partout"],
+      bonne: 1,
+      explication: "La fusion libère énormément d'énergie mais nécessite des températures et pressions dignes d'une étoile. La maîtriser durablement sur Terre reste un défi.",
+      tags: ["physique","astrophysique"]
+    },
+    {
+      q: "Sans corriger les effets de la relativité, ton GPS dériverait d'environ…",
+      choix: ["Quelques cm/jour", "Quelques mètres/jour", "~10 km/jour", "Rien du tout"],
+      bonne: 2,
+      explication: "Les horloges des satellites avancent d'~38 µs/jour (vitesse + gravité). Non corrigé, cela décalerait la position d'environ 10 km par jour. La relativité est indispensable au quotidien.",
+      tags: ["astrophysique","physique"]
+    },
+    {
+      q: "Pourquoi les ordinateurs utilisent-ils le binaire (0/1) plutôt que nos dix chiffres ?",
+      choix: ["Pour faire savant", "Un transistor n'a que deux états fiables (passant/bloqué), robustes au bruit", "C'est plus lent mais plus sûr", "Par tradition"],
+      bonne: 1,
+      explication: "Deux états nets sont impossibles à confondre, donc résistants aux parasites. Dix niveaux de tension seraient trop proches et brouillés. Le binaire est un choix physique.",
+      tags: ["numerique","electronique"]
+    },
+    {
+      q: "Tu envoies une photo par Internet et un câble se coupe en route. Que se passe-t-il souvent ?",
+      choix: ["La photo est perdue", "Les paquets contournent par un autre chemin et se recomposent à l'arrivée", "Internet s'arrête", "La photo revient à l'envoyeur"],
+      bonne: 1,
+      explication: "L'info est découpée en paquets indépendants empruntant des chemins variables. Si l'un est coupé, les paquets passent ailleurs : c'est ce qui rend le réseau robuste.",
+      tags: ["numerique"]
+    },
+    {
+      q: "Un son passe de 60 à 90 décibels. L'énergie sonore est multipliée par…",
+      choix: ["1,5", "30", "1000", "90"],
+      bonne: 2,
+      explication: "L'échelle des décibels est logarithmique : +10 dB = ×10 en énergie. +30 dB = ×10×10×10 = ×1000. D'où le danger rapide des sons forts.",
+      tags: ["ondes","maths"]
+    },
+    {
+      q: "Pourquoi, en général, n'attrape-t-on la varicelle qu'une seule fois ?",
+      choix: ["Le virus disparaît de la Terre", "Le système immunitaire en garde la mémoire et riposte vite au retour", "On devient trop vieux", "C'est faux, on la rattrape souvent"],
+      bonne: 1,
+      explication: "L'immunité adaptative fabrique des armes sur mesure et les mémorise. Au prochain contact, riposte immédiate. C'est ce que déclenche un vaccin, sans la maladie.",
+      tags: ["corps","vivant"]
+    },
+    {
+      q: "Une étincelle à 1500 °C te touche sans te brûler, une eau à 60 °C peut t'ébouillanter. Pourquoi ?",
+      choix: ["L'étincelle n'est pas chaude", "Température ≠ chaleur : l'étincelle a peu de matière, donc peu d'énergie à céder", "Ta peau est spéciale", "C'est faux"],
+      bonne: 1,
+      explication: "Température = agitation (élevée dans l'étincelle) ; chaleur = énergie transférée (minuscule car peu de matière). L'eau chaude, plus massive, cède bien plus d'énergie.",
+      tags: ["energie"]
+    },
+    {
+      q: "Deux personnes 'voient' des couleurs différentes sur une même photo (la fameuse robe). Cela montre que…",
+      choix: ["L'une ment", "La perception est une construction du cerveau, pas un enregistrement fidèle", "L'écran est cassé", "Les couleurs n'existent pas"],
+      bonne: 1,
+      explication: "Le cerveau interprète des signaux ambigus selon ses hypothèses (ici sur l'éclairage). Deux cerveaux peuvent aboutir honnêtement à deux perceptions.",
+      tags: ["cerveau","ondes"]
+    },
+    {
+      q: "La sélection naturelle favorise avant tout…",
+      choix: ["Les plus forts physiquement", "Ceux qui se reproduisent le mieux dans leur environnement", "Les plus intelligents", "Les plus gros"],
+      bonne: 1,
+      explication: "Pas 'le plus fort', mais le mieux adapté à SON milieu qui laisse le plus de descendants. Parfois c'est la discrétion, la coopération ou un petit gabarit qui l'emporte.",
+      tags: ["vivant"]
+    },
+    {
+      q: "À la roulette, le rouge sort 7 fois de suite. Parier sur le noir au prochain tour est…",
+      choix: ["Plus malin, le noir est 'dû'", "Ni plus ni moins probable : chaque tour est indépendant", "Certainement gagnant", "Interdit"],
+      bonne: 1,
+      explication: "La roulette n'a pas de mémoire (illusion du joueur). Chaque tour repart à la même probabilité. La loi des grands nombres joue sur des millions de coups, pas sur le prochain.",
+      tags: ["maths","cerveau"]
+    },
+    {
+      q: "Ton médecin refuse un antibiotique pour ta grippe. A-t-il raison ?",
+      choix: ["Non, ça aiderait", "Oui : la grippe est virale, l'antibiotique n'agit que sur les bactéries", "Non, c'est dangereux de refuser", "Oui, mais seulement en hiver"],
+      bonne: 1,
+      explication: "Un antibiotique cible la machinerie des bactéries ; un virus n'en a pas. Inutile contre la grippe, et en abuser favorise les résistances. Le médecin a raison.",
+      tags: ["vivant","corps"]
+    }
   ]
 };
