@@ -1,4 +1,5 @@
-const CACHE = 'prisme-v1';
+// Bump ce numéro à chaque déploiement de contenu pour forcer le renouvellement.
+const CACHE = 'prisme-v3';
 const ASSETS = [
   'index.html', 'styles.css', 'data.js', 'app.js',
   'manifest.webmanifest', 'icon-192.png', 'icon-512.png'
@@ -15,13 +16,18 @@ self.addEventListener('activate', e=>{
   );
 });
 
+// Stratégie « réseau d'abord » : quand on est en ligne, on sert TOUJOURS la
+// dernière version (et on met le cache à jour au passage). Hors-ligne, on
+// retombe sur le cache, puis sur index.html en dernier recours.
 self.addEventListener('fetch', e=>{
   if(e.request.method !== 'GET') return;
   e.respondWith(
-    caches.match(e.request).then(hit=> hit || fetch(e.request).then(res=>{
+    fetch(e.request).then(res=>{
       const copy = res.clone();
       caches.open(CACHE).then(c=> c.put(e.request, copy)).catch(()=>{});
       return res;
-    }).catch(()=> caches.match('index.html')))
+    }).catch(()=>
+      caches.match(e.request).then(hit=> hit || caches.match('index.html'))
+    )
   );
 });
