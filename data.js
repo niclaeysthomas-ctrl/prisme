@@ -1436,6 +1436,13 @@ const DATA = {
           qui: "Bernard Brunhes (puis la géomagnétique moderne)",
           resume: "On découvre que certaines roches anciennes sont aimantées à l'envers : le champ magnétique terrestre s'est inversé de nombreuses fois au cours de l'histoire.",
           pourquoi: "Ces bandes aimantées de part et d'autre des dorsales océaniques ont fourni la preuve décisive que les fonds marins s'écartent — confirmant la tectonique des plaques."
+        },
+        {
+          titre: "Le trou dans la couche d'ozone",
+          annee: "1985",
+          qui: "Joe Farman et al. (mécanisme : Molina & Rowland, 1974)",
+          resume: "On découvre au-dessus de l'Antarctique un effondrement de la couche d'ozone, causé par des gaz industriels (les CFC des aérosols et réfrigérateurs).",
+          pourquoi: "Rare succès mondial : le Protocole de Montréal (1987) a interdit ces gaz, et la couche se reconstitue lentement. La preuve qu'une action collective peut réparer un dégât planétaire."
         }
       ],
       notions: [
@@ -1483,6 +1490,24 @@ const DATA = {
             { t:"Ce cycle redistribue l'eau douce sur les continents (toute la pluie vient de là) et transporte d'énormes quantités de chaleur, ce qui régule le climat. La quantité totale d'eau sur Terre, elle, ne change quasiment pas : on ne fait que la recycler." }
           ],
           retenir: "Le cycle de l'eau (évaporation → nuages → pluie → rivières → mer) recycle sans cesse une même réserve d'eau, alimente toute l'eau douce et transporte de la chaleur qui régule le climat."
+        },
+        {
+          titre: "L'atmosphère : la fine pellicule qui nous garde en vie",
+          accroche: "Si la Terre était une pomme, l'atmosphère serait plus fine que sa peau. Tout ce qui nous protège tient dans cette mince couche de gaz.",
+          blocs: [
+            { t:"L'atmosphère est un mélange de gaz (surtout azote ~78 % et oxygène ~21 %) retenu par la gravité. Elle nous fournit l'oxygène, filtre les rayonnements dangereux du Soleil, désintègre la plupart des météorites, et sa couverture d'effet de serre garde la Terre tempérée." },
+            { t:"Elle est étonnamment mince : l'essentiel tient dans les ~10 premiers kilomètres, alors que la Terre a un rayon de 6 400 km. Dès une dizaine de km d'altitude, l'air est déjà trop rare pour respirer. Cette finesse explique pourquoi nos rejets de gaz peuvent en modifier l'équilibre." }
+          ],
+          retenir: "L'atmosphère est une fine couche de gaz (azote + oxygène) retenue par la gravité : elle donne l'air, filtre les rayons dangereux et régule la température. Fine et fragile, d'où sa sensibilité à nos émissions."
+        },
+        {
+          titre: "Climat et météo : ne pas confondre",
+          accroche: "\"Il fait froid aujourd'hui, où est le réchauffement ?\" — la question confond deux choses d'échelles totalement différentes.",
+          blocs: [
+            { t:"La météo, c'est le temps qu'il fait à un endroit, un jour donné : pluie, soleil, température du moment. Elle est chaotique et imprévisible au-delà de quelques jours. Le climat, c'est la moyenne de cette météo sur des décennies et sur de vastes régions." },
+            { t:"Un jour froid ne dit rien du climat, comme un mauvais repas ne dit rien de ton alimentation de l'année. Le réchauffement parle de tendances longues (la moyenne mondiale qui monte), pas du temps de demain. On peut avoir une vague de froid locale dans un monde qui se réchauffe globalement." }
+          ],
+          retenir: "Météo = le temps qu'il fait maintenant, ici (chaotique, court terme). Climat = la moyenne sur des décennies et de grandes régions. Un jour froid ne contredit pas une tendance climatique, comme un repas ne définit pas une alimentation."
         }
       ],
       quotidien: [
@@ -1499,6 +1524,11 @@ const DATA = {
         {
           titre: "Le sol garde la chaleur : la géothermie",
           texte: "À quelques mètres sous terre, la température reste stable toute l'année (~12-14 °C en France). C'est pourquoi une cave est fraîche l'été et hors gel l'hiver, et c'est ce que des pompes à chaleur géothermiques exploitent pour chauffer une maison à moindre coût."
+        },
+        {
+          titre: "Les UV : se protéger d'une étoile",
+          danger: true,
+          texte: "Le Soleil émet des ultraviolets (UV) que l'atmosphère ne filtre qu'en partie. À forte dose ils brûlent la peau (coups de soleil) et, à long terme, provoquent vieillissement et cancers cutanés. On se protège aux heures les plus fortes (midi), à l'ombre, avec vêtements, lunettes et crème solaire — d'autant que les UV traversent les nuages et se réfléchissent sur l'eau et la neige."
         }
       ],
       exos: [
@@ -1549,6 +1579,30 @@ const DATA = {
           choix: ["Il fait froid au centre", "L'énorme pression le maintient solide malgré la chaleur", "Il est en glace", "C'est une erreur de mesure"],
           bonne: 1,
           explication: "La pression colossale au centre force les atomes de fer à rester en solide, même à des milliers de degrés. La couche externe du noyau, moins comprimée, est liquide."
+        },
+        {
+          q: "Le trou dans la couche d'ozone est un rare cas de problème planétaire…",
+          choix: ["Jamais résolu", "En voie de réparation grâce à l'interdiction mondiale des CFC", "Aggravé chaque année sans espoir", "Inventé de toutes pièces"],
+          bonne: 1,
+          explication: "Le Protocole de Montréal (1987) a interdit les gaz (CFC) responsables ; la couche se reconstitue lentement. Preuve qu'une action collective peut réparer un dégât mondial."
+        },
+        {
+          q: "Il fait exceptionnellement froid aujourd'hui. Cela contredit-il le réchauffement climatique ?",
+          choix: ["Oui, forcément", "Non : la météo est le temps d'un jour, le climat une moyenne sur des décennies", "Oui, le réchauffement est faux", "On ne peut pas savoir"],
+          bonne: 1,
+          explication: "Météo = temps du moment (chaotique) ; climat = moyenne sur des décennies. Un jour froid ne dit rien de la tendance longue, comme un repas ne définit pas ton alimentation."
+        },
+        {
+          q: "L'atmosphère respirable, comparée à la taille de la Terre, est…",
+          choix: ["Aussi épaisse que la Terre", "Une couche très fine (l'essentiel dans les ~10 premiers km)", "Infinie", "Inexistante"],
+          bonne: 1,
+          explication: "La Terre a un rayon de 6 400 km, mais l'air respirable tient dans une dizaine de km : une pellicule plus fine que la peau d'une pomme, donc fragile."
+        },
+        {
+          q: "À quelle vitesse se déplacent les plaques tectoniques ?",
+          choix: ["Plusieurs km par jour", "Quelques centimètres par an (comme la pousse des ongles)", "À la vitesse du son", "Elles ne bougent pas"],
+          bonne: 1,
+          explication: "Quelques cm/an : imperceptible à notre échelle, mais sur des millions d'années cela déplace des continents et soulève des montagnes."
         }
       ]
     },
@@ -1595,6 +1649,13 @@ const DATA = {
           qui: "Projet Génome Humain (consortium international)",
           resume: "Lecture complète des ~3 milliards de \"lettres\" de l'ADN humain, réparties dans environ 20 000 gènes.",
           pourquoi: "Une carte de référence du vivant humain, qui accélère la compréhension des maladies génétiques et ouvre la médecine personnalisée."
+        },
+        {
+          titre: "Les rayons X",
+          annee: "1895",
+          qui: "Wilhelm Röntgen",
+          resume: "Röntgen découvre par hasard un rayonnement invisible qui traverse les chairs mais pas les os, et impressionne une plaque photo : la première radiographie.",
+          pourquoi: "Pour la première fois, on voit l'intérieur d'un corps vivant sans l'ouvrir. Fondation de l'imagerie médicale (radio, scanner). Tout premier prix Nobel de physique, 1901."
         }
       ],
       notions: [
@@ -1642,6 +1703,24 @@ const DATA = {
             { t:"Le cerveau profite aussi du sommeil pour évacuer des déchets accumulés en journée. Voilà pourquoi une nuit trop courte dégrade mémoire, concentration, humeur et défenses — et pourquoi \"réviser en dormant assez\" bat souvent \"réviser toute la nuit\"." }
           ],
           retenir: "Le sommeil consolide la mémoire, répare le corps, régule les hormones et nettoie le cerveau. Bien dormir n'est pas du temps perdu : c'est là que l'apprentissage s'imprime et que les défenses se rechargent."
+        },
+        {
+          titre: "Le système immunitaire : ton armée intérieure",
+          accroche: "Une armée à deux vitesses veille en toi en permanence : une garde rapide et généraliste, et des troupes d'élite qui apprennent.",
+          blocs: [
+            { h:"La ligne rapide (innée)", t:"Des cellules patrouillent et attaquent tout intrus de façon générale, en quelques minutes. La fièvre et l'inflammation (rougeur, chaleur, gonflement) font partie de cette riposte : monter la température gêne les microbes et accélère la défense. Un peu de fièvre est souvent un signe que le corps se bat, pas seulement un symptôme à faire taire." },
+            { h:"La ligne spécialisée (adaptative)", t:"Plus lente à démarrer, elle fabrique des armes sur mesure contre un microbe précis (les anticorps) et en garde la mémoire. C'est elle qui te rend immunisé après une maladie ou un vaccin : au prochain contact, la riposte est quasi immédiate." }
+          ],
+          retenir: "Deux défenses : l'innée (rapide, générale, avec fièvre/inflammation) et l'adaptative (lente mais ciblée, fabrique des anticorps sur mesure et les mémorise). Cette mémoire immunitaire est ce qu'exploitent les vaccins."
+        },
+        {
+          titre: "Reins et foie : les stations d'épuration",
+          accroche: "Ton sang est nettoyé en continu par deux organes discrets. Sans eux, tu serais empoisonné par tes propres déchets en quelques jours.",
+          blocs: [
+            { t:"Les reins filtrent le sang en permanence : ils en retirent les déchets et l'excès d'eau et de sel, évacués dans l'urine, tout en gardant ce qui est utile. Ils règlent aussi la quantité d'eau du corps — d'où l'urine plus foncée quand tu es déshydraté (le rein économise l'eau)." },
+            { t:"Le foie est l'usine chimique du corps : il neutralise les toxines (dont l'alcool et de nombreux médicaments), stocke des réserves d'énergie et fabrique quantité de molécules indispensables. C'est pour cela qu'un excès d'alcool ou certaines substances l'abîment en premier." }
+          ],
+          retenir: "Les reins filtrent le sang (déchets → urine) et gèrent l'eau du corps ; le foie neutralise les toxines et fabrique des molécules vitales. Deux stations d'épuration sans lesquelles on s'empoisonnerait vite."
         }
       ],
       quotidien: [
@@ -1658,6 +1737,10 @@ const DATA = {
         {
           titre: "Ton corps est surtout de l'eau",
           texte: "Le corps humain est composé d'environ 60 % d'eau. On en perd en permanence (respiration, sueur, urine) et une baisse de seulement 1-2 % suffit à altérer concentration et performance. La soif est un signal déjà tardif : boire régulièrement, sans attendre d'avoir soif, surtout à l'effort ou par forte chaleur."
+        },
+        {
+          titre: "Bouger : le corps est fait pour ça",
+          texte: "La position assise prolongée est associée à de nombreux risques pour la santé, même chez les sportifs. Le corps a évolué pour bouger : marcher, se lever régulièrement, monter les escaliers relance la circulation et le métabolisme. Quelques minutes d'activité toutes les heures comptent autant qu'une grosse séance isolée. Le meilleur exercice reste celui qu'on tient dans la durée."
         }
       ],
       exos: [
@@ -1708,6 +1791,30 @@ const DATA = {
           choix: ["Ils déterminent la personnalité", "Mélanger des sangs incompatibles lors d'une transfusion est dangereux", "Ils changent la couleur du sang", "Ils n'ont aucune importance"],
           bonne: 1,
           explication: "Une transfusion incompatible déclenche une réaction grave. La découverte des groupes (Landsteiner, 1901) a rendu les transfusions sûres."
+        },
+        {
+          q: "Grâce à quelle découverte peut-on voir les os sans ouvrir le corps ?",
+          choix: ["L'échographie", "Les rayons X (Röntgen, 1895)", "Le microscope", "La prise de sang"],
+          bonne: 1,
+          explication: "Les rayons X traversent les chairs mais pas les os : la radiographie, première façon de voir l'intérieur d'un corps vivant sans l'ouvrir."
+        },
+        {
+          q: "Avoir un peu de fièvre pendant une infection, c'est…",
+          choix: ["Toujours dangereux, à supprimer d'urgence", "Souvent un signe que le corps se défend (elle gêne les microbes)", "Sans rapport avec l'infection", "Le signe que la guérison est finie"],
+          bonne: 1,
+          explication: "La fièvre fait partie de la riposte immunitaire innée : elle gêne les microbes et accélère la défense. Utile en soi, même s'il faut surveiller si elle est forte ou prolongée."
+        },
+        {
+          q: "Pourquoi ton urine devient-elle plus foncée quand tu es déshydraté ?",
+          choix: ["Les reins ajoutent un colorant", "Les reins économisent l'eau : l'urine est plus concentrée", "C'est le foie qui la teinte", "C'est mauvais signe pour le cœur"],
+          bonne: 1,
+          explication: "En manque d'eau, les reins en gardent le maximum : l'urine est plus concentrée, donc plus foncée. Un bon indicateur d'hydratation."
+        },
+        {
+          q: "Pourquoi n'attrape-t-on en général qu'une seule fois certaines maladies (ex. varicelle) ?",
+          choix: ["Le corps s'y habitue au hasard", "Le système immunitaire en garde la mémoire et riposte vite au retour", "Le microbe disparaît de la Terre", "C'est faux, on les rattrape toujours"],
+          bonne: 1,
+          explication: "L'immunité adaptative fabrique des armes sur mesure et les mémorise. C'est ce mécanisme de mémoire que les vaccins déclenchent, sans la maladie."
         }
       ]
     },
@@ -1754,6 +1861,13 @@ const DATA = {
           qui: "Georg Cantor",
           resume: "Cantor prouve qu'il existe plusieurs \"tailles\" d'infini : l'infini des nombres entiers est strictement plus petit que celui des points d'une droite.",
           pourquoi: "Vertigineux et fondateur : il donne aux mathématiques des fondations solides sur l'infini, longtemps tabou. On peut comparer ce qui n'a pas de fin."
+        },
+        {
+          titre: "Les logarithmes",
+          annee: "1614",
+          qui: "John Napier",
+          resume: "Napier invente une opération qui transforme les multiplications en additions, simplifiant énormément les calculs à une époque sans machine.",
+          pourquoi: "Au-delà du calcul, le logarithme est l'outil pour manier les grandeurs qui varient sur d'énormes échelles : l'échelle de Richter (séismes), les décibels (son) et le pH (acidité) sont tous logarithmiques."
         }
       ],
       notions: [
@@ -1801,6 +1915,24 @@ const DATA = {
             { t:"Ce n'est pas un cas isolé : la plupart des nombres sont irrationnels (comme la racine de 2). Cela révèle que même la géométrie la plus élémentaire contient de l'infini, et que nos écritures décimales ne \"contiennent\" pas tous les nombres." }
           ],
           retenir: "π (≈3,14159…) relie le tour d'un cercle à son diamètre, identique pour tout cercle. C'est un nombre irrationnel : décimales infinies, sans fraction exacte ni motif. La simplicité d'un cercle cache de l'infini."
+        },
+        {
+          titre: "Les logarithmes : dompter les nombres géants",
+          accroche: "Comment mettre sur une même échelle un chuchotement et un réacteur d'avion, ou un séisme minuscule et un cataclysme ? En comptant les zéros plutôt que les nombres.",
+          blocs: [
+            { t:"Un logarithme répond à la question : \"combien de fois faut-il multiplier par 10 pour atteindre ce nombre ?\". 100 = 10×10, son logarithme vaut 2 ; 1000 = 10×10×10, il vaut 3. On remplace des nombres énormes par leur \"nombre de zéros\", bien plus maniable." },
+            { t:"C'est pourquoi les grandeurs de la nature qui s'étalent sur d'immenses plages utilisent des échelles logarithmiques. Sur l'échelle de Richter, un séisme de magnitude 7 libère ~30 fois plus d'énergie qu'un magnitude 6, et ~1000 fois plus qu'un magnitude 5. Un petit chiffre en plus cache une énorme différence réelle. Idem pour les décibels et le pH." }
+          ],
+          retenir: "Un logarithme compte les facteurs de 10 (les \"zéros\") d'un nombre : il écrase des échelles gigantesques en petits chiffres maniables (Richter, décibels, pH). Attention : +1 sur ces échelles = ×10 (ou plus) dans la réalité."
+        },
+        {
+          titre: "Moyenne ou médiane ? Le piège des statistiques",
+          accroche: "Dix personnes dans un bar gagnent 2 000 € par mois. Un milliardaire entre. Le salaire \"moyen\" grimpe à des millions — alors que personne n'est plus riche. La moyenne peut mentir.",
+          blocs: [
+            { t:"La moyenne additionne tout et divise par le nombre : une seule valeur extrême la tire brutalement. La médiane, elle, est la valeur \"du milieu\" (la moitié en dessous, la moitié au-dessus) : le milliardaire ne la bouge presque pas." },
+            { t:"Selon le message qu'on veut faire passer, on cite l'une ou l'autre — d'où l'importance de savoir laquelle. Pour des revenus, des prix immobiliers ou des temps d'attente très inégaux, la médiane décrit bien mieux \"les gens ordinaires\" que la moyenne." }
+          ],
+          retenir: "La moyenne est tirée par les valeurs extrêmes ; la médiane (la valeur du milieu) y résiste. Pour des données très inégales (salaires, prix), la médiane est plus honnête. Toujours se demander laquelle est citée."
         }
       ],
       quotidien: [
@@ -1815,6 +1947,10 @@ const DATA = {
         {
           titre: "Probabilités : pourquoi tu ne gagnes pas au loto",
           texte: "À la loterie, chaque grille est indépendante et la probabilité de gagner le gros lot est de l'ordre de 1 sur des dizaines de millions. Jouer les mêmes numéros \"parce qu'ils vont finir par sortir\" ne change rien : le tirage n'a pas de mémoire. La seule certitude mathématique, c'est que l'organisateur gagne sur la masse (loi des grands nombres)."
+        },
+        {
+          titre: "Lire un chiffre dans les médias",
+          texte: "\"+100 % de risque\" fait peur, mais passer de 1 cas sur un million à 2 sur un million reste minuscule : un pourcentage n'a de sens qu'avec sa valeur de départ (le risque absolu). De même, une \"hausse moyenne des salaires\" peut cacher que la plupart des gens n'ont rien gagné (voir moyenne vs médiane). Devant un chiffre, demande-toi toujours : par rapport à quoi ? moyenne ou médiane ? sur quel échantillon ?"
         }
       ],
       exos: [
@@ -1865,6 +2001,30 @@ const DATA = {
           choix: ["S'arrêtent à 3,14", "Se répètent en boucle", "Défilent à l'infini sans motif régulier", "Sont toutes des 3"],
           bonne: 2,
           explication: "π est irrationnel : décimales infinies, sans période. La simplicité d'un cercle (périmètre = π × diamètre) cache pourtant de l'infini."
+        },
+        {
+          q: "Sur l'échelle de Richter, un séisme de magnitude 7 par rapport à un magnitude 6 libère…",
+          choix: ["Un peu plus d'énergie", "Environ 30 fois plus d'énergie", "Exactement 2 fois plus", "La même chose"],
+          bonne: 1,
+          explication: "L'échelle est logarithmique : +1 en magnitude ≈ ×30 en énergie. Un petit chiffre en plus cache une différence énorme."
+        },
+        {
+          q: "Dans un bar, 10 personnes gagnent 2000 €. Un milliardaire entre. Qu'est-ce qui décrit le mieux \"les gens ordinaires\" ?",
+          choix: ["La moyenne", "La médiane", "Les deux, pareil", "Aucune des deux"],
+          bonne: 1,
+          explication: "La moyenne explose à cause du milliardaire ; la médiane (valeur du milieu) reste ~2000 €. Pour des données très inégales, la médiane est plus honnête."
+        },
+        {
+          q: "Le logarithme (base 10) de 1000, c'est…",
+          choix: ["10", "3", "100", "1000"],
+          bonne: 1,
+          explication: "1000 = 10×10×10, soit trois facteurs de 10 : son logarithme vaut 3. Le log compte les \"zéros\"."
+        },
+        {
+          q: "\"Ce comportement double votre risque.\" Est-ce forcément alarmant ?",
+          choix: ["Oui, toujours", "Pas forcément : doubler un risque minuscule reste minuscule (il faut le risque de départ)", "Non, jamais", "Ça veut dire 100 % de chances"],
+          bonne: 1,
+          explication: "Passer de 1 sur un million à 2 sur un million, c'est +100 % mais reste infime. Un pourcentage n'a de sens qu'avec sa valeur absolue de départ."
         }
       ]
     },
@@ -1911,6 +2071,13 @@ const DATA = {
           qui: "Geoffrey Hinton et son équipe (AlexNet)",
           resume: "Des réseaux de neurones artificiels à plusieurs couches, entraînés sur d'énormes quantités d'exemples, se mettent à reconnaître images et sons mieux que tout ce qu'on savait programmer à la main.",
           pourquoi: "Le déclencheur de l'IA moderne (reconnaissance d'images, traduction, assistants, IA générative). Un changement de méthode : on n'écrit plus les règles, la machine les apprend."
+        },
+        {
+          titre: "Les langages de programmation",
+          annee: "années 1950",
+          qui: "Grace Hopper (compilateur, puis COBOL)",
+          resume: "Hopper crée le premier \"compilateur\", un programme qui traduit des instructions écrites dans un langage proche de l'humain en langage machine (des 0 et des 1).",
+          pourquoi: "Plus besoin d'écrire directement en binaire : programmer devient accessible. Tous les langages actuels (Python, etc.) descendent de cette idée. Hopper a aussi popularisé le mot \"bug\"."
         }
       ],
       notions: [
@@ -1958,6 +2125,24 @@ const DATA = {
             { t:"D'où deux limites majeures. Un : elle ne \"comprend\" pas, elle reconnaît des motifs statistiques — elle peut donc se tromper avec aplomb, ou inventer (les \"hallucinations\"). Deux : elle hérite des biais de ses exemples. Une IA n'est jamais meilleure ni plus neutre que les données sur lesquelles on l'a entraînée." }
           ],
           retenir: "Une IA moderne apprend des régularités à partir d'énormes jeux d'exemples, en ajustant des millions de paramètres — au lieu de suivre des règles écrites. Elle reconnaît des motifs sans \"comprendre\", d'où erreurs, inventions et biais hérités des données."
+        },
+        {
+          titre: "Pixels, fichiers et compression : pourquoi une photo pèse 3 Mo",
+          accroche: "Une image, pour un ordinateur, c'est une grille de milliers de petits carrés colorés — et tout l'art consiste à la décrire avec le moins de chiffres possible.",
+          blocs: [
+            { t:"Une photo est une grille de pixels ; chaque pixel a une couleur codée par des nombres (dose de rouge, de vert, de bleu). Plusieurs millions de pixels, cela fait énormément de chiffres — d'où des fichiers lourds si on les stocke tels quels." },
+            { t:"La compression allège tout ça intelligemment. Sans perte, elle repère les répétitions (une grande zone de ciel bleu = \"ce bleu, ×10000\" au lieu de 10000 valeurs identiques). Avec perte (JPEG pour l'image, MP3 pour le son), elle jette les détails que l'œil ou l'oreille ne remarquent pas. C'est pourquoi une photo compressée pèse dix fois moins sans paraître dégradée." }
+          ],
+          retenir: "Une image = une grille de pixels colorés, donc beaucoup de chiffres. La compression allège : sans perte (repérer les répétitions) ou avec perte (jeter ce que l'œil/l'oreille ne perçoivent pas, comme le JPEG et le MP3)."
+        },
+        {
+          titre: "Le cloud : les ordinateurs de quelqu'un d'autre",
+          accroche: "Tes photos sont \"dans le nuage\". Rassurant et vaporeux — sauf qu'il n'y a aucun nuage : juste des ordinateurs bien réels, ailleurs.",
+          blocs: [
+            { t:"Le \"cloud\", ce sont d'immenses entrepôts remplis de serveurs (des ordinateurs qui tournent en permanence), gérés par des entreprises, auxquels tu accèdes par Internet. Quand tu \"sauvegardes dans le cloud\", ton fichier est copié sur ces machines distantes plutôt que sur ton seul appareil." },
+            { t:"Avantages : tu retrouves tes données partout et tu ne les perds pas si ton téléphone casse. Contreparties : sans connexion, tu n'y accèdes plus, et tu confies tes fichiers à un tiers — d'où l'importance de savoir qui les héberge, où, et comment ils sont protégés." }
+          ],
+          retenir: "Le cloud n'a rien de vaporeux : ce sont les ordinateurs (serveurs) de quelqu'un d'autre, accessibles par Internet. Pratique (données partout, sauvegardées) mais dépendant d'une connexion et d'un tiers à qui tu confies tes fichiers."
         }
       ],
       quotidien: [
@@ -1974,6 +2159,10 @@ const DATA = {
         {
           titre: "Ce que tu laisses derrière toi (les données)",
           texte: "Chaque site visité, recherche, clic peut être enregistré et recoupé pour dresser un profil (souvent à des fins de publicité). Les cookies servent à ce suivi. Refuser les cookies non essentiels, utiliser la navigation privée pour les recherches sensibles et limiter les autorisations des applis réduit cette trace."
+        },
+        {
+          titre: "Sauvegarder : la règle du 3-2-1",
+          texte: "Un disque tombe toujours en panne un jour, et un rançongiciel peut tout chiffrer d'un coup. La règle éprouvée : 3 copies de tes données importantes, sur 2 supports différents, dont 1 hors de chez toi (un disque externe rangé ailleurs, ou le cloud). Une seule copie n'est pas une sauvegarde. La plupart des drames de données auraient été évités par une simple copie à jour."
         }
       ],
       exos: [
@@ -2024,6 +2213,30 @@ const DATA = {
           choix: ["Aucune", "Internet est le réseau ; le Web est un service (pages liées) qui circule dessus", "Le Web est plus ancien", "Internet ne sert qu'aux mails"],
           bonne: 1,
           explication: "Internet achemine les paquets ; le Web (pages et hyperliens, 1989) n'est qu'un des services qui l'utilisent, au même titre que les mails ou la vidéo."
+        },
+        {
+          q: "Pourquoi n'écrit-on plus les programmes directement en 0 et 1 ?",
+          choix: ["C'est interdit", "Des langages proches de l'humain sont traduits en binaire par un compilateur", "Les 0 et 1 n'existent plus", "C'est devenu trop rapide"],
+          bonne: 1,
+          explication: "Depuis Grace Hopper et le compilateur, on écrit dans un langage lisible (Python…) qu'un programme traduit en langage machine. Programmer devient accessible."
+        },
+        {
+          q: "Pourquoi une photo JPEG pèse-t-elle bien moins que l'image brute ?",
+          choix: ["Elle a moins de pixels", "La compression jette les détails que l'œil ne remarque pas", "Elle est en noir et blanc", "Par magie"],
+          bonne: 1,
+          explication: "Le JPEG est une compression \"avec perte\" : il supprime les informations peu perceptibles. On gagne énormément de place sans dégradation visible."
+        },
+        {
+          q: "\"Sauvegarder dans le cloud\", concrètement, ça veut dire…",
+          choix: ["Envoyer ses fichiers dans l'atmosphère", "Copier ses fichiers sur des serveurs distants, accessibles par Internet", "Les graver sur un CD", "Les supprimer de partout"],
+          bonne: 1,
+          explication: "Le cloud, ce sont les ordinateurs (serveurs) de quelqu'un d'autre. Tes fichiers y sont copiés et accessibles partout — tant que tu as une connexion."
+        },
+        {
+          q: "Quelle est la bonne règle pour sauvegarder des données importantes ?",
+          choix: ["Une copie sur l'ordinateur suffit", "3 copies, sur 2 supports, dont 1 hors de chez soi", "Les imprimer", "Se les envoyer une fois par mail"],
+          bonne: 1,
+          explication: "La règle 3-2-1 protège des pannes, vols et rançongiciels. Une seule copie n'est pas une sauvegarde : le disque lâchera un jour."
         }
       ]
     },
@@ -2063,6 +2276,13 @@ const DATA = {
           qui: "Ludwig Boltzmann, James Clerk Maxwell",
           resume: "La chaleur n'est pas un fluide invisible : c'est l'agitation désordonnée des atomes et molécules. Plus ils s'agitent, plus c'est \"chaud\".",
           pourquoi: "Relie le monde microscopique (atomes en mouvement) au monde qu'on ressent (chaud/froid). Fonde la physique statistique."
+        },
+        {
+          titre: "La machine à vapeur",
+          annee: "1769",
+          qui: "James Watt",
+          resume: "Watt perfectionne la machine à vapeur : la chaleur d'un feu fait bouillir de l'eau, dont la vapeur pousse un piston et produit un mouvement mécanique utilisable.",
+          pourquoi: "Pour la première fois, on convertit massivement de la chaleur en travail : c'est le moteur de la révolution industrielle (usines, trains, bateaux). Le watt, unité de puissance, lui rend hommage."
         }
       ],
       notions: [
@@ -2111,6 +2331,24 @@ const DATA = {
             { h:"Rayonnement (par ondes, sans contact)", t:"Tout corps chaud émet de la chaleur sous forme d'ondes, qui traversent même le vide — c'est ainsi que le Soleil nous chauffe. C'est ce que ta main sent face à un feu sans le toucher." }
           ],
           retenir: "La chaleur voyage par conduction (de proche en proche dans les solides), convection (courants dans l'air/l'eau) et rayonnement (ondes, même dans le vide). Bien isoler une maison, c'est bloquer ces trois chemins."
+        },
+        {
+          titre: "Puissance ou énergie ? (le watt et le kilowattheure)",
+          accroche: "Deux mots qu'on mélange sans arrêt, sur les factures comme sur les étiquettes. Les distinguer, c'est comprendre ce qu'on paie vraiment.",
+          blocs: [
+            { t:"La puissance (en watts, W) est un débit : l'énergie utilisée à chaque instant. Un appareil de 2000 W tire fort tant qu'il fonctionne. C'est comme le débit d'un robinet ouvert." },
+            { t:"L'énergie (en wattheures, Wh, ou kilowattheures, kWh) est le total consommé sur la durée : puissance × temps. C'est le volume d'eau qui a coulé. Un appareil de 2000 W pendant 30 min consomme 1 kWh ; une LED de 10 W pendant 100 h aussi. Ta facture est en kWh : c'est l'énergie totale, pas la puissance instantanée, que tu paies." }
+          ],
+          retenir: "Puissance (W) = le débit d'énergie à un instant (la force du robinet). Énergie (kWh) = puissance × durée = le total consommé (le volume écoulé). La facture est en kWh. Un appareil puissant mais bref peut coûter moins qu'un faible mais permanent."
+        },
+        {
+          titre: "Toute énergie finit en chaleur",
+          accroche: "Suis n'importe quelle énergie assez longtemps : elle termine toujours dispersée en chaleur. C'est la version concrète du \"tout se dégrade\".",
+          blocs: [
+            { t:"L'électricité d'une ampoule finit en lumière puis en chaleur dans les murs ; le mouvement d'une voiture finit en chaleur dans les freins, les pneus et l'air ; le son se dissipe en chaleur. À chaque conversion, une part devient de la chaleur diffuse, de moins en moins récupérable (c'est le second principe, l'entropie)." },
+            { t:"D'où une nuance importante : on ne \"consomme\" pas l'énergie (elle se conserve), on la dégrade — d'une forme concentrée et utile (essence, électricité) vers de la chaleur diffuse et inutilisable. \"Économiser l'énergie\", c'est en réalité limiter cette dégradation en gaspillant moins de formes utiles." }
+          ],
+          retenir: "Toute chaîne d'énergie finit en chaleur diffuse, de moins en moins récupérable (entropie). On ne détruit pas l'énergie, on la dégrade du concentré (essence, électricité) vers le dispersé. \"Économiser l'énergie\" = gaspiller moins de formes utiles."
         }
       ],
       quotidien: [
@@ -2125,6 +2363,10 @@ const DATA = {
         {
           titre: "Pourquoi un thermos garde chaud ET froid",
           texte: "Un thermos combat les trois transferts : double paroi avec du vide entre les deux (le vide ne conduit pas et empêche la convection), et surfaces réfléchissantes (contre le rayonnement). Résultat : il ralentit l'échange de chaleur dans les deux sens, donc il garde un café chaud comme une boisson fraîche."
+        },
+        {
+          titre: "Comprendre sa facture d'électricité",
+          texte: "Ta facture compte des kilowattheures (kWh) : la puissance de chaque appareil × son temps d'usage. Les gros postes sont ceux qui sont puissants ET longtemps allumés : chauffage, chauffe-eau, sèche-linge. Une ampoule LED ou un chargeur, même oubliés allumés, pèsent peu. Pour réduire la facture, viser d'abord le chauffage et l'eau chaude, pas les petites veilles."
         }
       ],
       exos: [
@@ -2175,6 +2417,30 @@ const DATA = {
           choix: ["Manque de technologie", "Le second principe impose qu'une part se dissipe toujours en chaleur", "Les ingénieurs sont négligents", "C'est en fait possible"],
           bonne: 1,
           explication: "Le second principe (entropie) garantit qu'une part de l'énergie se dégrade fatalement en chaleur inutilisable. La perfection est physiquement interdite, pas juste difficile."
+        },
+        {
+          q: "Quelle unité apparaît sur ta facture d'électricité ?",
+          choix: ["Le watt (puissance)", "Le kilowattheure (énergie = puissance × temps)", "Le volt", "Le degré"],
+          bonne: 1,
+          explication: "On paie l'énergie totale consommée (kWh), pas la puissance instantanée (W). Puissance × durée = énergie."
+        },
+        {
+          q: "Que devient, au bout du compte, l'énergie du mouvement d'une voiture qui freine ?",
+          choix: ["Elle disparaît", "Elle se transforme en chaleur (freins, pneus, air)", "Elle retourne dans le réservoir", "Elle devient de la lumière"],
+          bonne: 1,
+          explication: "Le freinage convertit le mouvement en chaleur diffuse. Comme toute énergie, elle n'est pas détruite mais dégradée en chaleur peu récupérable."
+        },
+        {
+          q: "Qu'a rendu possible la machine à vapeur de Watt ?",
+          choix: ["De voler", "De convertir massivement la chaleur en mouvement (révolution industrielle)", "De produire de l'électricité solaire", "De refroidir les maisons"],
+          bonne: 1,
+          explication: "Transformer la chaleur d'un feu en travail mécanique a lancé usines, trains et bateaux. Le watt porte son nom."
+        },
+        {
+          q: "Quel appareil pèse le plus lourd sur une facture d'électricité, en général ?",
+          choix: ["Un chargeur de téléphone", "Une LED oubliée allumée", "Le chauffage ou le chauffe-eau", "Une télécommande"],
+          bonne: 2,
+          explication: "Les gros postes sont puissants ET longtemps allumés : chauffage, eau chaude, sèche-linge. Les petites veilles pèsent peu à côté."
         }
       ]
     }
