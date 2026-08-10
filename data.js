@@ -1721,6 +1721,182 @@ const DATA = {
             { t:"Le foie est l'usine chimique du corps : il neutralise les toxines (dont l'alcool et de nombreux médicaments), stocke des réserves d'énergie et fabrique quantité de molécules indispensables. C'est pour cela qu'un excès d'alcool ou certaines substances l'abîment en premier." }
           ],
           retenir: "Les reins filtrent le sang (déchets → urine) et gèrent l'eau du corps ; le foie neutralise les toxines et fabrique des molécules vitales. Deux stations d'épuration sans lesquelles on s'empoisonnerait vite."
+        },
+        {
+          titre: "Qu'est-ce qu'un nerf ?",
+          accroche: "Tu commandes ta main, tu sens le chaud, ton cœur s'accélère : tout passe par des « câbles » vivants, les nerfs. Mais un nerf n'est pas un fil électrique — c'est un faisceau de cellules.",
+          blocs: [
+            { h:"Neurone, axone, nerf", t:"La cellule de base est le NEURONE : un corps cellulaire prolongé par une longue fibre, l'axone (parfois plus d'un mètre). Un NERF, c'est un faisceau de milliers de ces axones réunis dans une gaine, comme un câble qui regroupe de nombreux fils. Ce qu'il transporte, c'est un signal électrique très rapide." },
+            { h:"Deux sens de circulation", t:"Des fibres SENSITIVES remontent au cerveau ce que tu touches, la douleur, la température ; des fibres MOTRICES descendent les ordres du cerveau vers les muscles. Un même nerf peut mêler les deux." },
+            { h:"La gaine qui accélère", t:"Beaucoup d'axones sont entourés de MYÉLINE, un isolant gras qui fait « sauter » le signal de nœud en nœud et le rend bien plus rapide. C'est cette gaine qui est attaquée dans la sclérose en plaques." }
+          ],
+          retenir: "Un nerf est un faisceau d'axones (les fibres des neurones) qui transporte des signaux électriques : sensitifs (vers le cerveau) et/ou moteurs (vers les muscles). La myéline accélère la transmission."
+        },
+        {
+          titre: "La cellule : la brique du vivant",
+          accroche: "Ton corps compte ~37 000 milliards de cellules. Chacune est une petite usine vivante et autonome, avec ses murs, son centre de commande et ses machines.",
+          blocs: [
+            { t:"Une cellule est délimitée par une MEMBRANE, un mur qui filtre les entrées et sorties. À l'intérieur baigne le cytoplasme, où flottent des ORGANITES, de petits organes spécialisés." },
+            { h:"Noyau et mitochondries", t:"Le NOYAU renferme l'ADN, le plan de fabrication de tout l'organisme. Les MITOCHONDRIES sont les centrales énergétiques : elles brûlent le sucre avec l'oxygène pour produire l'énergie de la cellule. Un muscle très actif en contient énormément." },
+            { t:"Toutes tes cellules partagent le même ADN, mais elles se SPÉCIALISENT : une cellule de peau, un neurone et un globule rouge n'ont ni la même forme ni le même métier." }
+          ],
+          retenir: "La cellule est l'unité de base du vivant : une membrane, un noyau (l'ADN, le plan) et des organites dont les mitochondries (l'énergie). Même ADN partout, mais des cellules spécialisées."
+        },
+        {
+          titre: "Des cellules aux systèmes : les niveaux d'organisation",
+          accroche: "Comment passe-t-on d'une cellule microscopique à un corps entier ? Par emboîtement, comme des poupées russes.",
+          blocs: [
+            { t:"Des CELLULES semblables regroupées forment un TISSU (ex. le tissu musculaire). Plusieurs tissus assemblés pour une fonction forment un ORGANE (le cœur : muscle + nerfs + vaisseaux). Plusieurs organes qui coopèrent forment un SYSTÈME (ou appareil)." },
+            { t:"Exemple : l'appareil digestif = bouche + œsophage + estomac + intestins + foie + pancréas, au service d'une même mission. Le corps est un assemblage d'une dizaine de grands systèmes qui collaborent." }
+          ],
+          retenir: "Niveaux d'organisation : cellule → tissu → organe → système → organisme. Chaque étage regroupe le précédent pour une fonction plus large."
+        },
+        {
+          titre: "Le squelette : la charpente vivante",
+          accroche: "206 os chez l'adulte. Bien plus qu'un portemanteau : une charpente mobile qui fabrique ton sang et stocke tes minéraux.",
+          blocs: [
+            { h:"Ses rôles", t:"Soutenir le corps, PROTÉGER les organes (crâne → cerveau, cage thoracique → cœur et poumons, colonne → moelle), et servir de LEVIERS aux muscles pour le mouvement. Bonus : l'intérieur des gros os (la moelle rouge) fabrique les cellules du sang, et l'os stocke le calcium." },
+            { h:"Un tissu vivant", t:"L'os n'est pas mort : il se renouvelle sans cesse, se répare après une fracture, et se renforce là où on le sollicite (d'où l'intérêt de l'activité physique). On naît avec ~300 os, dont beaucoup fusionnent pour finir à 206." }
+          ],
+          retenir: "Le squelette (206 os) soutient, protège, sert de leviers, fabrique le sang (moelle) et stocke le calcium. C'est un tissu vivant qui se répare et se renforce à l'usage."
+        },
+        {
+          titre: "La colonne vertébrale : le plan détaillé",
+          accroche: "33 vertèbres empilées, un canal qui protège la moelle épinière, des courbes qui amortissent : la colonne est un chef-d'œuvre d'ingénierie.",
+          blocs: [
+            { h:"Les 5 étages (de haut en bas)", t:"CERVICALES (7, le cou ; dont l'atlas et l'axis qui portent la tête et permettent de dire oui et non) · DORSALES ou thoraciques (12, elles portent les côtes) · LOMBAIRES (5, les plus massives, le bas du dos qui supporte le poids) · SACRUM (5 vertèbres soudées, entre les hanches) · COCCYX (4 vertèbres soudées, vestige de queue)." },
+            { h:"Disques et moelle", t:"Entre chaque vertèbre, un DISQUE intervertébral — un coussin fibreux à noyau gélatineux — amortit les chocs. Au centre court un canal qui abrite la MOELLE ÉPINIÈRE, l'autoroute nerveuse entre le cerveau et le corps. Une hernie discale, c'est ce noyau qui déborde et appuie sur un nerf (la fameuse sciatique)." },
+            { h:"Les courbures en S", t:"Vue de côté, la colonne dessine un double S : cette forme démultiplie sa résistance et amortit la marche. Trop de courbure = cyphose (dos rond) ou lordose ; une déviation latérale = scoliose." }
+          ],
+          retenir: "La colonne : 7 cervicales, 12 dorsales (les côtes), 5 lombaires, sacrum, coccyx. Des disques amortissent, un canal protège la moelle épinière, et le double S encaisse les chocs."
+        },
+        {
+          titre: "La main : le plan détaillé",
+          accroche: "27 os, un pouce opposable, des dizaines de muscles : la main est l'outil qui a fait de nous des bâtisseurs.",
+          blocs: [
+            { h:"27 os en trois groupes", t:"Le CARPE (8 petits os du poignet) · les MÉTACARPIENS (5 os de la paume) · les PHALANGES (14 : trois par doigt, deux pour le pouce). Ce grand nombre de petites articulations donne à la main son extraordinaire souplesse." },
+            { h:"Le pouce opposable", t:"Le pouce peut toucher chacun des autres doigts : c'est l'OPPOSITION, ce qui permet la pince de précision (tenir un stylo, un médiator). Très développée chez l'humain, elle est un atout majeur de l'espèce." },
+            { h:"Des muscles… dans l'avant-bras", t:"Étonnamment, la plupart des muscles qui plient les doigts sont dans l'AVANT-BRAS, reliés aux doigts par de longs TENDONS, comme une marionnette à fils. C'est pourquoi une tendinite se ressent souvent au poignet ou à l'avant-bras. La main n'a que de petits muscles, pour la finesse." }
+          ],
+          retenir: "La main : 27 os (carpe 8, métacarpiens 5, phalanges 14), un pouce OPPOSABLE pour la pince de précision, des doigts actionnés par des tendons venus de l'avant-bras (d'où les tendinites)."
+        },
+        {
+          titre: "Les muscles : comment on bouge",
+          accroche: "Plus de 600 muscles, environ 40 % de ton poids. Ils ne savent faire qu'une chose : se raccourcir. Tout le mouvement vient de là.",
+          blocs: [
+            { h:"Tirer, jamais pousser", t:"Un muscle ne peut que TIRER en se contractant (se raccourcir), jamais pousser. Pour bouger dans les deux sens, ils travaillent par PAIRES OPPOSÉES : le biceps plie le coude, le triceps le tend. Quand l'un tire, l'autre se relâche." },
+            { h:"Trois types", t:"SQUELETTIQUES (volontaires : bras, jambes…) · LISSES (involontaires : parois de l'intestin, des vaisseaux) · CARDIAQUE (unique, infatigable : le cœur). Seuls les premiers obéissent à ta volonté." },
+            { t:"Un muscle se contracte quand un nerf lui en donne l'ordre : à l'échelle microscopique, des filaments glissent les uns sur les autres, ce qui raccourcit la fibre. Répété, l'effort épaissit les fibres : c'est la prise de muscle." }
+          ],
+          retenir: "Un muscle ne fait que se raccourcir (tirer) ; ils vont par paires opposées (biceps/triceps). Trois types : squelettique (volontaire), lisse (involontaire), cardiaque. Un nerf commande, des filaments glissent, la fibre raccourcit."
+        },
+        {
+          titre: "La peau : ton plus grand organe",
+          accroche: "Environ 2 m² et 4 à 5 kg : la peau est le plus grand organe du corps. Une frontière vivante, étanche et intelligente.",
+          blocs: [
+            { h:"Trois couches", t:"L'ÉPIDERME (surface imperméable qui se renouvelle sans cesse ; contient la mélanine qui colore et protège du soleil) · le DERME (dessous : vaisseaux, nerfs, racines des poils, glandes de sueur) · l'HYPODERME (graisse isolante)." },
+            { h:"Ses rôles", t:"Barrière contre les microbes et la déshydratation, capteur du toucher/chaud/froid/douleur, thermostat (la sueur refroidit ; les vaisseaux se resserrent ou se dilatent), et fabrique de la vitamine D au soleil." }
+          ],
+          retenir: "La peau (le plus grand organe) a 3 couches : épiderme (barrière + mélanine), derme (nerfs, vaisseaux, glandes), hypoderme (graisse). Elle protège, ressent, régule la température et fabrique la vitamine D."
+        },
+        {
+          titre: "Le cœur : le plan détaillé",
+          accroche: "Un muscle de la taille de ton poing, quatre cavités, quatre valves anti-retour : voici le plan de la pompe.",
+          blocs: [
+            { h:"Quatre cavités", t:"En haut, deux OREILLETTES reçoivent le sang ; en bas, deux VENTRICULES l'éjectent avec force. Côté DROIT : le sang pauvre en oxygène, envoyé aux poumons. Côté GAUCHE : le sang rechargé, propulsé dans tout le corps (son ventricule est le plus musclé)." },
+            { h:"Les valves : des clapets anti-retour", t:"Entre chaque étage, une VALVE s'ouvre puis se referme pour que le sang n'aille que dans un sens. Le « toc-toc » du battement, c'est la fermeture de ces valves. Une valve abîmée donne un souffle au cœur." },
+            { h:"Ses propres artères", t:"Le cœur nourrit tout le corps mais doit aussi se nourrir lui-même : les artères CORONAIRES l'irriguent. Si l'une se bouche, une partie du muscle manque d'oxygène et meurt : c'est l'infarctus." }
+          ],
+          retenir: "Le cœur : 2 oreillettes (reçoivent) + 2 ventricules (éjectent) ; droite → poumons, gauche → corps. Des valves anti-retour imposent le sens (le « toc-toc »). Les coronaires nourrissent le cœur ; bouchées = infarctus."
+        },
+        {
+          titre: "Les poumons et l'échange gazeux",
+          accroche: "Environ 300 millions de minuscules sacs qui, dépliés, couvriraient un court de tennis. Tout ça pour capter l'oxygène.",
+          blocs: [
+            { h:"L'arbre respiratoire", t:"L'air descend par la TRACHÉE, qui se divise en deux BRONCHES (une par poumon), puis en bronchioles de plus en plus fines, jusqu'aux ALVÉOLES : de minuscules ballons enveloppés de vaisseaux." },
+            { h:"L'échange", t:"Dans l'alvéole, l'oxygène de l'air passe dans le sang, et le CO₂ (déchet) fait le chemin inverse pour être expiré. C'est le seul but de la respiration : charger l'oxygène, décharger le CO₂." },
+            { t:"Le DIAPHRAGME, un muscle sous les poumons, s'abaisse pour aspirer l'air puis remonte pour le chasser. Tu respires ~20 000 fois par jour sans y penser." }
+          ],
+          retenir: "L'air va trachée → bronches → bronchioles → alvéoles, où l'oxygène entre dans le sang et le CO₂ en sort. Le diaphragme pompe l'air. Une immense surface d'échange repliée dans la poitrine."
+        },
+        {
+          titre: "Le cerveau : le plan détaillé",
+          accroche: "1,4 kg, ~86 milliards de neurones, 20 % de ton énergie. Voici la carte de l'organe le plus complexe connu.",
+          blocs: [
+            { h:"Les grandes parties", t:"Le CORTEX (la surface plissée des deux hémisphères) : pensée, langage, décisions, mouvements volontaires, sens. Le CERVELET (derrière, en bas) : équilibre et coordination fine. Le TRONC cérébral (la tige vers la moelle) : les fonctions vitales automatiques — respiration, cœur, éveil." },
+            { h:"Les quatre lobes", t:"FRONTAL (décision, planification, personnalité, mouvement) · PARIÉTAL (toucher, espace) · TEMPORAL (audition, mémoire, langage) · OCCIPITAL (vision). Une lésion à un endroit précis touche une fonction précise." },
+            { h:"Deux hémisphères croisés", t:"Le côté GAUCHE du cerveau commande la moitié DROITE du corps, et inversement : les voies se croisent. Chez la plupart des gens, le langage siège plutôt à gauche." }
+          ],
+          retenir: "Cerveau = cortex (pensée, sens, mouvement, 4 lobes) + cervelet (équilibre) + tronc (fonctions vitales). Chaque hémisphère commande le côté OPPOSÉ du corps ; les fonctions sont localisées."
+        },
+        {
+          titre: "Le tube digestif : le voyage d'un repas",
+          accroche: "9 mètres du début à la fin. Suis une bouchée : chaque organe fait une étape précise du démontage.",
+          blocs: [
+            { h:"Le trajet", t:"BOUCHE (mâcher + salive qui attaque l'amidon) → ŒSOPHAGE (tuyau qui pousse) → ESTOMAC (brassage + acide qui digère les protéines et tue les microbes) → INTESTIN GRÊLE (là où presque tout est absorbé dans le sang) → GROS INTESTIN / côlon (récupère l'eau, forme les selles) → rectum." },
+            { h:"Les usines annexes", t:"Le FOIE fabrique la bile (qui casse les graisses) ; le PANCRÉAS déverse des enzymes puissantes et l'insuline. Hors du trajet, ils y déversent leurs sucs." },
+            { t:"L'intestin grêle est tapissé de millions de replis et de villosités : déplié, il couvrirait une surface énorme, pour absorber un maximum de nutriments." }
+          ],
+          retenir: "Le repas : bouche → œsophage → estomac (acide) → intestin grêle (absorption) → côlon (eau, selles). Foie (bile) et pancréas (enzymes + insuline) aident depuis le côté. Tout finit dans le sang."
+        },
+        {
+          titre: "Le sang : un tissu liquide",
+          accroche: "5 litres qui circulent en boucle. Le sang n'est pas qu'un liquide rouge : c'est un tissu vivant à plusieurs métiers.",
+          blocs: [
+            { h:"Ses composants", t:"Le PLASMA (liquide jaune, surtout de l'eau) transporte tout. Dedans flottent les GLOBULES ROUGES (l'oxygène, grâce à l'hémoglobine, d'où la couleur), les GLOBULES BLANCS (les défenses, le système immunitaire) et les PLAQUETTES (elles bouchent les blessures, forment le caillot)." },
+            { t:"Le sang livre oxygène et nutriments, emporte les déchets, répartit la chaleur, transporte hormones et cellules de défense. Une seule goutte contient des millions de globules." }
+          ],
+          retenir: "Le sang = plasma (liquide) + globules rouges (oxygène) + globules blancs (défense) + plaquettes (coagulation). Il transporte oxygène, nutriments, déchets, chaleur, hormones et défenses."
+        },
+        {
+          titre: "Le système nerveux : central, périphérique, autonome",
+          accroche: "Deux « bureaux » (cerveau + moelle) et un immense réseau de câbles qui atteint chaque recoin du corps.",
+          blocs: [
+            { h:"Central vs périphérique", t:"Le système nerveux CENTRAL = cerveau + moelle épinière : le centre de calcul et de décision, protégé par les os. Le PÉRIPHÉRIQUE = tous les nerfs qui en partent vers le corps, les câbles." },
+            { h:"Volontaire vs autonome", t:"Une partie obéit à ta volonté (bouger un bras). L'autre, l'AUTONOME, tourne toute seule (cœur, digestion, pupilles) avec deux modes : le SYMPATHIQUE (l'accélérateur : stress, fuite, cœur qui s'emballe) et le PARASYMPATHIQUE (le frein : repos, digestion, récupération)." },
+            { t:"Un RÉFLEXE (retirer la main d'une flamme) peut être traité par la moelle seule, sans attendre le cerveau : plus rapide, ça protège." }
+          ],
+          retenir: "Système nerveux : CENTRAL (cerveau + moelle) et PÉRIPHÉRIQUE (les nerfs). L'AUTONOME gère l'automatique via deux modes opposés : sympathique (accélère) et parasympathique (freine). Les réflexes passent par la moelle."
+        },
+        {
+          titre: "L'œil : le plan détaillé",
+          accroche: "Une caméra biologique qui fait la mise au point, dose la lumière et convertit l'image en signaux — en temps réel.",
+          blocs: [
+            { h:"Le chemin de la lumière", t:"La lumière traverse la CORNÉE (le hublot transparent) → la PUPILLE (le trou noir, dont l'IRIS coloré règle l'ouverture selon la luminosité) → le CRISTALLIN (une lentille qui se déforme pour faire la mise au point) → et se projette au fond, sur la RÉTINE." },
+            { h:"La rétine et le nerf optique", t:"La rétine porte des cellules photosensibles : les CÔNES (couleurs, lumière vive) et les BÂTONNETS (faible lumière, noir et blanc). Elles transforment la lumière en signal électrique, envoyé au cerveau par le NERF OPTIQUE." },
+            { t:"Myopie et hypermétropie viennent d'une image qui se forme un peu avant ou après la rétine ; les lunettes la recalent." }
+          ],
+          retenir: "L'œil : cornée → pupille (l'iris règle l'ouverture) → cristallin (mise au point) → rétine (cônes = couleurs, bâtonnets = pénombre) → nerf optique → cerveau. Une caméra vivante à autofocus."
+        },
+        {
+          titre: "L'appareil reproducteur masculin",
+          accroche: "Un système conçu pour produire et délivrer les cellules reproductrices mâles, les spermatozoïdes. (Anatomie, sans détour.)",
+          blocs: [
+            { h:"Les organes", t:"Les TESTICULES (deux, logés dans le scrotum, à l'EXTÉRIEUR du corps car les spermatozoïdes ont besoin d'une température un peu plus basse) fabriquent les spermatozoïdes et l'hormone masculine, la TESTOSTÉRONE. Des canaux (dont le canal déférent) les conduisent vers l'urètre." },
+            { h:"Le pénis", t:"Le PÉNIS contient l'URÈTRE (canal qui évacue l'urine ET le sperme, jamais en même temps) et des tissus SPONGIEUX (les corps caverneux). Quand ces tissus se remplissent de sang, c'est l'érection : un mécanisme hydraulique piloté par les nerfs. Le gland, à son extrémité, est très innervé." },
+            { h:"Le sperme", t:"À l'éjaculation, les spermatozoïdes se mêlent aux sécrétions de la PROSTATE et des vésicules séminales, qui les nourrissent et les protègent : c'est le sperme. La prostate, sous la vessie, est un organe clé (surveillé avec l'âge)." }
+          ],
+          retenir: "Masculin : testicules (spermatozoïdes + testostérone, à l'extérieur pour la fraîcheur) → canaux → urètre dans le pénis (tissus spongieux = érection hydraulique). Prostate et vésicules séminales fabriquent le liquide du sperme."
+        },
+        {
+          titre: "L'appareil reproducteur féminin",
+          accroche: "Un système conçu pour produire les cellules reproductrices femelles (ovules) et abriter le développement d'un embryon. (Anatomie, souvent mal enseignée.)",
+          blocs: [
+            { h:"Les organes internes", t:"Les OVAIRES (deux) contiennent dès la naissance un stock d'ovules et fabriquent les hormones féminines (œstrogènes, progestérone). Chaque cycle, un ovule est libéré (ovulation) et capté par une TROMPE, qui le mène à l'UTÉRUS — un muscle creux où un embryon peut s'implanter et grandir. L'utérus se prolonge par le VAGIN, canal vers l'extérieur." },
+            { h:"La vulve : la partie externe", t:"La VULVE désigne l'ensemble des organes externes : les grandes et petites LÈVRES (qui protègent l'entrée), le CLITORIS (organe dédié uniquement à la sensibilité, très innervé, dont la plus grande partie est interne), et deux orifices DISTINCTS : celui de l'urètre (urine) et celui du vagin. Son anatomie a longtemps été mal décrite dans les manuels." },
+            { h:"Le cycle menstruel", t:"Chaque mois, l'utérus prépare une muqueuse pour accueillir un embryon. Sans grossesse, cette muqueuse est évacuée : ce sont les règles. Le tout est piloté par les hormones, en un cycle d'environ 28 jours." }
+          ],
+          retenir: "Féminin : ovaires (ovules + hormones) → trompes → utérus (où grandit l'embryon) → vagin. La VULVE (externe) = lèvres + clitoris (dédié à la sensibilité) + orifices séparés urètre/vagin. Le cycle prépare l'utérus chaque mois."
+        },
+        {
+          titre: "Femmes et hommes : le dimorphisme sexuel",
+          accroche: "Au-delà des organes reproducteurs, quelles différences biologiques ? Et surtout, d'où viennent-elles ?",
+          blocs: [
+            { h:"À la source : les chromosomes", t:"Chaque cellule porte une paire de chromosomes sexuels : XX (typiquement femelle) ou XY (typiquement mâle). Un gène du chromosome Y déclenche chez l'embryon la formation de testicules ; sans lui, ce sont des ovaires. Tout le reste en découle, surtout via les HORMONES." },
+            { h:"Le rôle des hormones", t:"À la puberté, la testostérone (plus élevée chez les hommes) et les œstrogènes (plus élevés chez les femmes) façonnent les caractères SECONDAIRES : pilosité, voix, répartition des muscles et de la graisse, hanches, poitrine. En moyenne, les hommes sont plus grands et plus musclés ; les femmes ont souvent une immunité plus réactive et une espérance de vie un peu plus longue." },
+            { h:"Des moyennes, pas des destins", t:"Ces différences sont des MOYENNES statistiques : les courbes se recouvrent largement, et la variété entre individus d'un même sexe dépasse souvent l'écart entre les moyennes. Il existe aussi des variations (intersexuation) qui rappellent que le vivant est un spectre, pas deux cases étanches." }
+          ],
+          retenir: "Le sexe biologique part des chromosomes (XX/XY) → gonades (ovaires/testicules) → hormones (œstrogènes/testostérone) qui sculptent les différences à la puberté. Ce sont des moyennes qui se recouvrent : la variété individuelle est grande."
         }
       ],
       quotidien: [
@@ -1815,6 +1991,66 @@ const DATA = {
           choix: ["Le corps s'y habitue au hasard", "Le système immunitaire en garde la mémoire et riposte vite au retour", "Le microbe disparaît de la Terre", "C'est faux, on les rattrape toujours"],
           bonne: 1,
           explication: "L'immunité adaptative fabrique des armes sur mesure et les mémorise. C'est ce mécanisme de mémoire que les vaccins déclenchent, sans la maladie."
+        },
+        {
+          q: "Qu'est-ce qu'un nerf, exactement ?",
+          choix: ["Un fil électrique isolé", "Un faisceau d'axones qui transporte des signaux électriques", "Un petit muscle", "Un vaisseau sanguin"],
+          bonne: 1,
+          explication: "Un nerf est un faisceau de milliers d'axones (les fibres des neurones), regroupés dans une gaine, qui transporte des signaux sensitifs et/ou moteurs."
+        },
+        {
+          q: "Combien de vertèbres cervicales compte le cou ?",
+          choix: ["5", "7", "12", "33"],
+          bonne: 1,
+          explication: "7 cervicales (dont l'atlas et l'axis). Puis 12 dorsales (les côtes), 5 lombaires, le sacrum et le coccyx."
+        },
+        {
+          q: "À quoi sert le pouce opposable de la main ?",
+          choix: ["À rien de particulier", "À la pince de précision (toucher chaque doigt)", "À porter des charges lourdes", "À l'équilibre"],
+          bonne: 1,
+          explication: "Le pouce peut toucher chacun des autres doigts : c'est l'opposition, qui permet la pince de précision (tenir un stylo, un médiator)."
+        },
+        {
+          q: "Que peut faire un muscle ?",
+          choix: ["Pousser et tirer", "Seulement se raccourcir (tirer)", "Seulement pousser", "Rien, ce sont les os qui bougent"],
+          bonne: 1,
+          explication: "Un muscle ne fait que se raccourcir (tirer). Pour bouger dans les deux sens, ils vont par paires opposées, comme le biceps et le triceps."
+        },
+        {
+          q: "À quoi servent les valves du cœur ?",
+          choix: ["À réchauffer le sang", "À empêcher le sang de refluer (sens unique)", "À fabriquer le sang", "À filtrer l'air"],
+          bonne: 1,
+          explication: "Les valves sont des clapets anti-retour : elles imposent au sang un sens unique. Leur fermeture produit le « toc-toc » du battement."
+        },
+        {
+          q: "Où l'oxygène de l'air passe-t-il dans le sang ?",
+          choix: ["Dans l'estomac", "Dans les alvéoles des poumons", "Dans le foie", "Dans le cœur"],
+          bonne: 1,
+          explication: "Dans les alvéoles : l'oxygène y passe dans le sang et le CO₂ en ressort pour être expiré. C'est le seul but de la respiration."
+        },
+        {
+          q: "Le côté gauche du cerveau commande…",
+          choix: ["Le côté gauche du corps", "La moitié droite du corps", "Rien, il ne fait que penser", "Les jambes uniquement"],
+          bonne: 1,
+          explication: "Les voies nerveuses se croisent : chaque hémisphère commande le côté OPPOSÉ du corps."
+        },
+        {
+          q: "Pourquoi les testicules sont-ils logés à l'extérieur du corps ?",
+          choix: ["Par hasard de l'évolution", "Parce que les spermatozoïdes ont besoin d'une température un peu plus basse", "Pour peser moins lourd", "Ils sont en réalité à l'intérieur"],
+          bonne: 1,
+          explication: "La production de spermatozoïdes se fait mieux à une température légèrement inférieure à celle du corps ; le scrotum les garde au frais."
+        },
+        {
+          q: "Le mot « vulve » désigne…",
+          choix: ["Le canal interne (le vagin)", "L'ensemble des organes génitaux externes féminins (lèvres, clitoris, orifices)", "L'utérus", "Un ovaire"],
+          bonne: 1,
+          explication: "La vulve, c'est la partie EXTERNE : grandes et petites lèvres, clitoris (dédié à la sensibilité) et les orifices distincts de l'urètre et du vagin. Le vagin, lui, est interne."
+        },
+        {
+          q: "D'où part, biologiquement, la différence de sexe ?",
+          choix: ["Uniquement de l'éducation", "Des chromosomes (XX/XY), puis des hormones", "De la taille à la naissance", "Du groupe sanguin"],
+          bonne: 1,
+          explication: "Les chromosomes (XX ou XY) déclenchent la formation d'ovaires ou de testicules, qui produisent les hormones (œstrogènes/testostérone) façonnant les différences. Ce sont des tendances moyennes, avec un large recouvrement."
         }
       ]
     },
