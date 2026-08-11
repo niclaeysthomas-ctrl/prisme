@@ -3048,6 +3048,593 @@ const DATA = {
           explication: "L'ancrage : le premier chiffre rencontré déforme les jugements suivants. Très utilisé en négociation et en marketing."
         }
       ]
+    },
+
+    /* ======================= L'INFINIMENT PETIT ======================= */
+    {
+      id: "infime",
+      nom: "L'infiniment petit",
+      emoji: "🔬",
+      accent: "#e879f9",
+      tagline: "Descendre sous l'atome, jusqu'au grain du réel.",
+      decouvertes: [
+        {
+          titre: "L'électron",
+          annee: "1897",
+          qui: "J. J. Thomson",
+          resume: "En étudiant des \"rayons cathodiques\" dans un tube sous vide, Thomson identifie une particule des milliers de fois plus légère que l'atome, chargée négativement : l'électron. La première brique découverte à l'intérieur de l'atome.",
+          pourquoi: "L'atome, qu'on croyait insécable (son nom grec veut dire \"qu'on ne peut pas couper\"), a donc une structure interne. C'est le coup d'envoi de toute l'exploration du sous-atomique."
+        },
+        {
+          titre: "Le noyau atomique",
+          annee: "1911",
+          qui: "Ernest Rutherford (expérience de Geiger et Marsden)",
+          resume: "On bombarde une fine feuille d'or avec des particules. La plupart la traversent tout droit, mais quelques-unes rebondissent violemment. Conclusion : presque toute la masse et la charge positive de l'atome tient dans un noyau minuscule, entouré de vide.",
+          pourquoi: "L'atome est essentiellement vide. Si le noyau était une bille au centre d'un stade, les électrons seraient dans les tribunes. La matière \"solide\" est surtout de l'espace."
+        },
+        {
+          titre: "Le neutron",
+          annee: "1932",
+          qui: "James Chadwick",
+          resume: "Le noyau ne contient pas que des protons (positifs) : Chadwick y découvre une particule sans charge, de masse voisine, le neutron. Elle explique pourquoi deux atomes d'un même élément peuvent peser différemment (les isotopes).",
+          pourquoi: "Sans neutron, pas de compréhension de la radioactivité, des isotopes ni de la fission. C'est en projetant des neutrons sur de l'uranium qu'on ouvrira l'ère nucléaire."
+        },
+        {
+          titre: "Le neutrino",
+          annee: "1930 / 1956",
+          qui: "Wolfgang Pauli (prédiction), Cowan et Reines (détection)",
+          resume: "Pour sauver la conservation de l'énergie dans certaines désintégrations, Pauli postule une particule quasi indétectable : neutre, presque sans masse, traversant la matière comme si elle n'existait pas. Il faudra 26 ans pour la capter.",
+          pourquoi: "C'est le fantôme du modèle standard. Des dizaines de milliards de neutrinos venus du Soleil traversent ton ongle chaque seconde, sans jamais rien heurter. Ils nous renseignent sur le cœur des étoiles et sur le Big Bang."
+        },
+        {
+          titre: "Les quarks",
+          annee: "1964 / 1968",
+          qui: "Murray Gell-Mann et George Zweig (modèle), le SLAC (confirmation)",
+          resume: "Devant le foisonnement de nouvelles particules, on propose qu'elles soient faites de composants plus fondamentaux : les quarks. En 1968, en sondant le proton avec des électrons très énergétiques, on \"voit\" bien trois grains durs à l'intérieur.",
+          pourquoi: "Le proton et le neutron ne sont donc pas élémentaires : ils sont faits de quarks. On descend encore d'un cran dans la poupée russe de la matière."
+        },
+        {
+          titre: "La force forte et les gluons",
+          annee: "années 1970",
+          qui: "la chromodynamique quantique",
+          resume: "Qu'est-ce qui colle les quarks entre eux ? Une force à part entière, la force forte, transportée par des particules nommées gluons (de l'anglais glue, colle). Sa théorie, la chromodynamique quantique, complète le tableau des interactions.",
+          pourquoi: "C'est la plus puissante des quatre forces de la nature. Elle explique qu'un quark ne se balade jamais seul, et que les noyaux tiennent malgré la répulsion entre protons."
+        },
+        {
+          titre: "Le quark top, dernière brique lourde",
+          annee: "1995",
+          qui: "Fermilab (collisionneur Tevatron)",
+          resume: "Le sixième et dernier quark, le top, est enfin produit. Colossal pour une particule élémentaire : il pèse autant qu'un atome d'or entier, ce qui explique qu'il ait fallu des machines géantes pour le créer.",
+          pourquoi: "Il complète les six quarks prévus par le modèle standard. Trouver exactement ce que la théorie annonçait, à la masse près, est une éclatante confirmation."
+        },
+        {
+          titre: "Le plasma de quarks et de gluons",
+          annee: "années 2000",
+          qui: "les collisionneurs RHIC puis LHC",
+          resume: "En percutant des noyaux lourds à des énergies folles, on \"fait fondre\" protons et neutrons : quarks et gluons se libèrent un instant en une soupe brûlante, un état de la matière qui n'a existé que dans les tout premiers instants de l'univers.",
+          pourquoi: "On recrée en laboratoire la matière telle qu'elle était quelques millionièmes de seconde après le Big Bang. Un télescope vers le passé, à l'échelle du plus petit."
+        }
+      ],
+      notions: [
+        {
+          titre: "La poupée russe de la matière",
+          accroche: "Tout objet que tu touches est un emboîtement d'échelles de plus en plus petites. Descendons-les une à une.",
+          blocs: [
+            { t:"Une goutte d'eau est faite de molécules. Chaque molécule (H₂O) est un assemblage d'atomes. Chaque atome est un minuscule noyau entouré d'un nuage d'électrons. Le noyau, lui, est un paquet de protons et de neutrons. Et chaque proton ou neutron est fait de trois quarks. Cinq étages, du visible à l'insaisissable." },
+            { h:"Des écarts vertigineux", t:"Un atome mesure environ un dix-milliardième de mètre (10⁻¹⁰ m). Son noyau est encore 100 000 fois plus petit. Si l'atome avait la taille d'un stade, le noyau serait un petit pois au centre du terrain — et tout le reste, du vide. La matière est surtout de l'espace." }
+          ],
+          retenir: "Matière → molécules → atomes → (noyau + électrons) → protons/neutrons → quarks. À chaque étage on descend d'un facteur énorme, et l'atome se révèle presque entièrement vide."
+        },
+        {
+          titre: "\"Élémentaire\" : ce qu'on ne sait pas (encore) couper",
+          accroche: "On dit une particule \"élémentaire\" quand on ne lui connaît aucune sous-partie. Mais l'histoire invite à la prudence.",
+          blocs: [
+            { t:"L'atome était censé être insécable — son nom le dit — jusqu'à ce qu'on y trouve un noyau et des électrons. Le proton semblait fondamental, jusqu'aux quarks. Aujourd'hui, l'électron et les quarks sont nos briques \"élémentaires\" : pour nos meilleurs instruments, ce sont des points, sans taille ni structure interne détectable." },
+            { t:"\"Élémentaire\" signifie donc \"sans sous-structure connue à ce jour\", pas \"insécable pour l'éternité\". C'est une frontière du savoir, honnêtement admise, pas une certitude gravée dans le marbre." }
+          ],
+          retenir: "Élémentaire = sans sous-partie connue, à la précision de nos instruments actuels. L'histoire (l'atome, puis le proton) invite à ne jamais dire \"jamais\"."
+        },
+        {
+          titre: "Le modèle standard : le tableau périodique des particules",
+          accroche: "Toute la matière connue, et trois des quatre forces, tiennent dans un seul tableau d'une vingtaine de cases. C'est la théorie la mieux vérifiée de l'histoire.",
+          blocs: [
+            { h:"Les briques de matière", t:"Six quarks (up, down, charm, strange, top, bottom) et six leptons (dont l'électron et trois neutrinos). En pratique, presque tout ce qui t'entoure n'utilise que trois d'entre eux : les quarks up et down (qui font les protons et les neutrons) et l'électron." },
+            { h:"Les porteurs de force", t:"Les forces s'échangent via des particules : le photon (électromagnétisme), les gluons (force forte), les bosons W et Z (force faible). Et le boson de Higgs, à part, qui donne leur masse aux autres." }
+          ],
+          retenir: "Le modèle standard : 12 particules de matière (6 quarks + 6 leptons) + les porteurs de force (photon, gluons, W/Z) + le Higgs. La matière ordinaire n'en mobilise que trois : quarks up, down et électron."
+        },
+        {
+          titre: "Le confinement : pourquoi on ne voit jamais un quark seul",
+          accroche: "On est certains que les quarks existent, mais personne n'en a jamais isolé un. Ce n'est pas faute de moyens : c'est interdit par la nature même de la force forte.",
+          blocs: [
+            { t:"Toutes les forces qu'on connaît faiblissent avec la distance. La force forte fait l'inverse : plus tu éloignes deux quarks, plus elle tire fort, comme un élastique qu'on étire. Impossible de les séparer tranquillement." },
+            { t:"Si tu tires assez pour \"casser l'élastique\", l'énergie fournie se transforme (E = mc²) en une nouvelle paire de quarks, qui vient aussitôt coiffer les deux extrémités. Résultat : tu n'obtiens jamais un quark isolé, mais toujours de nouveaux paquets. C'est le confinement." }
+          ],
+          retenir: "La force forte augmente avec la distance : séparer deux quarks fabrique de nouveaux quarks au lieu d'en libérer un. On ne voit donc jamais un quark seul — seulement des trios (protons, neutrons) ou des paires."
+        },
+        {
+          titre: "Une particule est un frisson dans un champ",
+          accroche: "L'image de la petite bille est commode mais fausse. Dans notre théorie la plus profonde, la réalité première n'est pas la particule : c'est le champ.",
+          blocs: [
+            { t:"Imagine tout l'espace rempli d'une infinité de \"nappes\" invisibles, une par type de particule : un champ électronique, un champ pour chaque quark, un champ électromagnétique… Ces champs sont partout, même dans le vide." },
+            { t:"Ce qu'on appelle \"une particule\" n'est qu'une vibration localisée de son champ, comme une vaguelette à la surface de l'eau. Un électron est un frisson du champ électronique ; un photon, une ride du champ électromagnétique. Deux électrons sont rigoureusement identiques parce qu'ils sont deux vaguelettes du même océan." }
+          ],
+          retenir: "La théorie quantique des champs : au fond de la réalité, des champs emplissent tout l'espace. Une \"particule\" est une vibration localisée de son champ. D'où le fait que tous les électrons soient exactement identiques."
+        },
+        {
+          titre: "Le champ de Higgs : d'où vient la masse",
+          accroche: "Pourquoi les particules pèsent-elles quelque chose plutôt que rien ? La réponse a valu la traque scientifique la plus chère de l'histoire.",
+          blocs: [
+            { t:"Un champ particulier, le champ de Higgs, remplit tout l'espace. Les particules qui interagissent avec lui \"traînent\" en le traversant, comme on avance moins vite dans l'eau que dans l'air : cette résistance, c'est leur masse. Le photon, lui, l'ignore totalement — il n'a donc aucune masse et file à la vitesse de la lumière." },
+            { t:"En 2012, le LHC a détecté le boson de Higgs, la vibration propre de ce champ : la preuve directe qu'il existe. Nuance importante : le Higgs donne leur masse aux particules élémentaires, mais l'essentiel de TA masse vient d'ailleurs — de l'énergie qui agite les quarks à l'intérieur de tes protons (E = mc²)." }
+          ],
+          retenir: "Le champ de Higgs emplit l'espace ; plus une particule y \"accroche\", plus elle est massive. Le boson de Higgs (2012) prouve ce champ. Mais l'essentiel de la masse des objets vient de l'énergie de liaison des quarks, pas du Higgs."
+        },
+        {
+          titre: "Les quatre forces fondamentales",
+          accroche: "Tout ce qui arrive dans l'univers, du café qui refroidit à l'explosion d'une étoile, se ramène à quatre interactions. Pas une de plus.",
+          blocs: [
+            { h:"Les deux du quotidien", t:"La gravité, qui fait tomber les pommes et tourner les planètes : de loin la plus faible, mais à portée infinie et toujours attractive, donc elle domine à grande échelle. L'électromagnétisme, qui tient les atomes, fait la lumière, la chimie, la biologie et toute l'électronique." },
+            { h:"Les deux du noyau", t:"La force forte, la plus puissante, colle les quarks et les noyaux — mais seulement à très courte portée. La force faible, responsable de certaines radioactivités, sans qui le Soleil ne pourrait pas amorcer sa fusion." }
+          ],
+          retenir: "Quatre forces : gravité (faible mais infinie), électromagnétisme (atomes, lumière, chimie), force forte (colle noyaux et quarks, courte portée), force faible (radioactivité, moteur des étoiles). Le modèle standard en unifie trois ; la gravité reste à part."
+        },
+        {
+          titre: "Le vide n'est pas vide",
+          accroche: "Vide une boîte de tout : de l'air, de la lumière, de la moindre particule. Ce qui reste n'est pas le néant tranquille qu'on imagine.",
+          blocs: [
+            { t:"Le principe d'incertitude interdit à un champ d'être parfaitement au repos, figé à zéro. Alors même le vide \"bouillonne\" : des paires de particules apparaissent et disparaissent sans cesse, trop brièvement pour être capturées. On les appelle particules virtuelles." },
+            { t:"Ce n'est pas une vue de l'esprit : ce bouillonnement a des effets mesurés. Deux plaques métalliques très proches sont légèrement poussées l'une vers l'autre par le vide (effet Casimir), et il décale finement les niveaux d'énergie des atomes — un décalage qu'on sait mesurer avec une précision redoutable." }
+          ],
+          retenir: "Le vide quantique n'est pas le néant : il fluctue en permanence, peuplé de paires de particules virtuelles. Effet mesurable (effet Casimir). \"Rien\", en physique, est quelque chose de très actif."
+        },
+        {
+          titre: "La longueur de Planck : le dernier étage connu (10⁻³⁵ m)",
+          accroche: "Peut-on descendre indéfiniment vers le petit ? La physique bute sur un plancher, bien en dessous du quark.",
+          blocs: [
+            { t:"En combinant les trois constantes qui gouvernent le quantique, la relativité et la gravité, on obtient une longueur minuscule : environ 1,6 × 10⁻³⁵ mètre. C'est cent milliards de milliards (10²⁰) de fois plus petit qu'un proton." },
+            { t:"À cette échelle, l'espace-temps lui-même devrait devenir \"granuleux\" et incertain : la notion de distance y perdrait son sens habituel. Pour la décrire, il faudrait une théorie qui marie quantique et gravité — la fameuse gravité quantique — qu'on ne possède pas encore. C'est le mur actuel de l'infiniment petit." }
+          ],
+          retenir: "La longueur de Planck (~1,6 × 10⁻³⁵ m) est l'échelle où quantique et gravité se percutent, 10²⁰ fois sous le proton. En dessous, \"distance\" n'a peut-être plus de sens. C'est la frontière que notre physique ne sait pas franchir."
+        },
+        {
+          titre: "Y a-t-il quelque chose sous les quarks ?",
+          accroche: "Honnêtement : on ne sait pas. Mais il existe des pistes, aussi séduisantes qu'invérifiées à ce jour.",
+          blocs: [
+            { t:"La plus connue est la théorie des cordes : et si les particules n'étaient pas des points, mais de minuscules \"cordes\" vibrantes, à l'échelle de Planck ? Selon son mode de vibration, l'une donnerait un électron, l'autre un quark — comme une corde de guitare donne différentes notes. Élégant… mais aucune expérience ne l'a confirmée." },
+            { t:"D'autres imaginent des \"préons\", des sous-composants des quarks eux-mêmes : là encore, zéro preuve. La vérité du moment est un franc \"on ne sait pas\". C'est exactement là que travaille la recherche fondamentale, et c'est ce qui la rend passionnante." }
+          ],
+          retenir: "Sous les quarks : aucune sous-structure observée. Des pistes théoriques (cordes vibrantes, préons) existent mais restent invérifiées. Le mot juste, ici, est \"on ne sait pas encore\" — la frontière vivante de la physique."
+        },
+        {
+          titre: "L'antimatière : le miroir de la matière",
+          accroche: "À chaque particule correspond une jumelle de charge opposée. Quand elles se rencontrent, elles disparaissent en pure lumière.",
+          blocs: [
+            { t:"L'antiélectron (le positron) est identique à l'électron, mais chargé positivement. Matière et antimatière s'annihilent au contact, se convertissant intégralement en énergie (E = mc²). C'est la réaction la plus efficace qu'on connaisse pour libérer l'énergie d'une masse." },
+            { h:"Le grand mystère", t:"Le Big Bang aurait dû produire autant de matière que d'antimatière, qui se seraient toutes annihilées… ne laissant qu'un univers de lumière, sans étoiles ni nous. Or il reste de la matière. Ce léger déséquilibre en sa faveur, encore mal expliqué, est l'une des grandes énigmes ouvertes de la physique." }
+          ],
+          retenir: "Chaque particule a une antiparticule de charge opposée ; leur rencontre = annihilation en énergie. Pourquoi l'univers est-il fait de matière, et non d'un mélange à parts égales qui se serait annulé ? Énigme non résolue."
+        },
+        {
+          titre: "Comment \"voir\" l'invisible : les accélérateurs",
+          accroche: "On ne pose pas un quark sous un microscope. Pour explorer l'infiniment petit, on casse la matière et on lit les débris.",
+          blocs: [
+            { t:"L'astuce : plus on veut sonder petit, plus il faut d'énergie. On accélère donc des particules à une vitesse frôlant celle de la lumière, puis on les fait entrer en collision. L'énergie du choc se matérialise (E = mc²) en une gerbe de nouvelles particules, que d'immenses détecteurs reconstituent." },
+            { t:"Le plus grand, le LHC au CERN, est un anneau de 27 km enterré sous la frontière franco-suisse. En concentrant assez d'énergie sur un point, il recrée un instant les conditions de l'univers juste après le Big Bang. Chercher le plus petit exige, paradoxe superbe, les plus grandes machines jamais construites." }
+          ],
+          retenir: "On sonde l'infiniment petit en percutant des particules près de la vitesse de la lumière : l'énergie du choc se change en matière nouvelle (E = mc²), lue par des détecteurs géants. Voir le plus petit demande les plus grandes machines (LHC, 27 km)."
+        }
+      ],
+      quotidien: [
+        {
+          titre: "Le PET-scan : de l'antimatière à l'hôpital",
+          texte: "L'imagerie médicale TEP (PET-scan en anglais) injecte un traceur légèrement radioactif qui émet des positrons — de l'antimatière. Chaque positron s'annihile aussitôt avec un électron du corps, produisant deux rayons gamma partant dos à dos, que la machine capte pour reconstruire une image en 3D. L'antimatière n'est pas de la science-fiction : elle sauve des vies tous les jours."
+        },
+        {
+          titre: "La radioactivité : le noyau qui se réarrange",
+          danger: true,
+          texte: "Certains noyaux, instables, se transforment en éjectant des particules (alpha, bêta) ou un rayon (gamma). Le danger dépend de la dose et du type : les alpha sont arrêtés par une feuille de papier mais deviennent dangereux si on les inhale (radon dans certaines caves — aérer suffit souvent à le disperser) ; les gamma traversent tout et exigent du plomb. Un détecteur de fumée contient une source alpha minuscule et scellée, sans danger tant qu'on ne l'ouvre pas."
+        },
+        {
+          titre: "Des neutrinos te traversent par milliards",
+          texte: "En lisant cette phrase, des dizaines de milliards de neutrinos venus du Soleil traversent chaque centimètre carré de ta peau, chaque seconde — sans en heurter un seul atome. Ils passent à travers la Terre entière presque sans obstacle. L'infiniment petit n'est pas qu'au laboratoire : il te traverse en ce moment même, en silence."
+        },
+        {
+          titre: "Tes puces reposent sur le comportement quantique des électrons",
+          texte: "Un transistor, la brique de tout processeur, ne fonctionne que parce que les électrons d'un matériau (le silicium) obéissent à des règles quantiques : ils ne peuvent occuper que certaines \"bandes\" d'énergie. Maîtriser ce comportement du plus petit, c'est ce qui permet d'entasser des milliards d'interrupteurs sur une puce grande comme un ongle."
+        }
+      ],
+      exos: [
+        {
+          q: "Qu'a découvert J. J. Thomson en 1897 ?",
+          choix: ["Le noyau", "L'électron, première particule trouvée sous l'atome", "Le neutron", "Le quark"],
+          bonne: 1,
+          explication: "L'électron est la première brique découverte à l'intérieur de l'atome. L'atome n'était donc pas insécable comme son nom le prétendait."
+        },
+        {
+          q: "L'expérience de la feuille d'or (Rutherford) montre que l'atome est…",
+          choix: ["Une bille pleine et compacte", "Surtout du vide, avec un noyau minuscule et dense", "Fait uniquement d'électrons", "Sans noyau"],
+          bonne: 1,
+          explication: "La plupart des particules traversent tout droit : l'atome est essentiellement vide, avec presque toute sa masse concentrée dans un noyau minuscule."
+        },
+        {
+          q: "De quoi un proton est-il fait ?",
+          choix: ["De rien, il est élémentaire", "De trois quarks", "De deux électrons", "D'un neutron et d'un électron"],
+          bonne: 1,
+          explication: "Proton et neutron ne sont pas élémentaires : chacun est fait de trois quarks, liés par la force forte."
+        },
+        {
+          q: "Pourquoi ne voit-on jamais un quark isolé ?",
+          choix: ["Ils sont trop petits pour nos instruments", "La force forte augmente avec la distance : les séparer crée de nouveaux quarks", "Ils n'existent pas vraiment", "Ils vont trop vite"],
+          bonne: 1,
+          explication: "C'est le confinement : tirer sur deux quarks fabrique, via E = mc², de nouveaux quarks aux extrémités. On n'en isole jamais un seul."
+        },
+        {
+          q: "Dans la théorie quantique des champs, une \"particule\" est…",
+          choix: ["Une petite bille solide", "Une vibration localisée d'un champ qui emplit tout l'espace", "Une illusion", "Un point sans énergie"],
+          bonne: 1,
+          explication: "La réalité première, ce sont des champs partout dans l'espace. Une particule n'est qu'une vaguelette de son champ — d'où le fait que tous les électrons soient identiques."
+        },
+        {
+          q: "À quoi sert le champ de Higgs ?",
+          choix: ["À accélérer les particules", "À donner leur masse aux particules élémentaires", "À créer la lumière", "À coller les noyaux"],
+          bonne: 1,
+          explication: "Plus une particule \"accroche\" au champ de Higgs, plus elle est massive. Le boson de Higgs (2012) a prouvé l'existence de ce champ."
+        },
+        {
+          q: "Combien y a-t-il de forces fondamentales dans la nature ?",
+          choix: ["Deux", "Quatre", "Six", "Une seule"],
+          bonne: 1,
+          explication: "Gravité, électromagnétisme, force forte et force faible. Le modèle standard en unifie trois ; la gravité reste, elle, à part."
+        },
+        {
+          q: "Quelle force colle les quarks à l'intérieur du proton ?",
+          choix: ["La gravité", "La force forte (via les gluons)", "L'électromagnétisme", "La force faible"],
+          bonne: 1,
+          explication: "La force forte, la plus puissante des quatre, portée par les gluons. Sa portée est très courte, mais elle est irrésistible à l'échelle du noyau."
+        },
+        {
+          q: "Un neutrino, c'est…",
+          choix: ["Une particule très lourde", "Une particule quasi indétectable qui te traverse par milliards sans rien heurter", "Un type de lumière", "Un morceau de noyau"],
+          bonne: 1,
+          explication: "Neutre et presque sans masse, il interagit très peu : des dizaines de milliards traversent ton ongle chaque seconde. Il renseigne sur le cœur des étoiles."
+        },
+        {
+          q: "La longueur de Planck (~10⁻³⁵ m) marque…",
+          choix: ["La taille d'un atome", "L'échelle où quantique et gravité se percutent, le \"mur\" de l'infiniment petit", "La taille d'un quark", "Une erreur de calcul"],
+          bonne: 1,
+          explication: "10²⁰ fois plus petite qu'un proton. En dessous, la notion de distance perd son sens : il faudrait une gravité quantique qu'on n'a pas encore."
+        },
+        {
+          q: "Dire qu'une particule est \"élémentaire\" signifie…",
+          choix: ["Qu'elle est insécable pour l'éternité", "Qu'on ne lui connaît aucune sous-structure à ce jour", "Qu'elle est la plus légère", "Qu'elle est facile à comprendre"],
+          bonne: 1,
+          explication: "C'est une frontière du savoir, pas une certitude définitive. L'atome, puis le proton, ont déjà démenti ce genre de \"jamais\"."
+        },
+        {
+          q: "Que se passe-t-il quand matière et antimatière se rencontrent ?",
+          choix: ["Rien", "Elles s'annihilent en pure énergie (E = mc²)", "Elles fusionnent en un atome", "L'antimatière absorbe la matière"],
+          bonne: 1,
+          explication: "Annihilation totale : toute la masse se convertit en énergie. Pourquoi l'univers est-il fait de matière plutôt qu'à parts égales ? Énigme encore ouverte."
+        },
+        {
+          q: "Le \"vide\" quantique est en réalité…",
+          choix: ["Un néant parfaitement immobile", "Agité de fluctuations, avec des particules virtuelles qui apparaissent et disparaissent", "Rempli d'air", "Impossible à créer"],
+          bonne: 1,
+          explication: "Le principe d'incertitude interdit le repos total : le vide bouillonne. Ça se mesure (effet Casimir, entre deux plaques très proches)."
+        },
+        {
+          q: "Pourquoi les accélérateurs de particules sont-ils si gigantesques (le LHC fait 27 km) ?",
+          choix: ["Pour impressionner", "Parce que sonder toujours plus petit exige toujours plus d'énergie", "Pour loger les chercheurs", "Par tradition"],
+          bonne: 1,
+          explication: "Explorer le plus petit demande d'énormes énergies de collision. Paradoxe : voir l'infiniment petit réclame les plus grandes machines jamais bâties."
+        },
+        {
+          q: "L'essentiel de la masse de ton corps vient…",
+          choix: ["Du boson de Higgs", "De l'énergie de liaison qui agite les quarks dans tes protons (E = mc²)", "De l'eau que tu bois", "Des électrons"],
+          bonne: 1,
+          explication: "Subtil : le Higgs ne donne qu'une petite part. Le gros de la masse d'un proton est de l'énergie (celle des quarks et de la force forte), convertie en masse par E = mc²."
+        },
+        {
+          q: "Y a-t-il quelque chose de plus petit que les quarks ?",
+          choix: ["Oui, on l'a photographié", "On ne sait pas : des pistes existent (cordes, préons), aucune n'est prouvée", "Non, c'est certain", "Oui, l'atome"],
+          bonne: 1,
+          explication: "La réponse honnête est \"on ne sait pas encore\". La théorie des cordes est élégante mais invérifiée. C'est la frontière vivante de la physique."
+        }
+      ]
+    },
+
+    /* ==================== LES LIMITES DE L'UNIVERS ==================== */
+    {
+      id: "limites",
+      nom: "Les limites de l'Univers",
+      emoji: "🌀",
+      accent: "#22d3ee",
+      tagline: "Les plafonds, les planchers et les murs infranchissables de la nature.",
+      decouvertes: [
+        {
+          titre: "La lumière a une vitesse (finie)",
+          annee: "1676",
+          qui: "Ole Rømer",
+          resume: "En chronométrant les éclipses d'une lune de Jupiter, Rømer remarque qu'elles \"retardent\" quand la Terre s'éloigne. Seule explication : la lumière met du temps à nous parvenir. Elle ne se déplace donc pas infiniment vite.",
+          pourquoi: "Jusque-là, on croyait la lumière instantanée. Découvrir qu'elle a une vitesse — et donc une valeur limite — est le premier pas vers l'idée d'une vitesse maximale de l'univers."
+        },
+        {
+          titre: "La vitesse de la lumière est la même pour tous",
+          annee: "1887",
+          qui: "Albert Michelson et Edward Morley",
+          resume: "Leur expérience cherchait à mesurer la vitesse de la Terre à travers l'\"éther\" supposé porter la lumière. Résultat stupéfiant : aucune différence, quel que soit le sens de mesure. La lumière file à la même vitesse pour tout le monde.",
+          pourquoi: "Ce \"résultat nul\" est l'un des plus féconds de l'histoire : il forcera Einstein à repenser l'espace et le temps eux-mêmes. La constance de c est le socle de toute la relativité."
+        },
+        {
+          titre: "Le zéro absolu",
+          annee: "1848 / 1906",
+          qui: "William Thomson (Lord Kelvin), puis Walther Nernst",
+          resume: "La température mesure l'agitation des particules. En la baissant, l'agitation diminue — jusqu'à un minimum, −273,15 °C, où il ne reste presque plus rien à retirer. Nernst montre qu'on peut s'en approcher sans fin, mais jamais l'atteindre.",
+          pourquoi: "C'est le plancher de la température : il n'existe pas de \"plus froid\". Il fixe l'origine de l'échelle Kelvin et une limite absolue à tout ce qui refroidit."
+        },
+        {
+          titre: "Les unités de Planck",
+          annee: "1899",
+          qui: "Max Planck",
+          resume: "Planck combine trois constantes fondamentales de la nature (la vitesse de la lumière, la gravitation, le quantique) pour bâtir des unités \"naturelles\" : une longueur, un temps et une température de Planck, indépendantes de toute convention humaine.",
+          pourquoi: "Ces valeurs extrêmes marquent les bornes où nos théories cessent de fonctionner. Elles dessinent, en creux, la carte des limites ultimes du réel."
+        },
+        {
+          titre: "Les trous noirs, prédits par le calcul",
+          annee: "1916",
+          qui: "Karl Schwarzschild (à partir de la relativité d'Einstein)",
+          resume: "En résolvant les équations d'Einstein, Schwarzschild trouve qu'une masse assez concentrée courbe l'espace-temps au point de créer une frontière — l'horizon — d'où rien, pas même la lumière, ne peut ressortir.",
+          pourquoi: "L'objet le plus extrême de l'univers sort d'abord d'une feuille de calcul, des décennies avant qu'on en observe. Le terme \"trou noir\" ne sera popularisé qu'en 1967."
+        },
+        {
+          titre: "La limite de Chandrasekhar",
+          annee: "1930",
+          qui: "Subrahmanyan Chandrasekhar",
+          resume: "Un jeune physicien calcule qu'une étoile morte (naine blanche) ne peut dépasser environ 1,4 fois la masse du Soleil : au-delà, plus rien ne peut soutenir son propre poids, et elle s'effondre.",
+          pourquoi: "Cette limite décide du destin des étoiles : naine blanche tranquille, ou effondrement en étoile à neutrons voire en trou noir. Une simple inégalité qui gouverne la mort des soleils."
+        },
+        {
+          titre: "Le rayonnement de Hawking",
+          annee: "1974",
+          qui: "Stephen Hawking",
+          resume: "Hawking montre qu'un trou noir n'est pas totalement noir : des effets quantiques au bord de l'horizon lui font émettre un très faible rayonnement. Lentement, sur des durées inimaginables, un trou noir s'évapore donc.",
+          pourquoi: "C'est le premier pont solide entre les trois grands piliers — gravité, quantique et thermodynamique. Même la limite ultime a une fissure quantique."
+        },
+        {
+          titre: "La première image d'un trou noir",
+          annee: "2019",
+          qui: "l'Event Horizon Telescope",
+          resume: "En reliant des radiotélescopes des quatre coins du globe pour former un instrument virtuel grand comme la Terre, on obtient la première \"photo\" d'un trou noir : l'anneau de lumière cerclant l'ombre de l'horizon, dans la galaxie M87.",
+          pourquoi: "Un siècle après le calcul de Schwarzschild, on voit enfin le bord de l'objet le plus extrême qui soit. En 2022, la même équipe photographiait celui tapi au centre de notre propre galaxie."
+        }
+      ],
+      notions: [
+        {
+          titre: "c : la vraie limite de vitesse de l'univers",
+          accroche: "On dit \"vitesse de la lumière\", mais ce n'est pas qu'une affaire de lumière. C'est la vitesse maximale à laquelle une cause peut produire un effet — la vitesse de l'information elle-même.",
+          blocs: [
+            { t:"Environ 300 000 km/s (299 792 458 m/s, exactement). Rien de matériel, aucun signal, aucune influence ne peut aller plus vite. Ce n'est pas une limite de nos moteurs : c'est inscrit dans la structure même de l'espace et du temps." },
+            { t:"Deux camps stricts : ce qui a une masse (toi, une fusée, un électron) reste toujours en dessous de c ; ce qui n'a pas de masse (la lumière, les gluons) doit voyager exactement à c, jamais moins vite. Il n'y a pas d'entre-deux pour les sans-masse." }
+          ],
+          retenir: "c (~300 000 km/s) est la vitesse limite de tout ce qui transporte énergie ou information — la vitesse de causalité. Les objets massifs restent sous c ; les objets sans masse filent pile à c."
+        },
+        {
+          titre: "Pourquoi c est indépassable",
+          accroche: "Ce n'est pas qu'on manque de puissance : c'est mathématiquement impossible, et l'univers s'arrange pour que ça le reste.",
+          blocs: [
+            { t:"Plus tu accélères une masse, plus il faut d'énergie pour gagner encore un peu de vitesse. En approchant de c, l'énergie nécessaire tend vers l'infini : atteindre c demanderait une énergie infinie. La porte est fermée par les nombres eux-mêmes." },
+            { h:"Et les raccourcis ?", t:"Les idées de \"vitesse supraluminique\" (trous de ver, distorsion) ne consistent jamais à aller vite localement : elles imaginent de déformer l'espace-temps pour raccourcir le trajet. Purement spéculatif, et sans doute hors de portée. Localement, c reste infranchissable." }
+          ],
+          retenir: "Accélérer une masse jusqu'à c exigerait une énergie infinie : impossible. Les \"raccourcis\" (trous de ver) ne violeraient pas c localement, ils déformeraient l'espace — pure spéculation."
+        },
+        {
+          titre: "Le zéro absolu : le plancher du froid",
+          accroche: "On peut chauffer presque sans limite, mais refroidir a un fond : −273,15 °C. En dessous, il n'y a rien.",
+          blocs: [
+            { t:"La température, c'est l'agitation des particules. Retirer de la chaleur, c'est les calmer. Au zéro absolu (0 kelvin), il ne reste que le strict minimum de mouvement imposé par la physique quantique : on ne peut pas descendre plus bas." },
+            { t:"Le troisième principe de la thermodynamique le garantit : on peut s'approcher du zéro absolu d'aussi près qu'on veut (les labos atteignent des milliardièmes de degré au-dessus), mais jamais l'atteindre exactement, car il faudrait pour cela un nombre infini d'étapes." }
+          ],
+          retenir: "Le zéro absolu (−273,15 °C = 0 K) est le plancher de la température : l'agitation minimale possible. On s'en approche à des milliardièmes de degré, sans jamais l'atteindre tout à fait."
+        },
+        {
+          titre: "La température de Planck : le plafond du chaud",
+          accroche: "S'il y a un plancher au froid, y a-t-il un plafond au chaud ? Notre physique en pose un, vertigineux : environ 10³² kelvins.",
+          blocs: [
+            { t:"La température de Planck vaut à peu près 1,4 × 10³² K — un 14 suivi de 31 zéros. C'est la température qu'aurait eue l'univers un temps de Planck après le Big Bang, soit le tout premier instant que nos théories savent décrire." },
+            { t:"Au-delà, nos équations rendent l'âme : décrire plus chaud exigerait une théorie de la gravité quantique qu'on n'a pas. Mesure de notre place : nous vivons autour de 300 K, tassés tout en bas d'une échelle qui grimpe jusqu'à 10³²." }
+          ],
+          retenir: "La température de Planck (~1,4 × 10³² K) est le \"plafond\" au-delà duquel notre physique n'a plus rien à dire — la chaleur du tout premier instant de l'univers. Nous vivons à 300 K, tout en bas de l'échelle."
+        },
+        {
+          titre: "Densité et pression extrêmes : les étoiles à neutrons",
+          accroche: "Avant même le trou noir, la nature fabrique des objets d'une densité proprement inimaginable : les étoiles à neutrons.",
+          blocs: [
+            { t:"Quand une grosse étoile s'effondre, sa matière est comprimée à un point tel que les électrons s'enfoncent dans les protons : il ne reste presque que des neutrons, tassés les uns contre les autres comme dans un noyau atomique géant. On loge là plus d'une fois la masse du Soleil dans une boule de 20 km." },
+            { t:"À cette densité, une cuillère à café de cette matière pèserait environ un milliard de tonnes. C'est la pression tenable la plus extrême qu'on connaisse… jusqu'à un certain point : au-delà d'environ deux à trois masses solaires, même les neutrons cèdent, et plus rien n'arrête l'effondrement." }
+          ],
+          retenir: "Une étoile à neutrons tasse plus d'un Soleil dans 20 km : une cuillère de sa matière pèserait un milliard de tonnes. C'est la pression maximale connue de la matière — au-delà de ~2-3 masses solaires, plus rien ne résiste : c'est le trou noir."
+        },
+        {
+          titre: "Le cœur d'un trou noir : la singularité (et un aveu d'ignorance)",
+          accroche: "Que trouve-t-on au centre d'un trou noir ? La réponse honnête est la plus intéressante : on ne le sait pas vraiment.",
+          blocs: [
+            { t:"Rien n'arrêtant l'effondrement, la relativité générale prédit que toute la masse se concentre en un point de densité et de courbure infinies : la singularité. Mais en physique, quand une théorie se met à cracher des \"infinis\", ce n'est pas une description du réel : c'est le signal qu'elle vient d'atteindre sa propre limite de validité." },
+            { t:"Décrire vraiment ce cœur exigerait une théorie de la gravité quantique — mariant la relativité (qui règne sur le très massif) et le quantique (qui règne sur le très petit) — que personne ne possède encore. Alors méfie-toi de qui affirme savoir ce qu'il y a \"au fond\". Le vrai état du savoir, c'est : la question est ouverte." }
+          ],
+          retenir: "La relativité prédit une singularité (densité infinie) au cœur d'un trou noir — mais un \"infini\" signale surtout que la théorie n'est plus valable là. Ce qu'il y a vraiment au centre reste inconnu : il faudrait une gravité quantique qu'on n'a pas."
+        },
+        {
+          titre: "L'horizon des événements : le point de non-retour",
+          accroche: "La vraie frontière d'un trou noir n'est pas une surface solide : c'est une ligne invisible qu'on ne franchit qu'une fois.",
+          blocs: [
+            { t:"L'horizon est la distance en deçà de laquelle il faudrait dépasser c pour ressortir — donc impossible. Ce n'est pas un mur : tu ne sens rien en le traversant. Mais une fois passé, tous les chemins possibles de ton futur mènent vers le centre. \"Faire demi-tour\" reviendrait à remonter le temps." },
+            { t:"Sa taille (le rayon de Schwarzschild) ne dépend que de la masse : plus le trou noir est lourd, plus l'horizon est vaste. Vu de loin, un objet qui y tombe semble ralentir et se figer à jamais au bord — un effet de la dilatation du temps par la gravité." }
+          ],
+          retenir: "L'horizon des événements : une frontière à sens unique, pas un mur. Une fois franchie, tout futur mène au centre. Sa taille ne dépend que de la masse. Vu de l'extérieur, un objet qui tombe paraît s'y figer pour l'éternité."
+        },
+        {
+          titre: "Longueur et temps de Planck : les \"pixels\" de l'espace-temps ?",
+          accroche: "Comme il existe une vitesse maximale, il existe peut-être une plus petite longueur et une plus petite durée qui aient encore un sens.",
+          blocs: [
+            { t:"La longueur de Planck (~1,6 × 10⁻³⁵ m) et le temps de Planck (~5 × 10⁻⁴⁴ s) sont fabuleusement petits : il s'écoule davantage de temps de Planck en une seule seconde qu'il ne s'est écoulé de secondes depuis le Big Bang. En dessous de ces échelles, parler de \"distance\" ou de \"durée\" pourrait n'avoir aucun sens." },
+            { t:"Certaines théories y voient une granularité ultime de l'espace-temps, comme si le réel avait des \"pixels\". Prudence : c'est une piste, pas une certitude. Aucune expérience n'approche, même de très loin, de telles échelles." }
+          ],
+          retenir: "Longueur (~10⁻³⁵ m) et temps (~10⁻⁴⁴ s) de Planck : les plus petites échelles peut-être encore dotées de sens. L'espace-temps y serait peut-être \"granuleux\" — hypothèse séduisante, mais non vérifiée."
+        },
+        {
+          titre: "Le principe d'incertitude : une limite au savoir lui-même",
+          accroche: "Toutes les limites précédentes portent sur des choses. Celle-ci porte sur ce qu'on peut savoir — et elle est tout aussi infranchissable.",
+          blocs: [
+            { t:"On ne peut pas connaître en même temps, et parfaitement, la position et la vitesse d'une particule : plus tu précises l'une, plus l'autre devient floue. Ce n'est pas un défaut de nos appareils, c'est une propriété de la nature." },
+            { t:"C'est une limite d'un genre unique : elle ne dit pas \"tu ne peux pas aller plus vite\" ni \"plus froid\", mais \"tu ne peux pas savoir davantage\". Le réel garde, par construction, une part d'indétermination qu'aucun progrès technique ne lèvera." }
+          ],
+          retenir: "Le principe d'incertitude : position et vitesse d'une particule ne sont jamais toutes deux parfaitement connues. Ce n'est pas un défaut d'instrument, mais une limite de la nature sur le savoir lui-même."
+        },
+        {
+          titre: "Le mur de l'horizon cosmique : l'univers observable",
+          accroche: "Même en voyant à l'infini, on ne verrait pas tout : il y a un bord à ce qu'on peut observer, et il n'est pas là où on croit.",
+          blocs: [
+            { t:"La lumière va vite mais pas infiniment vite, et l'univers a un âge fini (13,8 milliards d'années). On ne peut donc voir que ce dont la lumière a eu le temps de nous parvenir. Cela définit une sphère : l'univers observable." },
+            { t:"Surprise : son rayon n'est pas de 13,8 mais d'environ 46 milliards d'années-lumière, car l'espace lui-même s'est dilaté pendant le trajet. Et cette expansion peut éloigner des galaxies plus vite que la lumière — non parce qu'elles filent dans l'espace, mais parce que l'espace entre nous grandit. Elles nous sont alors à jamais inaccessibles. L'expansion de l'espace, elle, n'est pas bornée par c." }
+          ],
+          retenir: "On ne voit que ce dont la lumière a eu le temps de nous parvenir : l'univers observable, une sphère de ~46 milliards d'al de rayon (plus que son âge, car l'espace s'est dilaté). Au-delà, des galaxies existent mais nous seront toujours inaccessibles."
+        },
+        {
+          titre: "La flèche du temps : la limite thermodynamique",
+          accroche: "Pourquoi peut-on casser un œuf mais jamais le \"décasser\" ? Une loi impose au temps un sens unique.",
+          blocs: [
+            { t:"Le deuxième principe de la thermodynamique dit que le désordre (l'entropie) d'un système isolé ne peut qu'augmenter. Une tasse chaude refroidit, jamais l'inverse spontanément ; le parfum se disperse et ne revient pas dans le flacon. C'est ce qui donne au temps une direction." },
+            { t:"Poussée à l'échelle de l'univers, cette loi dessine une fin : l'énergie se dilue et s'uniformise jusqu'à ce que plus rien ne puisse se passer — la \"mort thermique\". Une limite non pas de vitesse ou de température, mais sur ce qui est réversible, et sur l'avenir lointain de tout." }
+          ],
+          retenir: "2e principe : l'entropie (le désordre) d'un système isolé ne fait que croître. C'est la flèche du temps — ce qui distingue le passé du futur — et, à très long terme, l'horizon d'un univers qui s'uniformise (\"mort thermique\")."
+        },
+        {
+          titre: "Les constantes fondamentales : les réglages du réel",
+          accroche: "Derrière chaque limite se cachent quelques nombres fixes. Change-les un peu, et l'univers ne tient plus debout.",
+          blocs: [
+            { t:"La vitesse de la lumière, la constante de la gravitation, la constante quantique, la charge de l'électron… : une poignée de nombres qui ne se déduisent de rien et qu'on ne fait que mesurer. Ce sont eux qui fixent la taille des atomes, la puissance des étoiles, la valeur de toutes les limites." },
+            { t:"Ce qui interroge : ces valeurs semblent \"bien réglées\". Un peu différentes, et il n'y aurait ni atomes stables, ni chimie, ni étoiles durables, ni personne pour en parler. Pourquoi ces nombres-là précisément ? Personne ne le sait. C'est l'une des plus profondes questions ouvertes." }
+          ],
+          retenir: "Quelques constantes (c, gravitation, quantique, charge…) fixent toutes les limites de l'univers. Elles paraissent finement réglées : à peine différentes, pas d'atomes ni d'étoiles ni de vie. Pourquoi ces valeurs ? Question ouverte."
+        }
+      ],
+      quotidien: [
+        {
+          titre: "Ton GPS ne marcherait pas sans Einstein",
+          texte: "Les satellites GPS filent vite (le temps y ralentit un peu) et sont plus loin de la Terre (la gravité y est plus faible, le temps y accélère un peu). Bilan : leurs horloges avancent d'environ 38 millionièmes de seconde par jour par rapport au sol. Sans corriger en direct ces deux effets — vitesse et gravité, les limites d'Einstein — ton GPS te situerait à une dizaine de kilomètres de ta vraie position, dès le premier jour."
+        },
+        {
+          titre: "Pourquoi on ne visitera pas les étoiles de sitôt",
+          texte: "L'étoile la plus proche (Proxima du Centaure) est à 4,2 années-lumière : même en frôlant la vitesse de la lumière — ce qu'on ne sait pas faire — il faudrait plus de quatre ans pour l'atteindre. Avec nos fusées actuelles, des dizaines de milliers d'années. La limite de vitesse c est ce qui rend la galaxie si immense. Les \"vitesses de distorsion\" des films restent, à ce jour, de la pure fiction."
+        },
+        {
+          titre: "Le zéro absolu au service de la médecine",
+          texte: "En s'approchant très près du zéro absolu, certains matériaux deviennent supraconducteurs : ils conduisent le courant sans aucune perte. C'est ce qui permet les aimants surpuissants d'un IRM à l'hôpital, ou la lévitation des trains maglev. Le plancher de la température n'est pas qu'une curiosité : refroidir à l'extrême est une véritable ressource technologique."
+        },
+        {
+          titre: "Regarder loin, c'est regarder le passé",
+          texte: "Comme la lumière met du temps à venir, tu ne vois jamais les choses \"maintenant\". Le Soleil que tu regardes date de 8 minutes ; l'étoile la plus proche, de 4 ans ; certaines galaxies, de milliards d'années. La limite de vitesse de la lumière transforme chaque télescope en machine à remonter le temps — et la plus vieille lumière captée, le fond diffus cosmologique, nous montre l'univers tel qu'il était il y a 13,8 milliards d'années."
+        }
+      ],
+      exos: [
+        {
+          q: "La \"vitesse de la lumière\" (~300 000 km/s) est surtout…",
+          choix: ["La vitesse propre aux ampoules", "La vitesse limite de toute cause, de toute information dans l'univers", "Une moyenne qui varie", "La vitesse du son en plus rapide"],
+          bonne: 1,
+          explication: "c est la vitesse maximale à laquelle une cause peut produire un effet. Rien de matériel, aucun signal ne peut la dépasser."
+        },
+        {
+          q: "Pourquoi ne peut-on pas accélérer une fusée jusqu'à dépasser c ?",
+          choix: ["Le carburant gèlerait", "L'énergie nécessaire tendrait vers l'infini en approchant de c", "La lumière la repousserait", "On le peut, en réalité"],
+          bonne: 1,
+          explication: "Amener une masse jusqu'à c demanderait une énergie infinie. Seuls les objets sans masse (la lumière) atteignent cette vitesse."
+        },
+        {
+          q: "Le zéro absolu, c'est…",
+          choix: ["0 °C, la glace", "−273,15 °C, l'agitation minimale, qu'on ne peut jamais atteindre exactement", "Le vide spatial", "Une température négative infinie"],
+          bonne: 1,
+          explication: "C'est le plancher du froid : l'agitation des particules y est au minimum. On s'en approche à des milliardièmes de degré, sans jamais y arriver."
+        },
+        {
+          q: "La température de Planck (~10³² K) marque…",
+          choix: ["La température du Soleil", "Le plafond au-delà duquel notre physique n'a plus rien à dire (1er instant du Big Bang)", "La température d'un four", "Une limite sans importance"],
+          bonne: 1,
+          explication: "C'est la chaleur qu'avait l'univers au tout premier instant décrit par nos théories. Au-delà, il faudrait une gravité quantique qu'on n'a pas."
+        },
+        {
+          q: "Que trouve-t-on vraiment au cœur d'un trou noir ?",
+          choix: ["Une autre galaxie", "On ne le sait pas : la \"singularité\" prédite signale surtout que la théorie n'est plus valable là", "Un mur de feu", "Du vide parfait"],
+          bonne: 1,
+          explication: "La relativité prédit une densité infinie, mais un \"infini\" veut dire que la théorie atteint sa limite. Il faudrait une gravité quantique qu'on n'a pas encore."
+        },
+        {
+          q: "L'horizon des événements d'un trou noir est…",
+          choix: ["Une surface solide et brûlante", "Une frontière invisible à sens unique : une fois franchie, tout mène au centre", "Le centre exact du trou noir", "Une illusion d'optique"],
+          bonne: 1,
+          explication: "Ce n'est pas un mur : on ne sent rien en le traversant. Mais après, ressortir demanderait de dépasser c — donc impossible. Sa taille ne dépend que de la masse."
+        },
+        {
+          q: "Une cuillère à café de matière d'étoile à neutrons pèserait environ…",
+          choix: ["Un kilo", "Une tonne", "Un milliard de tonnes", "Rien du tout"],
+          bonne: 2,
+          explication: "On y tasse plus d'un Soleil dans une boule de 20 km. C'est la matière la plus dense connue — juste avant que, plus lourde encore, elle ne devienne trou noir."
+        },
+        {
+          q: "Le rayon de l'univers observable est d'environ…",
+          choix: ["13,8 milliards d'al (son âge)", "46 milliards d'al, car l'espace s'est dilaté pendant que la lumière voyageait", "L'infini", "1 million d'al"],
+          bonne: 1,
+          explication: "On ne voit que ce dont la lumière a eu le temps de venir, mais l'expansion a étiré la distance : le bord est bien plus loin que l'âge ne le suggère."
+        },
+        {
+          q: "Des galaxies s'éloignent de nous plus vite que la lumière. Est-ce interdit ?",
+          choix: ["Oui, c'est impossible", "Non : ce n'est pas elles qui filent, c'est l'espace entre nous qui se dilate", "Oui, la relativité est fausse", "Non, elles vont plus vite que c dans l'espace"],
+          bonne: 1,
+          explication: "La limite c concerne les objets se déplaçant DANS l'espace. L'expansion de l'espace lui-même n'est pas bornée par c : ces galaxies nous sont à jamais inaccessibles."
+        },
+        {
+          q: "Sans correction relativiste, un GPS…",
+          choix: ["Marcherait pareil", "Dériverait d'une dizaine de kilomètres par jour", "Exploserait", "Irait plus vite"],
+          bonne: 1,
+          explication: "Vitesse et gravité décalent les horloges des satellites d'environ 38 µs/jour. Non corrigé, ça fausse la position d'~10 km dès le premier jour."
+        },
+        {
+          q: "Le principe d'incertitude est une limite portant sur…",
+          choix: ["La vitesse maximale", "Ce qu'on peut savoir (position et vitesse ne sont jamais toutes deux parfaites)", "La température", "La taille des atomes"],
+          bonne: 1,
+          explication: "Ce n'est pas un défaut d'appareil : la nature elle-même garde une part d'indétermination qu'aucune technique ne lèvera. Une limite sur le savoir."
+        },
+        {
+          q: "Le rayonnement de Hawking signifie qu'un trou noir…",
+          choix: ["Est totalement noir pour toujours", "Émet un très faible rayonnement et s'évapore très lentement", "Grossit sans fin", "Aspire la lumière voisine"],
+          bonne: 1,
+          explication: "Des effets quantiques au bord de l'horizon lui font perdre un peu d'énergie. Même la limite ultime a une fissure quantique : le trou noir n'est pas 100 % noir."
+        },
+        {
+          q: "Quand tu regardes le Soleil, tu vois…",
+          choix: ["Le Soleil tel qu'il est maintenant", "Sa lumière d'il y a environ 8 minutes — donc son passé", "Une image inventée par l'œil", "Le futur du Soleil"],
+          bonne: 1,
+          explication: "La lumière met ~8 minutes à venir. Regarder loin, c'est toujours regarder le passé : la limite de vitesse c fait de chaque télescope une machine à remonter le temps."
+        },
+        {
+          q: "La limite de Chandrasekhar (~1,4 masse solaire) décide…",
+          choix: ["De la couleur d'une étoile", "Si une étoile morte reste une naine blanche ou s'effondre (étoile à neutrons, trou noir)", "De la vitesse de la lumière", "De la taille de la galaxie"],
+          bonne: 1,
+          explication: "Au-delà de cette masse, plus rien ne soutient le poids de l'étoile morte : elle s'effondre. Une simple inégalité gouverne le destin des soleils."
+        },
+        {
+          q: "D'où vient la \"flèche du temps\" (le fait que le passé diffère du futur) ?",
+          choix: ["De l'expansion de l'univers seule", "Du 2e principe : l'entropie (le désordre) d'un système isolé ne fait qu'augmenter", "D'une illusion du cerveau", "De la gravité"],
+          bonne: 1,
+          explication: "Une tasse refroidit mais ne se réchauffe pas seule ; un œuf ne se \"décasse\" pas. Ce sens unique du désordre croissant donne au temps sa direction."
+        },
+        {
+          q: "En physique, quand une théorie sort un résultat \"infini\", ça veut généralement dire…",
+          choix: ["Qu'on a trouvé l'infini réel", "Que la théorie atteint sa limite de validité et qu'il en faut une meilleure", "Que le calcul est parfait", "Qu'il faut arrondir"],
+          bonne: 1,
+          explication: "C'est le cas de la singularité au cœur des trous noirs : l'\"infini\" est un panneau \"fin de validité\". Il faudrait une gravité quantique pour aller plus loin."
+        }
+      ]
     }
 
   ],
@@ -3398,6 +3985,69 @@ const DATA = {
       bonne: 1,
       explication: "Un antibiotique cible la machinerie des bactéries ; un virus n'en a pas. Inutile contre la grippe, et en abuser favorise les résistances. Le médecin a raison.",
       tags: ["vivant","corps"]
+    },
+    {
+      q: "Tu veux capturer un seul quark en tirant de toutes tes forces sur un proton pour l'extraire. Que se passe-t-il ?",
+      choix: ["Tu obtiens enfin un quark libre", "L'énergie que tu fournis crée de nouveaux quarks : tu n'en isoles jamais un seul", "Le proton explose en pure lumière", "Rien, le proton est indivisible"],
+      bonne: 1,
+      explication: "La force forte augmente avec la distance. L'énergie de traction se change (E = mc²) en nouvelles paires de quarks qui coiffent les extrémités : c'est le confinement. Un quark seul, jamais.",
+      tags: ["infime","physique"]
+    },
+    {
+      q: "Le froid a un plancher net et infranchissable (le zéro absolu). Et le chaud ?",
+      choix: ["Aucune limite, on peut chauffer à l'infini", "Il a un \"plafond\" (la température de Planck, ~10³² K) au-delà duquel notre physique s'effondre", "Il s'arrête vers un million de degrés", "Le chaud n'a pas de limite connue"],
+      bonne: 1,
+      explication: "Le zéro absolu est net (0 K). Le plafond du chaud est plus vertigineux : à la température de Planck, atteinte au tout premier instant du Big Bang, il faudrait une gravité quantique qu'on ne possède pas.",
+      tags: ["limites","energie"]
+    },
+    {
+      q: "Deux galaxies très lointaines s'éloignent l'une de l'autre plus vite que la lumière. La relativité est-elle prise en défaut ?",
+      choix: ["Oui, rien ne peut dépasser c", "Non : ce ne sont pas elles qui filent dans l'espace, c'est l'espace entre elles qui se dilate", "Oui, la relativité ne vaut que près de nous", "Non, elles voyagent réellement plus vite que c"],
+      bonne: 1,
+      explication: "La limite c s'applique à un déplacement DANS l'espace. L'expansion de l'espace lui-même n'est pas bornée par c. Ces galaxies franchissent notre horizon cosmique et nous deviennent inaccessibles à jamais.",
+      tags: ["limites","astrophysique"]
+    },
+    {
+      q: "Le boson de Higgs donne leur masse aux particules. L'essentiel de la masse de TON corps vient donc de lui ?",
+      choix: ["Oui, tout vient du Higgs", "Non : le gros vient de l'énergie qui agite les quarks dans tes protons (E = mc²)", "Non, elle vient surtout des électrons", "Oui, à 100 %"],
+      bonne: 1,
+      explication: "Le Higgs ne fournit qu'une petite part. La majeure partie de la masse d'un proton est de l'énergie (mouvement des quarks + force forte) convertie en masse par E = mc². Tu es surtout de l'énergie \"figée\".",
+      tags: ["infime","corps"]
+    },
+    {
+      q: "La relativité prédit une \"densité infinie\" au centre d'un trou noir. La bonne lecture est :",
+      choix: ["L'infini existe vraiment là-bas", "C'est le signe que la théorie atteint sa limite : il faut une meilleure physique (gravité quantique)", "Le trou noir est en fait vide", "C'est une simple erreur de calcul"],
+      bonne: 1,
+      explication: "En physique, un \"infini\" est presque toujours un panneau \"fin de validité\". Ce qu'il y a vraiment au cœur d'un trou noir reste inconnu : marier relativité et quantique reste à faire.",
+      tags: ["limites","physique"]
+    },
+    {
+      q: "Le cœur du Soleil est enfoui sous 700 000 km de gaz opaque. Comment l'observe-t-on quand même presque \"en direct\" ?",
+      choix: ["Avec un télescope très puissant", "Grâce aux neutrinos, qui sortent du cœur presque sans interagir et nous parviennent", "En y envoyant une sonde", "On ne le peut pas du tout"],
+      bonne: 1,
+      explication: "La lumière du cœur met des dizaines de milliers d'années à s'échapper. Les neutrinos, eux, traversent tout : captés sur Terre, ils sont un messager quasi direct des réactions au centre du Soleil.",
+      tags: ["infime","astrophysique"]
+    },
+    {
+      q: "Un noyau est environ 100 000 fois plus petit qu'un atome (en diamètre). Quelle fraction du VOLUME de l'atome occupe-t-il ?",
+      choix: ["Un cent-millième (10⁻⁵)", "Environ un millionième de milliardième (10⁻¹⁵), car le volume varie comme le cube", "La moitié", "Presque tout"],
+      bonne: 1,
+      explication: "Le volume varie comme le cube de la taille : (1/100 000)³ = 10⁻¹⁵. Le noyau, qui porte quasi toute la masse, n'occupe qu'une part infime du volume. Voilà pourquoi l'atome est \"vide\".",
+      tags: ["infime","maths"]
+    },
+    {
+      q: "La lumière n'a pas de masse. Quelle en est la conséquence sur sa vitesse ?",
+      choix: ["Elle peut aller à n'importe quelle vitesse", "Elle est obligée de voyager exactement à c, jamais moins vite", "Elle va un peu plus vite que c", "Elle peut rester immobile"],
+      bonne: 1,
+      explication: "Tout ce qui a une masse reste sous c ; tout ce qui n'en a pas (lumière, gluons) doit filer pile à c. Pas d'entre-deux : un objet sans masse ne peut ni ralentir sous c, ni le dépasser.",
+      tags: ["limites","physique"]
+    },
+    {
+      q: "Qu'est-ce qui distingue fondamentalement deux éléments chimiques (l'or du fer, par exemple) ?",
+      choix: ["La couleur de leurs atomes", "Le nombre de protons dans leur noyau", "Leur seul nombre d'électrons", "Rien, c'est arbitraire"],
+      bonne: 1,
+      explication: "L'identité d'un élément tient à un seul nombre : ses protons (le numéro atomique). Changer ce nombre, c'est changer d'élément — c'est exactement ce que font la radioactivité et la fusion au cœur des étoiles.",
+      tags: ["infime","chimie"]
     }
   ]
 };
