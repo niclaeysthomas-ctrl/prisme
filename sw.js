@@ -1,5 +1,5 @@
 // Bump ce numéro à chaque déploiement de contenu pour forcer le renouvellement.
-const CACHE = 'prisme-v7-limites';
+const CACHE = 'prisme-v8-carnet';
 const ASSETS = [
   'index.html', 'styles.css', 'data.js', 'app.js',
   'manifest.webmanifest', 'icon-192.png', 'icon-512.png'

@@ -176,3 +176,83 @@ main{flex:1;width:100%;max-width:720px;margin:0 auto;padding:18px 16px 40px}
 
 .fade{animation:fade .3s ease}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ================= CARNET DE RECHERCHES ================= */
+/* Carte d'accueil */
+.journalCard{
+  display:flex;align-items:center;gap:14px;width:100%;text-align:left;cursor:pointer;
+  margin:0 0 22px;padding:16px;border-radius:var(--radius);
+  border:1px solid #4a3f2a;
+  background:linear-gradient(135deg,rgba(251,191,36,.15),rgba(139,125,255,.10));
+  transition:transform .12s ease;
+}
+.journalCard:active{transform:scale(.99)}
+.journalCard .jIcon{font-size:28px;line-height:1}
+.journalCard .jTxt{flex:1;display:flex;flex-direction:column;gap:3px}
+.journalCard .jTxt b{font-size:16px;letter-spacing:.02em}
+.journalCard .jTxt small{font-size:12px;color:var(--ink-soft);line-height:1.4}
+.journalCard .jGo{font-size:13px;font-weight:800;color:var(--warn);white-space:nowrap}
+
+/* Barre d'outils (nouvelle partie / export / renommer…) */
+.jTools{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 14px}
+.addPartieBtn{background:var(--accent);color:#0d1220;border:none;font-weight:800;font-size:13px;padding:10px 14px;border-radius:11px;cursor:pointer}
+.addPartieBtn:active{transform:scale(.98)}
+.exportBtn,.iconTextBtn{background:var(--card);color:var(--ink-soft);border:1px solid var(--line);font-weight:700;font-size:13px;padding:10px 12px;border-radius:11px;cursor:pointer}
+.iconTextBtn.danger{color:var(--bad);border-color:#4a2530}
+.exportBtn:active,.iconTextBtn:active{transform:scale(.98)}
+
+/* Formulaire inline (créer / renommer une partie) */
+.newInline{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:16px}
+.pickLabel{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-dim);font-weight:800;margin:14px 2px 8px}
+.emojiPick{display:flex;flex-wrap:wrap;gap:8px}
+.emojiOpt{width:42px;height:42px;font-size:20px;background:var(--bg2);border:1.5px solid var(--line);border-radius:11px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.emojiOpt.sel{border-color:var(--accent);background:rgba(139,125,255,.16)}
+.colorPick{display:flex;gap:12px;flex-wrap:wrap}
+.colorOpt{width:32px;height:32px;border-radius:50%;border:2px solid transparent;cursor:pointer}
+.colorOpt.sel{border-color:var(--ink);box-shadow:inset 0 0 0 3px var(--card)}
+.formRow{display:flex;gap:10px;margin-top:18px}
+.formRow .nextBtn{margin-top:0}
+.formRow .ghostBtn{flex:0 0 auto;width:auto;padding-left:20px;padding-right:20px}
+
+/* Carte d'une partie */
+.partieCard{
+  display:flex;align-items:center;gap:10px;width:100%;text-align:left;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:14px 12px 14px 0;margin-bottom:10px;overflow:hidden;transition:transform .12s ease,border-color .2s;
+}
+.partieCard:active{transform:scale(.99)}
+.partieCard .pBar{align-self:stretch;width:5px;border-radius:0 4px 4px 0;flex:0 0 5px}
+.partieCard .pEmoji{font-size:24px;margin-left:10px}
+.partieCard .pMain{flex:1;display:flex;flex-direction:column;gap:3px;min-width:0}
+.partieCard .pMain b{font-size:15.5px}
+.partieCard .pMain small{font-size:12px;color:var(--ink-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.partieCard .pGo{font-size:22px;color:var(--ink-dim);padding-right:8px}
+
+/* Carte d'une entrée */
+.entreeCard{
+  display:block;width:100%;text-align:left;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:14px 15px;margin-bottom:10px;transition:transform .12s ease,border-color .2s;
+}
+.entreeCard:active{transform:scale(.99)}
+.ecTop{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.ecTop b{font-size:15.5px;line-height:1.3}
+.ecTop .untitled{color:var(--ink-dim);font-weight:700;font-style:italic}
+.ecDate{font-size:11px;color:var(--ink-dim);white-space:nowrap}
+.ecPrev{margin:7px 0 0;font-size:13.5px;line-height:1.5;color:var(--ink-soft)}
+
+/* Éditeur d'entrée */
+.crumb{background:none;border:none;color:var(--ink-soft);font-size:13.5px;font-weight:700;cursor:pointer;padding:2px 0;margin-bottom:12px}
+.crumb:active{opacity:.7}
+.eTitre{width:100%;background:var(--card);border:1.5px solid var(--line);color:var(--ink);border-radius:12px;padding:13px 14px;font-size:15px;font-weight:700;font-family:inherit}
+.eTitre.big{font-size:20px}
+.eTitre:focus{outline:none;border-color:var(--accent)}
+.eTitre.shake{animation:shake .35s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.eMeta{display:flex;justify-content:space-between;align-items:center;margin:10px 2px 12px;gap:10px}
+.savedTag{font-size:11.5px;color:var(--good);font-weight:800}
+.eDate{font-size:11.5px;color:var(--ink-dim)}
+.eCorps{width:100%;background:var(--card);border:1.5px solid var(--line);color:var(--ink);border-radius:14px;padding:15px;font-size:15px;line-height:1.65;font-family:inherit;resize:none;min-height:260px}
+.eCorps:focus{outline:none;border-color:var(--accent)}
+.delEntry{margin-top:16px;width:100%;background:none;border:1px solid #4a2530;color:var(--bad);font-weight:700;font-size:13.5px;padding:12px;border-radius:12px;cursor:pointer}
+.delEntry:active{transform:scale(.99)}

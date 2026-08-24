@@ -40,13 +40,24 @@ function levelToast(lv){
 }
 
 /* ---------- Navigation ---------- */
+let currentView = { name:'home', arg:null };
 function go(view, arg){
   window.scrollTo(0,0);
+  currentView = { name:view, arg };
   if(view === 'home'){ backBtn.hidden = true; renderHome(); }
   else if(view === 'domain'){ backBtn.hidden = false; renderDomain(arg); }
   else if(view === 'defi'){ backBtn.hidden = false; renderDefi(); }
+  else if(view === 'journal'){ backBtn.hidden = false; renderJournal(); }
+  else if(view === 'partie'){ backBtn.hidden = false; renderPartie(arg); }
+  else if(view === 'entree'){ backBtn.hidden = false; renderEntree(arg); }
 }
-backBtn.onclick = ()=> go('home');
+function goBack(){
+  const v = currentView;
+  if(v.name === 'entree') go('partie', v.arg.partieId);
+  else if(v.name === 'partie') go('journal');
+  else go('home');
+}
+backBtn.onclick = goBack;
 
 /* ---------- Outils communs ---------- */
 function shuffle(arr){
@@ -87,6 +98,9 @@ function renderHome(){
   const totalExos = DATA.domaines.reduce((a,d)=>a+d.exos.length,0);
   const nbDefis = (DATA.defis||[]).length;
   const best = state.defiBest||0;
+  const jp = (state.journal && state.journal.parties) || [];
+  const jParts = jp.length;
+  const jCount = jp.reduce((a,p)=>a+p.entrees.length,0);
 
   APP.className = 'fade';
   APP.innerHTML = `
@@ -111,6 +125,15 @@ function renderHome(){
       <span class="defiGo">${best?`record ${best}/${DEFI_N}`:'▶'}</span>
     </button>
 
+    <button class="journalCard" id="journalBtn">
+      <span class="jIcon">📓</span>
+      <span class="jTxt">
+        <b>Mon carnet de recherches</b>
+        <small>${jCount ? `${jCount} entrée${jCount>1?'s':''} · ${jParts} partie${jParts>1?'s':''} — reprends tes recherches` : 'Écris tes propres recherches, organisées en parties.'}</small>
+      </span>
+      <span class="jGo">${jCount?'▶':'＋'}</span>
+    </button>
+
     <div class="sectionTitle">Explore un domaine</div>
     <div class="domGrid">
       ${DATA.domaines.map(d=>{
@@ -132,6 +155,8 @@ function renderHome(){
   });
   const db = document.getElementById('defiBtn');
   if(db) db.onclick = ()=> go('defi');
+  const jb = document.getElementById('journalBtn');
+  if(jb) jb.onclick = ()=> go('journal');
   renderXP();
 }
 
@@ -346,6 +371,229 @@ function mountDefi(body){
       body.querySelector('#home').onclick = ()=> go('home');
     }
   });
+}
+
+/* ================= CARNET DE RECHERCHES ================= */
+const J_EMOJIS = ['🔬','🧪','🧬','🔭','🪐','⚛️','🧠','💡','📐','🌌','🧲','⚗️','🌱','📊','🦴','🌍'];
+const J_COLORS = ['#8b7dff','#4fd1c5','#fbbf24','#4ade80','#f472b6','#38bdf8'];
+
+function journal(){ if(!state.journal) state.journal = { parties: [] }; return state.journal; }
+function jSave(){ store.save(state); }
+function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+function findPartie(id){ return journal().parties.find(p=>p.id===id); }
+
+function fmtDate(ts){
+  if(!ts) return '';
+  const d = new Date(ts);
+  const m = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+  return `${d.getDate()} ${m[d.getMonth()]} ${d.getFullYear()}`;
+}
+function escapeAttr(s){ return escapeH(s).replace(/"/g,'&quot;'); }
+function snippet(txt, n){
+  const t = String(txt||'').replace(/\s+/g,' ').trim();
+  return escapeH(t.length>n ? t.slice(0,n).trim()+'…' : t);
+}
+
+/* --- Vue : liste des parties --- */
+function renderJournal(){
+  const j = journal();
+  APP.className = 'fade';
+  APP.innerHTML = `
+    <div class="domHead">
+      <span class="big">📓</span>
+      <div><h2>Mon carnet</h2><p class="sub">Tes recherches à toi, rangées en parties.</p></div>
+    </div>
+    <div class="jTools">
+      <button class="addPartieBtn" id="addPartie">＋ Nouvelle partie</button>
+      ${j.parties.length ? `<button class="exportBtn" id="exportJ">⬇︎ Exporter (.md)</button>` : ''}
+    </div>
+    <div id="jFormSlot"></div>
+    <div id="jList"></div>`;
+
+  const slot = document.getElementById('jFormSlot');
+  const listEl = document.getElementById('jList');
+
+  function drawList(){
+    if(!j.parties.length){
+      listEl.innerHTML = `<div class="emptyExo">Aucune partie pour l'instant.<br>Crée-en une (ex. « Trous noirs », « Théorie du chaos », « Idées à creuser »)<br>puis écris tes recherches dedans.</div>`;
+      return;
+    }
+    listEl.innerHTML = j.parties.map(p=>{
+      const n = p.entrees.length;
+      const last = p.entrees.slice().sort((a,b)=>b.maj-a.maj)[0];
+      return `
+      <button class="partieCard" data-id="${p.id}">
+        <span class="pBar" style="background:${p.couleur||'#8b7dff'}"></span>
+        <span class="pEmoji">${p.emoji||'🔬'}</span>
+        <span class="pMain">
+          <b>${escapeH(p.titre)}</b>
+          <small>${n} entrée${n>1?'s':''}${last&&(last.titre||last.corps)?` · ${snippet(last.titre||last.corps,44)}`:''}</small>
+        </span>
+        <span class="pGo">›</span>
+      </button>`;
+    }).join('');
+    listEl.querySelectorAll('.partieCard').forEach(b=> b.onclick = ()=> go('partie', b.dataset.id));
+  }
+
+  document.getElementById('addPartie').onclick = ()=> partieForm(slot, null, renderJournal);
+  const ex = document.getElementById('exportJ');
+  if(ex) ex.onclick = exportJournal;
+  drawList();
+}
+
+/* --- Formulaire créer / renommer une partie --- */
+function partieForm(slot, existing, onDone){
+  const isEdit = !!existing;
+  let emoji   = existing ? (existing.emoji||'🔬') : '🔬';
+  let couleur = existing ? (existing.couleur||J_COLORS[0]) : J_COLORS[0];
+  slot.innerHTML = `
+    <div class="newInline">
+      <input id="pfTitre" class="eTitre" placeholder="Nom de la partie" value="${existing?escapeAttr(existing.titre):''}" maxlength="60">
+      <div class="pickLabel">Icône</div>
+      <div class="emojiPick">${J_EMOJIS.map(e=>`<button class="emojiOpt${e===emoji?' sel':''}" data-e="${e}">${e}</button>`).join('')}</div>
+      <div class="pickLabel">Couleur</div>
+      <div class="colorPick">${J_COLORS.map(c=>`<button class="colorOpt${c===couleur?' sel':''}" data-c="${c}" style="background:${c}"></button>`).join('')}</div>
+      <div class="formRow">
+        <button class="nextBtn" id="pfSave">${isEdit?'Enregistrer':'Créer la partie'}</button>
+        <button class="nextBtn ghostBtn" id="pfCancel">Annuler</button>
+      </div>
+    </div>`;
+  const titreEl = slot.querySelector('#pfTitre');
+  slot.scrollIntoView({behavior:'smooth', block:'nearest'});
+  setTimeout(()=>titreEl.focus(), 60);
+  slot.querySelectorAll('.emojiOpt').forEach(b=> b.onclick = ()=>{ emoji=b.dataset.e; slot.querySelectorAll('.emojiOpt').forEach(x=>x.classList.toggle('sel',x===b)); });
+  slot.querySelectorAll('.colorOpt').forEach(b=> b.onclick = ()=>{ couleur=b.dataset.c; slot.querySelectorAll('.colorOpt').forEach(x=>x.classList.toggle('sel',x===b)); });
+  slot.querySelector('#pfCancel').onclick = ()=>{ slot.innerHTML=''; };
+  slot.querySelector('#pfSave').onclick = ()=>{
+    const titre = titreEl.value.trim();
+    if(!titre){ titreEl.classList.add('shake'); setTimeout(()=>titreEl.classList.remove('shake'),400); titreEl.focus(); return; }
+    if(isEdit){ existing.titre=titre; existing.emoji=emoji; existing.couleur=couleur; }
+    else { journal().parties.push({ id:uid(), titre, emoji, couleur, entrees:[] }); }
+    jSave();
+    slot.innerHTML='';
+    onDone && onDone();
+  };
+}
+
+/* --- Vue : une partie (ses entrées) --- */
+function renderPartie(id){
+  const p = findPartie(id);
+  if(!p){ go('journal'); return; }
+  // nettoie les entrées vides laissées en plan
+  const before = p.entrees.length;
+  p.entrees = p.entrees.filter(e=> (e.titre&&e.titre.trim()) || (e.corps&&e.corps.trim()));
+  if(p.entrees.length!==before) jSave();
+
+  APP.className = 'fade';
+  APP.innerHTML = `
+    <div class="domHead">
+      <span class="big">${p.emoji||'🔬'}</span>
+      <div><h2>${escapeH(p.titre)}</h2><p class="sub">${p.entrees.length} entrée${p.entrees.length>1?'s':''}</p></div>
+    </div>
+    <div class="jTools">
+      <button class="addPartieBtn" id="addEntree">＋ Nouvelle entrée</button>
+      <button class="iconTextBtn" id="editP">✎ Renommer</button>
+      <button class="iconTextBtn danger" id="delP">🗑 Supprimer</button>
+    </div>
+    <div id="pFormSlot"></div>
+    <div id="eList"></div>`;
+
+  const slot = document.getElementById('pFormSlot');
+  const listEl = document.getElementById('eList');
+
+  function drawList(){
+    if(!p.entrees.length){
+      listEl.innerHTML = `<div class="emptyExo">Rien d'écrit ici pour l'instant.<br>Ouvre une nouvelle entrée et note ta recherche.</div>`;
+      return;
+    }
+    listEl.innerHTML = p.entrees.slice().sort((a,b)=>b.maj-a.maj).map(e=>`
+      <button class="entreeCard" data-id="${e.id}">
+        <div class="ecTop">
+          <b>${e.titre&&e.titre.trim()?escapeH(e.titre):'<span class="untitled">Sans titre</span>'}</b>
+          <span class="ecDate">${fmtDate(e.maj)}</span>
+        </div>
+        ${e.corps&&e.corps.trim()?`<p class="ecPrev">${snippet(e.corps,140)}</p>`:''}
+      </button>`).join('');
+    listEl.querySelectorAll('.entreeCard').forEach(b=> b.onclick = ()=> go('entree',{partieId:p.id, entreeId:b.dataset.id}));
+  }
+
+  document.getElementById('addEntree').onclick = ()=>{
+    const e = { id:uid(), titre:'', corps:'', cree:Date.now(), maj:Date.now() };
+    p.entrees.push(e); jSave();
+    go('entree', { partieId:p.id, entreeId:e.id });
+  };
+  document.getElementById('editP').onclick = ()=> partieForm(slot, p, ()=> renderPartie(id));
+  document.getElementById('delP').onclick = ()=>{
+    if(confirm(`Supprimer la partie « ${p.titre} » et ses ${p.entrees.length} entrée(s) ? C'est définitif.`)){
+      journal().parties = journal().parties.filter(x=>x.id!==p.id);
+      jSave(); go('journal');
+    }
+  };
+  drawList();
+}
+
+/* --- Vue : éditeur d'une entrée (auto-sauvegarde) --- */
+function renderEntree(arg){
+  const p = findPartie(arg.partieId);
+  const e = p && p.entrees.find(x=>x.id===arg.entreeId);
+  if(!p || !e){ go('journal'); return; }
+
+  APP.className = 'fade';
+  APP.innerHTML = `
+    <button class="crumb" id="crumb">‹ ${p.emoji||'🔬'} ${escapeH(p.titre)}</button>
+    <input id="eTitre" class="eTitre big" placeholder="Titre de la recherche" value="${escapeAttr(e.titre)}" maxlength="120">
+    <div class="eMeta">
+      <span id="savedTag" class="savedTag">${(e.titre&&e.titre.trim())||(e.corps&&e.corps.trim())?'Enregistré ✓':'Nouvelle entrée'}</span>
+      <span class="eDate">${e.cree?('créée le '+fmtDate(e.cree)):''}</span>
+    </div>
+    <textarea id="eCorps" class="eCorps" placeholder="Écris ta recherche ici… hypothèse, sources, calculs, conclusions — comme tu veux.">${escapeH(e.corps)}</textarea>
+    <button class="delEntry" id="delEntry">Supprimer cette entrée</button>`;
+
+  const titreEl = document.getElementById('eTitre');
+  const corpsEl = document.getElementById('eCorps');
+  const tag = document.getElementById('savedTag');
+
+  function autosize(){ corpsEl.style.height='auto'; corpsEl.style.height = Math.max(260, corpsEl.scrollHeight+4)+'px'; }
+  function persist(){
+    e.titre = titreEl.value; e.corps = corpsEl.value; e.maj = Date.now();
+    if(!e.xpAwarded && (e.titre.trim() || e.corps.trim())){ e.xpAwarded = true; addXP(10); } // addXP sauvegarde déjà
+    jSave();
+    tag.textContent = 'Enregistré ✓';
+  }
+  titreEl.oninput = persist;
+  corpsEl.oninput = ()=>{ autosize(); persist(); };
+
+  document.getElementById('crumb').onclick = ()=> go('partie', p.id);
+  document.getElementById('delEntry').onclick = ()=>{
+    if(confirm('Supprimer cette entrée ? C\'est définitif.')){
+      p.entrees = p.entrees.filter(x=>x.id!==e.id); jSave();
+      go('partie', p.id);
+    }
+  };
+  autosize();
+}
+
+/* --- Export du carnet en Markdown --- */
+function exportJournal(){
+  const j = journal();
+  let md = `# Mon carnet de recherches — PRISME\n\n_Exporté le ${fmtDate(Date.now())}_\n`;
+  j.parties.forEach(p=>{
+    md += `\n\n## ${p.emoji||''} ${p.titre}\n`;
+    if(!p.entrees.length){ md += `\n_(vide)_\n`; return; }
+    p.entrees.slice().sort((a,b)=>a.cree-b.cree).forEach(e=>{
+      md += `\n### ${e.titre&&e.titre.trim()?e.titre:'Sans titre'}\n`;
+      md += `_${fmtDate(e.maj)}_\n\n`;
+      md += `${(e.corps||'').trim()}\n`;
+    });
+  });
+  try{
+    const blob = new Blob([md], {type:'text/markdown;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'carnet-prisme.md';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url), 1500);
+  }catch(err){ alert('Export impossible sur cet appareil.'); }
 }
 
 /* ---------- utils ---------- */
