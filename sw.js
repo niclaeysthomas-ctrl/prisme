@@ -1,5 +1,5 @@
 // Bump ce numéro à chaque déploiement de contenu pour forcer le renouvellement.
-const CACHE = 'prisme-v8-carnet';
+const CACHE = 'prisme-v9-carnet';
 const ASSETS = [
   'index.html', 'styles.css', 'data.js', 'app.js',
   'manifest.webmanifest', 'icon-192.png', 'icon-512.png'
@@ -24,7 +24,7 @@ self.addEventListener('fetch', e=>{
   e.respondWith(
     fetch(e.request).then(res=>{
       const copy = res.clone();
-      caches.open(CACHE).then(c=> c.put(e.request, copy)).catch(()=>{});
+      if (res.ok) caches.open(CACHE).then(c=> c.put(e.request, copy)).catch(()=>{});
       return res;
     }).catch(()=>
       caches.match(e.request).then(hit=> hit || caches.match('index.html'))
